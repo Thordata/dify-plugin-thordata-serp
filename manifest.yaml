@@ -1,0 +1,39 @@
+version: 0.1.0
+type: plugin
+author: thordata
+name: thordata_serp
+label:
+  en_US: Thordata SERP
+description:
+  en_US: Live, structured search results across schema-discovered search engines through the Thordata SERP API.
+icon: icon.svg
+icon_dark: icon-dark.svg
+repo: https://github.com/Thordata/dify-plugin-thordata-serp
+contact: cianna@thordata.com
+created_at: "2026-09-23T00:00:00+08:00"
+privacy: PRIVACY.md
+verified: false
+tags:
+  - search
+resource:
+  # Bytes. 256 MB, the value the official `dify plugin init` template ships with;
+  # the previous 1048576 (1 MiB) was below any Python plugin's real footprint.
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/thordata_serp.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+network:
+  domains:
+    - api.thordata.com
+    - scraperapi.thordata.com

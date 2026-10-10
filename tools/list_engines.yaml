@@ -1,0 +1,19 @@
+identity:
+  author: Thordata
+  name: list_engines
+  label:
+    en_US: List Search Engines
+description:
+  human:
+    en_US: List the available Thordata SERP search engines.
+  llm: List available Thordata SERP engines and their identifiers before choosing an engine for a search.
+parameters: []
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/list_engines.py

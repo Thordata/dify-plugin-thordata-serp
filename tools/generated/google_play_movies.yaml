@@ -1,0 +1,1476 @@
+identity:
+  author: thordata
+  name: google_play_movies
+  label:
+    en_US: Thordata Google Play Movies
+description:
+  human:
+    en_US: Search with the fixed Thordata SERP engine Thordata Google Play Movies.
+  llm: Run a Thordata SERP search using the fixed engine google_play_movies.
+parameters:
+- name: q
+  type: string
+  required: true
+  label:
+    en_US: Search Query
+  human_description:
+    en_US: Search Query parameter.
+  llm_description: Search Query parameter.
+  form: llm
+  placeholder:
+    en_US: pizza
+- name: no_cache
+  type: boolean
+  required: false
+  label:
+    en_US: Disable Caching
+  human_description:
+    en_US: Disable Caching parameter.
+  llm_description: Disable Caching parameter.
+  form: form
+  default: false
+- name: gl
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Country
+  human_description:
+    en_US: Country parameter.
+  llm_description: Country parameter.
+  form: form
+  default: us
+  multiple: false
+  options:
+  - value: af
+    label:
+      en_US: Afghanistan
+  - value: al
+    label:
+      en_US: Albania
+  - value: dz
+    label:
+      en_US: Algeria
+  - value: as
+    label:
+      en_US: American Samoa
+  - value: ad
+    label:
+      en_US: Andorra
+  - value: ao
+    label:
+      en_US: Angola
+  - value: ai
+    label:
+      en_US: Anguilla
+  - value: aq
+    label:
+      en_US: Antarctica
+  - value: ag
+    label:
+      en_US: Antigua and Barbuda
+  - value: ar
+    label:
+      en_US: Argentina
+  - value: am
+    label:
+      en_US: Armenia
+  - value: aw
+    label:
+      en_US: Aruba
+  - value: au
+    label:
+      en_US: Australia
+  - value: at
+    label:
+      en_US: Austria
+  - value: az
+    label:
+      en_US: Azerbaijan
+  - value: bs
+    label:
+      en_US: Bahamas
+  - value: bh
+    label:
+      en_US: Bahrain
+  - value: bd
+    label:
+      en_US: Bangladesh
+  - value: bb
+    label:
+      en_US: Barbados
+  - value: by
+    label:
+      en_US: Belarus
+  - value: be
+    label:
+      en_US: Belgium
+  - value: bz
+    label:
+      en_US: Belize
+  - value: bj
+    label:
+      en_US: Benin
+  - value: bm
+    label:
+      en_US: Bermuda
+  - value: bt
+    label:
+      en_US: Bhutan
+  - value: bo
+    label:
+      en_US: Bolivia
+  - value: ba
+    label:
+      en_US: Bosnia and Herzegovina
+  - value: bw
+    label:
+      en_US: Botswana
+  - value: bv
+    label:
+      en_US: Bouvet Island
+  - value: br
+    label:
+      en_US: Brazil
+  - value: io
+    label:
+      en_US: British Indian Ocean Territory
+  - value: bn
+    label:
+      en_US: Brunei Darussalam
+  - value: bg
+    label:
+      en_US: Bulgaria
+  - value: bf
+    label:
+      en_US: Burkina Faso
+  - value: bi
+    label:
+      en_US: Burundi
+  - value: kh
+    label:
+      en_US: Cambodia
+  - value: cm
+    label:
+      en_US: Cameroon
+  - value: ca
+    label:
+      en_US: Canada
+  - value: cv
+    label:
+      en_US: Cape Verde
+  - value: ky
+    label:
+      en_US: Cayman Islands
+  - value: cf
+    label:
+      en_US: Central African Republic
+  - value: td
+    label:
+      en_US: Chad
+  - value: cl
+    label:
+      en_US: Chile
+  - value: cn
+    label:
+      en_US: China
+  - value: cx
+    label:
+      en_US: Christmas Island
+  - value: cc
+    label:
+      en_US: Cocos (Keeling) Islands
+  - value: co
+    label:
+      en_US: Colombia
+  - value: km
+    label:
+      en_US: Comoros
+  - value: cg
+    label:
+      en_US: Congo
+  - value: cd
+    label:
+      en_US: Congo, the Democratic Republic of the
+  - value: ck
+    label:
+      en_US: Cook Islands
+  - value: cr
+    label:
+      en_US: Costa Rica
+  - value: ci
+    label:
+      en_US: Cote D'ivoire
+  - value: hr
+    label:
+      en_US: Croatia
+  - value: cu
+    label:
+      en_US: Cuba
+  - value: cy
+    label:
+      en_US: Cyprus
+  - value: cz
+    label:
+      en_US: Czech Republic
+  - value: dk
+    label:
+      en_US: Denmark
+  - value: dj
+    label:
+      en_US: Djibouti
+  - value: dm
+    label:
+      en_US: Dominica
+  - value: do
+    label:
+      en_US: Dominican Republic
+  - value: ec
+    label:
+      en_US: Ecuador
+  - value: eg
+    label:
+      en_US: Egypt
+  - value: sv
+    label:
+      en_US: El Salvador
+  - value: gq
+    label:
+      en_US: Equatorial Guinea
+  - value: er
+    label:
+      en_US: Eritrea
+  - value: ee
+    label:
+      en_US: Estonia
+  - value: et
+    label:
+      en_US: Ethiopia
+  - value: fk
+    label:
+      en_US: Falkland Islands (Malvinas)
+  - value: fo
+    label:
+      en_US: Faroe Islands
+  - value: fj
+    label:
+      en_US: Fiji
+  - value: fi
+    label:
+      en_US: Finland
+  - value: fr
+    label:
+      en_US: France
+  - value: gf
+    label:
+      en_US: French Guiana
+  - value: pf
+    label:
+      en_US: French Polynesia
+  - value: tf
+    label:
+      en_US: French Southern Territories
+  - value: ga
+    label:
+      en_US: Gabon
+  - value: gm
+    label:
+      en_US: Gambia
+  - value: ge
+    label:
+      en_US: Georgia
+  - value: de
+    label:
+      en_US: Germany
+  - value: gh
+    label:
+      en_US: Ghana
+  - value: gi
+    label:
+      en_US: Gibraltar
+  - value: gr
+    label:
+      en_US: Greece
+  - value: gl
+    label:
+      en_US: Greenland
+  - value: gd
+    label:
+      en_US: Grenada
+  - value: gp
+    label:
+      en_US: Guadeloupe
+  - value: gu
+    label:
+      en_US: Guam
+  - value: gt
+    label:
+      en_US: Guatemala
+  - value: gg
+    label:
+      en_US: Guernsey
+  - value: gn
+    label:
+      en_US: Guinea
+  - value: gw
+    label:
+      en_US: Guinea-Bissau
+  - value: gy
+    label:
+      en_US: Guyana
+  - value: ht
+    label:
+      en_US: Haiti
+  - value: hm
+    label:
+      en_US: Heard Island and Mcdonald Islands
+  - value: va
+    label:
+      en_US: Holy See (Vatican City State)
+  - value: hn
+    label:
+      en_US: Honduras
+  - value: hk
+    label:
+      en_US: Hong Kong
+  - value: hu
+    label:
+      en_US: Hungary
+  - value: is
+    label:
+      en_US: Iceland
+  - value: in
+    label:
+      en_US: India
+  - value: id
+    label:
+      en_US: Indonesia
+  - value: ir
+    label:
+      en_US: Iran, Islamic Republic of
+  - value: iq
+    label:
+      en_US: Iraq
+  - value: ie
+    label:
+      en_US: Ireland
+  - value: im
+    label:
+      en_US: Isle of Man
+  - value: il
+    label:
+      en_US: Israel
+  - value: it
+    label:
+      en_US: Italy
+  - value: je
+    label:
+      en_US: Jersey
+  - value: jm
+    label:
+      en_US: Jamaica
+  - value: jp
+    label:
+      en_US: Japan
+  - value: jo
+    label:
+      en_US: Jordan
+  - value: kz
+    label:
+      en_US: Kazakhstan
+  - value: ke
+    label:
+      en_US: Kenya
+  - value: ki
+    label:
+      en_US: Kiribati
+  - value: kp
+    label:
+      en_US: Korea, Democratic People's Republic of
+  - value: kr
+    label:
+      en_US: Korea, Republic of
+  - value: kw
+    label:
+      en_US: Kuwait
+  - value: kg
+    label:
+      en_US: Kyrgyzstan
+  - value: la
+    label:
+      en_US: Lao People's Democratic Republic
+  - value: lv
+    label:
+      en_US: Latvia
+  - value: lb
+    label:
+      en_US: Lebanon
+  - value: ls
+    label:
+      en_US: Lesotho
+  - value: lr
+    label:
+      en_US: Liberia
+  - value: ly
+    label:
+      en_US: Libyan Arab Jamahiriya
+  - value: li
+    label:
+      en_US: Liechtenstein
+  - value: lt
+    label:
+      en_US: Lithuania
+  - value: lu
+    label:
+      en_US: Luxembourg
+  - value: mo
+    label:
+      en_US: Macao
+  - value: mk
+    label:
+      en_US: Macedonia, the Former Yugosalv Republic of
+  - value: mg
+    label:
+      en_US: Madagascar
+  - value: mw
+    label:
+      en_US: Malawi
+  - value: my
+    label:
+      en_US: Malaysia
+  - value: mv
+    label:
+      en_US: Maldives
+  - value: ml
+    label:
+      en_US: Mali
+  - value: mt
+    label:
+      en_US: Malta
+  - value: mh
+    label:
+      en_US: Marshall Islands
+  - value: mq
+    label:
+      en_US: Martinique
+  - value: mr
+    label:
+      en_US: Mauritania
+  - value: mu
+    label:
+      en_US: Mauritius
+  - value: yt
+    label:
+      en_US: Mayotte
+  - value: mx
+    label:
+      en_US: Mexico
+  - value: fm
+    label:
+      en_US: Micronesia, Federated States of
+  - value: md
+    label:
+      en_US: Moldova, Republic of
+  - value: mc
+    label:
+      en_US: Monaco
+  - value: mn
+    label:
+      en_US: Mongolia
+  - value: me
+    label:
+      en_US: Montenegro
+  - value: ms
+    label:
+      en_US: Montserrat
+  - value: ma
+    label:
+      en_US: Morocco
+  - value: mz
+    label:
+      en_US: Mozambique
+  - value: mm
+    label:
+      en_US: Myanmar
+  - value: na
+    label:
+      en_US: Namibia
+  - value: nr
+    label:
+      en_US: Nauru
+  - value: np
+    label:
+      en_US: Nepal
+  - value: nl
+    label:
+      en_US: Netherlands
+  - value: an
+    label:
+      en_US: Netherlands Antilles
+  - value: nc
+    label:
+      en_US: New Caledonia
+  - value: nz
+    label:
+      en_US: New Zealand
+  - value: ni
+    label:
+      en_US: Nicaragua
+  - value: ne
+    label:
+      en_US: Niger
+  - value: ng
+    label:
+      en_US: Nigeria
+  - value: nu
+    label:
+      en_US: Niue
+  - value: nf
+    label:
+      en_US: Norfolk Island
+  - value: mp
+    label:
+      en_US: Northern Mariana Islands
+  - value: 'no'
+    label:
+      en_US: Norway
+  - value: om
+    label:
+      en_US: Oman
+  - value: pk
+    label:
+      en_US: Pakistan
+  - value: pw
+    label:
+      en_US: Palau
+  - value: ps
+    label:
+      en_US: Palestinian Territory, Occupied
+  - value: pa
+    label:
+      en_US: Panama
+  - value: pg
+    label:
+      en_US: Papua New Guinea
+  - value: py
+    label:
+      en_US: Paraguay
+  - value: pe
+    label:
+      en_US: Peru
+  - value: ph
+    label:
+      en_US: Philippines
+  - value: pn
+    label:
+      en_US: Pitcairn
+  - value: pl
+    label:
+      en_US: Poland
+  - value: pt
+    label:
+      en_US: Portugal
+  - value: pr
+    label:
+      en_US: Puerto Rico
+  - value: qa
+    label:
+      en_US: Qatar
+  - value: re
+    label:
+      en_US: Reunion
+  - value: ro
+    label:
+      en_US: Romania
+  - value: ru
+    label:
+      en_US: Russian Federation
+  - value: rw
+    label:
+      en_US: Rwanda
+  - value: sh
+    label:
+      en_US: Saint Helena
+  - value: kn
+    label:
+      en_US: Saint Kitts and Nevis
+  - value: lc
+    label:
+      en_US: Saint Lucia
+  - value: pm
+    label:
+      en_US: Saint Pierre and Miquelon
+  - value: vc
+    label:
+      en_US: Saint Vincent and the Grenadines
+  - value: ws
+    label:
+      en_US: Samoa
+  - value: sm
+    label:
+      en_US: San Marino
+  - value: st
+    label:
+      en_US: Sao Tome and Principe
+  - value: sa
+    label:
+      en_US: Saudi Arabia
+  - value: sn
+    label:
+      en_US: Senegal
+  - value: rs
+    label:
+      en_US: Serbia
+  - value: sc
+    label:
+      en_US: Seychelles
+  - value: sl
+    label:
+      en_US: Sierra Leone
+  - value: sg
+    label:
+      en_US: Singapore
+  - value: sk
+    label:
+      en_US: Slovakia
+  - value: si
+    label:
+      en_US: Slovenia
+  - value: sb
+    label:
+      en_US: Solomon Islands
+  - value: so
+    label:
+      en_US: Somalia
+  - value: za
+    label:
+      en_US: South Africa
+  - value: gs
+    label:
+      en_US: South Georgia and the South Sandwich Islands
+  - value: es
+    label:
+      en_US: Spain
+  - value: lk
+    label:
+      en_US: Sri Lanka
+  - value: sd
+    label:
+      en_US: Sudan
+  - value: sr
+    label:
+      en_US: Suriname
+  - value: sj
+    label:
+      en_US: Svalbard and Jan Mayen
+  - value: sz
+    label:
+      en_US: Swaziland
+  - value: se
+    label:
+      en_US: Sweden
+  - value: ch
+    label:
+      en_US: Switzerland
+  - value: sy
+    label:
+      en_US: Syrian Arab Republic
+  - value: tw
+    label:
+      en_US: Taiwan, Province of China
+  - value: tj
+    label:
+      en_US: Tajikistan
+  - value: tz
+    label:
+      en_US: Tanzania, United Republic of
+  - value: th
+    label:
+      en_US: Thailand
+  - value: tl
+    label:
+      en_US: Timor-Leste
+  - value: tg
+    label:
+      en_US: Togo
+  - value: tk
+    label:
+      en_US: Tokelau
+  - value: to
+    label:
+      en_US: Tonga
+  - value: tt
+    label:
+      en_US: Trinidad and Tobago
+  - value: tn
+    label:
+      en_US: Tunisia
+  - value: tr
+    label:
+      en_US: Turkiye
+  - value: tm
+    label:
+      en_US: Turkmenistan
+  - value: tc
+    label:
+      en_US: Turks and Caicos Islands
+  - value: tv
+    label:
+      en_US: Tuvalu
+  - value: ug
+    label:
+      en_US: Uganda
+  - value: ua
+    label:
+      en_US: Ukraine
+  - value: ae
+    label:
+      en_US: United Arab Emirates
+  - value: uk
+    label:
+      en_US: United Kingdom
+  - value: gb
+    label:
+      en_US: United Kingdom
+  - value: us
+    label:
+      en_US: United States
+  - value: um
+    label:
+      en_US: United States Minor Outlying Islands
+  - value: uy
+    label:
+      en_US: Uruguay
+  - value: uz
+    label:
+      en_US: Uzbekistan
+  - value: vu
+    label:
+      en_US: Vanuatu
+  - value: ve
+    label:
+      en_US: Venezuela
+  - value: vn
+    label:
+      en_US: Viet Nam
+  - value: vg
+    label:
+      en_US: Virgin Islands, British
+  - value: vi
+    label:
+      en_US: Virgin Islands, U.S.
+  - value: wf
+    label:
+      en_US: Wallis and Futuna
+  - value: eh
+    label:
+      en_US: Western Sahara
+  - value: ye
+    label:
+      en_US: Yemen
+  - value: zm
+    label:
+      en_US: Zambia
+  - value: zw
+    label:
+      en_US: Zimbabwe
+- name: hl
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Language
+  human_description:
+    en_US: Language parameter.
+  llm_description: Language parameter.
+  form: form
+  default: en
+  multiple: false
+  options:
+  - value: af
+    label:
+      en_US: Afrikaans
+  - value: ak
+    label:
+      en_US: Akan
+  - value: ws
+    label:
+      en_US: Samoa
+  - value: am
+    label:
+      en_US: Amharic
+  - value: ar
+    label:
+      en_US: Arabic
+  - value: hy
+    label:
+      en_US: Armenian
+  - value: az
+    label:
+      en_US: Azerbaijani
+  - value: ceb
+    label:
+      en_US: Binisaya
+  - value: eu
+    label:
+      en_US: Basque
+  - value: be
+    label:
+      en_US: Belarusian
+  - value: bem
+    label:
+      en_US: Bemba
+  - value: bn
+    label:
+      en_US: Bengali
+  - value: bh
+    label:
+      en_US: Bihari
+  - value: xx-bork
+    label:
+      en_US: Bork, bork, bork!
+  - value: bs
+    label:
+      en_US: Bosnian
+  - value: br
+    label:
+      en_US: Breton
+  - value: bg
+    label:
+      en_US: Bulgarian
+  - value: bt
+    label:
+      en_US: Bhutanese
+  - value: km
+    label:
+      en_US: Cambodian
+  - value: ca
+    label:
+      en_US: Catalan
+  - value: chr
+    label:
+      en_US: Cherokee
+  - value: ny
+    label:
+      en_US: Chichewa
+  - value: zh-cn
+    label:
+      en_US: Chinese (Simplified)
+  - value: zh-tw
+    label:
+      en_US: Chinese (Traditional)
+  - value: co
+    label:
+      en_US: Corsican
+  - value: hr
+    label:
+      en_US: Croatian
+  - value: cs
+    label:
+      en_US: Czech
+  - value: da
+    label:
+      en_US: Danish
+  - value: nl
+    label:
+      en_US: Dutch
+  - value: xx-elmer
+    label:
+      en_US: Elmer Fudd
+  - value: en
+    label:
+      en_US: English
+  - value: eo
+    label:
+      en_US: Esperanto
+  - value: et
+    label:
+      en_US: Estonian
+  - value: ee
+    label:
+      en_US: Ewe
+  - value: fo
+    label:
+      en_US: Faroese
+  - value: tl
+    label:
+      en_US: Filipino
+  - value: fi
+    label:
+      en_US: Finnish
+  - value: fr
+    label:
+      en_US: French
+  - value: fy
+    label:
+      en_US: Frisian
+  - value: gaa
+    label:
+      en_US: Ga
+  - value: gl
+    label:
+      en_US: Galician
+  - value: ka
+    label:
+      en_US: Georgian
+  - value: de
+    label:
+      en_US: German
+  - value: el
+    label:
+      en_US: Greek
+  - value: kl
+    label:
+      en_US: Greenlandic
+  - value: gn
+    label:
+      en_US: Guarani
+  - value: gu
+    label:
+      en_US: Gujarati
+  - value: xx-hacker
+    label:
+      en_US: Hacker
+  - value: ht
+    label:
+      en_US: Haitian Creole
+  - value: ha
+    label:
+      en_US: Hausa
+  - value: haw
+    label:
+      en_US: Hawaiian
+  - value: iw
+    label:
+      en_US: Hebrew
+  - value: he
+    label:
+      en_US: Hebrew
+  - value: hi
+    label:
+      en_US: Hindi
+  - value: hu
+    label:
+      en_US: Hungarian
+  - value: is
+    label:
+      en_US: Icelandic
+  - value: ig
+    label:
+      en_US: Igbo
+  - value: id
+    label:
+      en_US: Indonesian
+  - value: ia
+    label:
+      en_US: Interlingua
+  - value: ga
+    label:
+      en_US: Irish
+  - value: it
+    label:
+      en_US: Italian
+  - value: ja
+    label:
+      en_US: Japanese
+  - value: jw
+    label:
+      en_US: Javanese
+  - value: kn
+    label:
+      en_US: Kannada
+  - value: kk
+    label:
+      en_US: Kazakh
+  - value: rw
+    label:
+      en_US: Kinyarwanda
+  - value: rn
+    label:
+      en_US: Kirundi
+  - value: xx-klingon
+    label:
+      en_US: Klingon
+  - value: kg
+    label:
+      en_US: Kongo
+  - value: ko
+    label:
+      en_US: Korean
+  - value: kri
+    label:
+      en_US: Krio (Sierra Leone)
+  - value: ku
+    label:
+      en_US: Kurdish
+  - value: ckb
+    label:
+      en_US: Kurdish (Soranî)
+  - value: ky
+    label:
+      en_US: Kyrgyz
+  - value: lo
+    label:
+      en_US: Laothian
+  - value: la
+    label:
+      en_US: Latin
+  - value: lv
+    label:
+      en_US: Latvian
+  - value: ln
+    label:
+      en_US: Lingala
+  - value: lt
+    label:
+      en_US: Lithuanian
+  - value: loz
+    label:
+      en_US: Lozi
+  - value: lg
+    label:
+      en_US: Luganda
+  - value: ach
+    label:
+      en_US: Luo
+  - value: mk
+    label:
+      en_US: Macedonian
+  - value: mg
+    label:
+      en_US: Malagasy
+  - value: ms
+    label:
+      en_US: Malay
+  - value: ml
+    label:
+      en_US: Malayalam
+  - value: mt
+    label:
+      en_US: Maltese
+  - value: mv
+    label:
+      en_US: Maldives
+  - value: mi
+    label:
+      en_US: Maori
+  - value: mr
+    label:
+      en_US: Marathi
+  - value: mfe
+    label:
+      en_US: Mauritian Creole
+  - value: mo
+    label:
+      en_US: Moldavian
+  - value: mn
+    label:
+      en_US: Mongolian
+  - value: sr-me
+    label:
+      en_US: Montenegrin
+  - value: my
+    label:
+      en_US: Myanmar
+  - value: ne
+    label:
+      en_US: Nepali
+  - value: pcm
+    label:
+      en_US: Nigerian Pidgin
+  - value: nso
+    label:
+      en_US: Northern Sotho
+  - value: 'no'
+    label:
+      en_US: Norwegian
+  - value: nn
+    label:
+      en_US: Norwegian (Nynorsk)
+  - value: oc
+    label:
+      en_US: Occitan
+  - value: or
+    label:
+      en_US: Oriya
+  - value: om
+    label:
+      en_US: Oromo
+  - value: ps
+    label:
+      en_US: Pashto
+  - value: fa
+    label:
+      en_US: Persian
+  - value: xx-pirate
+    label:
+      en_US: Pirate
+  - value: pl
+    label:
+      en_US: Polish
+  - value: pt
+    label:
+      en_US: Portuguese
+  - value: pt-br
+    label:
+      en_US: Portuguese (Brazil)
+  - value: pt-pt
+    label:
+      en_US: Portuguese (Portugal)
+  - value: pa
+    label:
+      en_US: Punjabi
+  - value: qu
+    label:
+      en_US: Quechua
+  - value: ro
+    label:
+      en_US: Romanian
+  - value: rm
+    label:
+      en_US: Romansh
+  - value: nyn
+    label:
+      en_US: Runyakitara
+  - value: ru
+    label:
+      en_US: Russian
+  - value: gd
+    label:
+      en_US: Scots Gaelic
+  - value: sr
+    label:
+      en_US: Serbian
+  - value: sh
+    label:
+      en_US: Serbo-Croatian
+  - value: st
+    label:
+      en_US: Sesotho
+  - value: tn
+    label:
+      en_US: Setswana
+  - value: crs
+    label:
+      en_US: Seychellois Creole
+  - value: sn
+    label:
+      en_US: Shona
+  - value: sd
+    label:
+      en_US: Sindhi
+  - value: si
+    label:
+      en_US: Sinhalese
+  - value: sk
+    label:
+      en_US: Slovak
+  - value: sl
+    label:
+      en_US: Slovenian
+  - value: so
+    label:
+      en_US: Somali
+  - value: es
+    label:
+      en_US: Spanish
+  - value: es-419
+    label:
+      en_US: Spanish (Latin American)
+  - value: su
+    label:
+      en_US: Sundanese
+  - value: sw
+    label:
+      en_US: Swahili
+  - value: sv
+    label:
+      en_US: Swedish
+  - value: tg
+    label:
+      en_US: Tajik
+  - value: ta
+    label:
+      en_US: Tamil
+  - value: tt
+    label:
+      en_US: Tatar
+  - value: te
+    label:
+      en_US: Telugu
+  - value: th
+    label:
+      en_US: Thai
+  - value: ti
+    label:
+      en_US: Tigrinya
+  - value: to
+    label:
+      en_US: Tonga
+  - value: lua
+    label:
+      en_US: Tshiluba
+  - value: tum
+    label:
+      en_US: Tumbuka
+  - value: tr
+    label:
+      en_US: Turkish
+  - value: tk
+    label:
+      en_US: Turkmen
+  - value: tw
+    label:
+      en_US: Twi
+  - value: ug
+    label:
+      en_US: Uighur
+  - value: uk
+    label:
+      en_US: Ukrainian
+  - value: ur
+    label:
+      en_US: Urdu
+  - value: uz
+    label:
+      en_US: Uzbek
+  - value: vu
+    label:
+      en_US: Vanuatu
+  - value: vi
+    label:
+      en_US: Vietnamese
+  - value: cy
+    label:
+      en_US: Welsh
+  - value: wo
+    label:
+      en_US: Wolof
+  - value: xh
+    label:
+      en_US: Xhosa
+  - value: yi
+    label:
+      en_US: Yiddish
+  - value: yo
+    label:
+      en_US: Yoruba
+  - value: zu
+    label:
+      en_US: Zulu
+- name: movies_category
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Movies Category
+  human_description:
+    en_US: Movies Category parameter.
+  llm_description: Movies Category parameter.
+  form: form
+  multiple: false
+  options:
+  - value: MOVIE
+    label:
+      en_US: Movie
+  - value: '1'
+    label:
+      en_US: Movies - Action & adventure
+  - value: '2'
+    label:
+      en_US: Movies - Animation
+  - value: '40'
+    label:
+      en_US: Movies - Anime
+  - value: '3'
+    label:
+      en_US: Movies - Classics
+  - value: '4'
+    label:
+      en_US: Movies - Comedy
+  - value: '5'
+    label:
+      en_US: Movies - Crime
+  - value: '7'
+    label:
+      en_US: Movies - Documentary
+  - value: '6'
+    label:
+      en_US: Movies - Drama
+  - value: '8'
+    label:
+      en_US: Movies - Family
+  - value: '27'
+    label:
+      en_US: Movies - Independent
+  - value: '18'
+    label:
+      en_US: Movies - Indian cinema
+  - value: '25'
+    label:
+      en_US: Movies - Music
+  - value: '11'
+    label:
+      en_US: Movies - Mystery & suspense
+  - value: '12'
+    label:
+      en_US: Movies - Romance
+  - value: '13'
+    label:
+      en_US: Movies - Sci-fi & fantasy
+  - value: '26'
+    label:
+      en_US: Movies - Short films
+  - value: '15'
+    label:
+      en_US: Movies - Sports
+  - value: '36'
+    label:
+      en_US: Movies - Thriller
+  - value: '9'
+    label:
+      en_US: Movies - World cinema
+  - value: TV
+    label:
+      en_US: TV
+  - value: '1001'
+    label:
+      en_US: TV - Action & adventure
+  - value: '1002'
+    label:
+      en_US: TV - Animation
+  - value: '1030'
+    label:
+      en_US: TV - Anime
+  - value: '1004'
+    label:
+      en_US: TV - Comedy
+  - value: '1017'
+    label:
+      en_US: TV - Documentary
+  - value: '1005'
+    label:
+      en_US: TV - Drama
+  - value: '1029'
+    label:
+      en_US: TV - Family
+  - value: '1025'
+    label:
+      en_US: TV - Health & fitness
+  - value: '1026'
+    label:
+      en_US: TV - Learning & education
+  - value: '1008'
+    label:
+      en_US: TV - Reality & game shows
+  - value: '1013'
+    label:
+      en_US: TV - Sports
+  - value: FAMILY
+    label:
+      en_US: Family
+  - value: '3001'
+    label:
+      en_US: Family - TV
+  - value: '2001'
+    label:
+      en_US: Family - Action & adventure
+  - value: '2002'
+    label:
+      en_US: Family - Animation
+  - value: '2003'
+    label:
+      en_US: Family - Classics
+  - value: '2004'
+    label:
+      en_US: Family - Comedy
+  - value: '2007'
+    label:
+      en_US: Family - Education
+  - value: '2005'
+    label:
+      en_US: Family - Music
+  - value: '2006'
+    label:
+      en_US: Family - Sci-fi & fantasy
+- name: next_page_token
+  type: string
+  required: false
+  label:
+    en_US: Next Page Token
+  human_description:
+    en_US: Next Page Token parameter.
+  llm_description: Next Page Token parameter.
+  form: form
+  placeholder:
+    en_US: Next page token
+- name: section_page_token
+  type: string
+  required: false
+  label:
+    en_US: Section Page Token
+  human_description:
+    en_US: Section Page Token parameter.
+  llm_description: Section Page Token parameter.
+  form: form
+  placeholder:
+    en_US: Section page token
+- name: chart
+  type: string
+  required: false
+  label:
+    en_US: Chart
+  human_description:
+    en_US: Chart parameter.
+  llm_description: Chart parameter.
+  form: form
+  placeholder:
+    en_US: Chart
+- name: see_more_token
+  type: string
+  required: false
+  label:
+    en_US: See more token
+  human_description:
+    en_US: See more token parameter.
+  llm_description: See more token parameter.
+  form: form
+  placeholder:
+    en_US: See more token
+- name: age
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Age
+  human_description:
+    en_US: Age parameter.
+  llm_description: Age parameter.
+  form: form
+  multiple: false
+  options:
+  - value: AGE_RANGE1
+    label:
+      en_US: Ages 5 and under
+  - value: AGE_RANGE2
+    label:
+      en_US: Ages 6-8
+  - value: AGE_RANGE3
+    label:
+      en_US: Ages 9-12
+- name: extra_parameters_json
+  type: string
+  required: false
+  default: '{}'
+  label:
+    en_US: Extra Parameters JSON
+  human_description:
+    en_US: Advanced JSON overrides; engine and isjson remain protected.
+  llm_description: Optional advanced JSON object override. The engine and isjson fields
+    remain protected.
+  form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/generated/google_play_movies.py

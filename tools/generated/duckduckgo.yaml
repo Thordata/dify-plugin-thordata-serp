@@ -1,0 +1,853 @@
+identity:
+  author: thordata
+  name: duckduckgo
+  label:
+    en_US: Thordata DuckDuckGo Search
+description:
+  human:
+    en_US: Search with the fixed Thordata SERP engine Thordata DuckDuckGo Search.
+  llm: Run a Thordata SERP search using the fixed engine duckduckgo.
+parameters:
+- name: q
+  type: string
+  required: true
+  label:
+    en_US: Search Query
+  human_description:
+    en_US: Search Query parameter.
+  llm_description: Search Query parameter.
+  form: llm
+  placeholder:
+    en_US: pizza
+- name: no_cache
+  type: boolean
+  required: false
+  label:
+    en_US: Disable Caching
+  human_description:
+    en_US: Disable Caching parameter.
+  llm_description: Disable Caching parameter.
+  form: form
+  default: false
+- name: kl
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Region
+  human_description:
+    en_US: Region parameter.
+  llm_description: Region parameter.
+  form: form
+  default: us-en
+  multiple: false
+  options:
+  - value: af-en
+    label:
+      en_US: Afghanistan (EN)
+  - value: al-en
+    label:
+      en_US: Albania (EN)
+  - value: dz-en
+    label:
+      en_US: Algeria (EN)
+  - value: as-en
+    label:
+      en_US: American Samoa (EN)
+  - value: ad-en
+    label:
+      en_US: Andorra (EN)
+  - value: ao-en
+    label:
+      en_US: Angola (EN)
+  - value: ai-en
+    label:
+      en_US: Anguilla (EN)
+  - value: aq-en
+    label:
+      en_US: Antarctica (EN)
+  - value: ag-en
+    label:
+      en_US: Antigua and Barbuda (EN)
+  - value: ar-en
+    label:
+      en_US: Argentina (EN)
+  - value: am-en
+    label:
+      en_US: Armenia (EN)
+  - value: aw-en
+    label:
+      en_US: Aruba (EN)
+  - value: au-en
+    label:
+      en_US: Australia (EN)
+  - value: at-en
+    label:
+      en_US: Austria (EN)
+  - value: az-en
+    label:
+      en_US: Azerbaijan (EN)
+  - value: bs-en
+    label:
+      en_US: Bahamas (EN)
+  - value: bh-en
+    label:
+      en_US: Bahrain (EN)
+  - value: bd-en
+    label:
+      en_US: Bangladesh (EN)
+  - value: bb-en
+    label:
+      en_US: Barbados (EN)
+  - value: by-en
+    label:
+      en_US: Belarus (EN)
+  - value: be-en
+    label:
+      en_US: Belgium (EN)
+  - value: bz-en
+    label:
+      en_US: Belize (EN)
+  - value: bj-en
+    label:
+      en_US: Benin (EN)
+  - value: bm-en
+    label:
+      en_US: Bermuda (EN)
+  - value: bt-en
+    label:
+      en_US: Bhutan (EN)
+  - value: bo-en
+    label:
+      en_US: Bolivia (EN)
+  - value: ba-en
+    label:
+      en_US: Bosnia and Herzegovina (EN)
+  - value: bw-en
+    label:
+      en_US: Botswana (EN)
+  - value: bv-en
+    label:
+      en_US: Bouvet Island (EN)
+  - value: br-en
+    label:
+      en_US: Brazil (EN)
+  - value: io-en
+    label:
+      en_US: British Indian Ocean Territory (EN)
+  - value: bn-en
+    label:
+      en_US: Brunei Darussalam (EN)
+  - value: bg-en
+    label:
+      en_US: Bulgaria (EN)
+  - value: bf-en
+    label:
+      en_US: Burkina Faso (EN)
+  - value: bi-en
+    label:
+      en_US: Burundi (EN)
+  - value: kh-en
+    label:
+      en_US: Cambodia (EN)
+  - value: cm-en
+    label:
+      en_US: Cameroon (EN)
+  - value: ca-en
+    label:
+      en_US: Canada (EN)
+  - value: cv-en
+    label:
+      en_US: Cape Verde (EN)
+  - value: ky-en
+    label:
+      en_US: Cayman Islands (EN)
+  - value: cf-en
+    label:
+      en_US: Central African Republic (EN)
+  - value: td-en
+    label:
+      en_US: Chad (EN)
+  - value: cl-en
+    label:
+      en_US: Chile (EN)
+  - value: cn-en
+    label:
+      en_US: China (EN)
+  - value: cx-en
+    label:
+      en_US: Christmas Island (EN)
+  - value: cc-en
+    label:
+      en_US: Cocos (Keeling) Islands (EN)
+  - value: co-en
+    label:
+      en_US: Colombia (EN)
+  - value: km-en
+    label:
+      en_US: Comoros (EN)
+  - value: cg-en
+    label:
+      en_US: Congo (EN)
+  - value: cd-en
+    label:
+      en_US: Congo, the Democratic Republic of the (EN)
+  - value: ck-en
+    label:
+      en_US: Cook Islands (EN)
+  - value: cr-en
+    label:
+      en_US: Costa Rica (EN)
+  - value: ci-en
+    label:
+      en_US: Cote D'ivoire (EN)
+  - value: hr-en
+    label:
+      en_US: Croatia (EN)
+  - value: cu-en
+    label:
+      en_US: Cuba (EN)
+  - value: cy-en
+    label:
+      en_US: Cyprus (EN)
+  - value: cz-en
+    label:
+      en_US: Czech Republic (EN)
+  - value: dk-en
+    label:
+      en_US: Denmark (EN)
+  - value: dj-en
+    label:
+      en_US: Djibouti (EN)
+  - value: dm-en
+    label:
+      en_US: Dominica (EN)
+  - value: do-en
+    label:
+      en_US: Dominican Republic (EN)
+  - value: ec-en
+    label:
+      en_US: Ecuador (EN)
+  - value: eg-en
+    label:
+      en_US: Egypt (EN)
+  - value: sv-en
+    label:
+      en_US: El Salvador (EN)
+  - value: gq-en
+    label:
+      en_US: Equatorial Guinea (EN)
+  - value: er-en
+    label:
+      en_US: Eritrea (EN)
+  - value: ee-en
+    label:
+      en_US: Estonia (EN)
+  - value: et-en
+    label:
+      en_US: Ethiopia (EN)
+  - value: fk-en
+    label:
+      en_US: Falkland Islands (Malvinas) (EN)
+  - value: fo-en
+    label:
+      en_US: Faroe Islands (EN)
+  - value: fj-en
+    label:
+      en_US: Fiji (EN)
+  - value: fi-en
+    label:
+      en_US: Finland (EN)
+  - value: fr-en
+    label:
+      en_US: France (EN)
+  - value: gf-en
+    label:
+      en_US: French Guiana (EN)
+  - value: pf-en
+    label:
+      en_US: French Polynesia (EN)
+  - value: tf-en
+    label:
+      en_US: French Southern Territories (EN)
+  - value: ga-en
+    label:
+      en_US: Gabon (EN)
+  - value: gm-en
+    label:
+      en_US: Gambia (EN)
+  - value: ge-en
+    label:
+      en_US: Georgia (EN)
+  - value: de-en
+    label:
+      en_US: Germany (EN)
+  - value: gh-en
+    label:
+      en_US: Ghana (EN)
+  - value: gi-en
+    label:
+      en_US: Gibraltar (EN)
+  - value: gr-en
+    label:
+      en_US: Greece (EN)
+  - value: gl-en
+    label:
+      en_US: Greenland (EN)
+  - value: gd-en
+    label:
+      en_US: Grenada (EN)
+  - value: gp-en
+    label:
+      en_US: Guadeloupe (EN)
+  - value: gu-en
+    label:
+      en_US: Guam (EN)
+  - value: gt-en
+    label:
+      en_US: Guatemala (EN)
+  - value: gg-en
+    label:
+      en_US: Guernsey (EN)
+  - value: gn-en
+    label:
+      en_US: Guinea (EN)
+  - value: gw-en
+    label:
+      en_US: Guinea-Bissau (EN)
+  - value: gy-en
+    label:
+      en_US: Guyana (EN)
+  - value: ht-en
+    label:
+      en_US: Haiti (EN)
+  - value: hm-en
+    label:
+      en_US: Heard Island and Mcdonald Islands (EN)
+  - value: va-en
+    label:
+      en_US: Holy See (Vatican City State) (EN)
+  - value: hn-en
+    label:
+      en_US: Honduras (EN)
+  - value: hk-en
+    label:
+      en_US: Hong Kong (EN)
+  - value: hu-en
+    label:
+      en_US: Hungary (EN)
+  - value: is-en
+    label:
+      en_US: Iceland (EN)
+  - value: in-en
+    label:
+      en_US: India (EN)
+  - value: id-en
+    label:
+      en_US: Indonesia (EN)
+  - value: ir-en
+    label:
+      en_US: Iran, Islamic Republic of (EN)
+  - value: iq-en
+    label:
+      en_US: Iraq (EN)
+  - value: ie-en
+    label:
+      en_US: Ireland (EN)
+  - value: im-en
+    label:
+      en_US: Isle of Man (EN)
+  - value: il-en
+    label:
+      en_US: Israel (EN)
+  - value: it-en
+    label:
+      en_US: Italy (EN)
+  - value: je-en
+    label:
+      en_US: Jersey (EN)
+  - value: jm-en
+    label:
+      en_US: Jamaica (EN)
+  - value: jp-en
+    label:
+      en_US: Japan (EN)
+  - value: jo-en
+    label:
+      en_US: Jordan (EN)
+  - value: kz-en
+    label:
+      en_US: Kazakhstan (EN)
+  - value: ke-en
+    label:
+      en_US: Kenya (EN)
+  - value: ki-en
+    label:
+      en_US: Kiribati (EN)
+  - value: kp-en
+    label:
+      en_US: Korea, Democratic People's Republic of (EN)
+  - value: kr-en
+    label:
+      en_US: Korea, Republic of (EN)
+  - value: kw-en
+    label:
+      en_US: Kuwait (EN)
+  - value: kg-en
+    label:
+      en_US: Kyrgyzstan (EN)
+  - value: la-en
+    label:
+      en_US: Lao People's Democratic Republic (EN)
+  - value: lv-en
+    label:
+      en_US: Latvia (EN)
+  - value: lb-en
+    label:
+      en_US: Lebanon (EN)
+  - value: ls-en
+    label:
+      en_US: Lesotho (EN)
+  - value: lr-en
+    label:
+      en_US: Liberia (EN)
+  - value: ly-en
+    label:
+      en_US: Libyan Arab Jamahiriya (EN)
+  - value: li-en
+    label:
+      en_US: Liechtenstein (EN)
+  - value: lt-en
+    label:
+      en_US: Lithuania (EN)
+  - value: lu-en
+    label:
+      en_US: Luxembourg (EN)
+  - value: mo-en
+    label:
+      en_US: Macao (EN)
+  - value: mk-en
+    label:
+      en_US: Macedonia, the Former Yugosalv Republic of (EN)
+  - value: mg-en
+    label:
+      en_US: Madagascar (EN)
+  - value: mw-en
+    label:
+      en_US: Malawi (EN)
+  - value: my-en
+    label:
+      en_US: Malaysia (EN)
+  - value: mv-en
+    label:
+      en_US: Maldives (EN)
+  - value: ml-en
+    label:
+      en_US: Mali (EN)
+  - value: mt-en
+    label:
+      en_US: Malta (EN)
+  - value: mh-en
+    label:
+      en_US: Marshall Islands (EN)
+  - value: mq-en
+    label:
+      en_US: Martinique (EN)
+  - value: mr-en
+    label:
+      en_US: Mauritania (EN)
+  - value: mu-en
+    label:
+      en_US: Mauritius (EN)
+  - value: yt-en
+    label:
+      en_US: Mayotte (EN)
+  - value: mx-en
+    label:
+      en_US: Mexico (EN)
+  - value: fm-en
+    label:
+      en_US: Micronesia, Federated States of (EN)
+  - value: md-en
+    label:
+      en_US: Moldova, Republic of (EN)
+  - value: mc-en
+    label:
+      en_US: Monaco (EN)
+  - value: mn-en
+    label:
+      en_US: Mongolia (EN)
+  - value: me-en
+    label:
+      en_US: Montenegro (EN)
+  - value: ms-en
+    label:
+      en_US: Montserrat (EN)
+  - value: ma-en
+    label:
+      en_US: Morocco (EN)
+  - value: mz-en
+    label:
+      en_US: Mozambique (EN)
+  - value: mm-en
+    label:
+      en_US: Myanmar (EN)
+  - value: na-en
+    label:
+      en_US: Namibia (EN)
+  - value: nr-en
+    label:
+      en_US: Nauru (EN)
+  - value: np-en
+    label:
+      en_US: Nepal (EN)
+  - value: nl-en
+    label:
+      en_US: Netherlands (EN)
+  - value: an-en
+    label:
+      en_US: Netherlands Antilles (EN)
+  - value: nc-en
+    label:
+      en_US: New Caledonia (EN)
+  - value: nz-en
+    label:
+      en_US: New Zealand (EN)
+  - value: ni-en
+    label:
+      en_US: Nicaragua (EN)
+  - value: ne-en
+    label:
+      en_US: Niger (EN)
+  - value: ng-en
+    label:
+      en_US: Nigeria (EN)
+  - value: nu-en
+    label:
+      en_US: Niue (EN)
+  - value: nf-en
+    label:
+      en_US: Norfolk Island (EN)
+  - value: mp-en
+    label:
+      en_US: Northern Mariana Islands (EN)
+  - value: no-en
+    label:
+      en_US: Norway (EN)
+  - value: om-en
+    label:
+      en_US: Oman (EN)
+  - value: pk-en
+    label:
+      en_US: Pakistan (EN)
+  - value: pw-en
+    label:
+      en_US: Palau (EN)
+  - value: ps-en
+    label:
+      en_US: Palestinian Territory, Occupied (EN)
+  - value: pa-en
+    label:
+      en_US: Panama (EN)
+  - value: pg-en
+    label:
+      en_US: Papua New Guinea (EN)
+  - value: py-en
+    label:
+      en_US: Paraguay (EN)
+  - value: pe-en
+    label:
+      en_US: Peru (EN)
+  - value: ph-en
+    label:
+      en_US: Philippines (EN)
+  - value: pn-en
+    label:
+      en_US: Pitcairn (EN)
+  - value: pl-en
+    label:
+      en_US: Poland (EN)
+  - value: pt-en
+    label:
+      en_US: Portugal (EN)
+  - value: pr-en
+    label:
+      en_US: Puerto Rico (EN)
+  - value: qa-en
+    label:
+      en_US: Qatar (EN)
+  - value: re-en
+    label:
+      en_US: Reunion (EN)
+  - value: ro-en
+    label:
+      en_US: Romania (EN)
+  - value: ru-en
+    label:
+      en_US: Russian Federation (EN)
+  - value: rw-en
+    label:
+      en_US: Rwanda (EN)
+  - value: sh-en
+    label:
+      en_US: Saint Helena (EN)
+  - value: kn-en
+    label:
+      en_US: Saint Kitts and Nevis (EN)
+  - value: lc-en
+    label:
+      en_US: Saint Lucia (EN)
+  - value: pm-en
+    label:
+      en_US: Saint Pierre and Miquelon (EN)
+  - value: vc-en
+    label:
+      en_US: Saint Vincent and the Grenadines (EN)
+  - value: ws-en
+    label:
+      en_US: Samoa (EN)
+  - value: sm-en
+    label:
+      en_US: San Marino (EN)
+  - value: st-en
+    label:
+      en_US: Sao Tome and Principe (EN)
+  - value: sa-en
+    label:
+      en_US: Saudi Arabia (EN)
+  - value: sn-en
+    label:
+      en_US: Senegal (EN)
+  - value: rs-en
+    label:
+      en_US: Serbia (EN)
+  - value: sc-en
+    label:
+      en_US: Seychelles (EN)
+  - value: sl-en
+    label:
+      en_US: Sierra Leone (EN)
+  - value: sg-en
+    label:
+      en_US: Singapore (EN)
+  - value: sk-en
+    label:
+      en_US: Slovakia (EN)
+  - value: si-en
+    label:
+      en_US: Slovenia (EN)
+  - value: sb-en
+    label:
+      en_US: Solomon Islands (EN)
+  - value: so-en
+    label:
+      en_US: Somalia (EN)
+  - value: za-en
+    label:
+      en_US: South Africa (EN)
+  - value: gs-en
+    label:
+      en_US: South Georgia and the South Sandwich Islands (EN)
+  - value: es-en
+    label:
+      en_US: Spain (EN)
+  - value: lk-en
+    label:
+      en_US: Sri Lanka (EN)
+  - value: sd-en
+    label:
+      en_US: Sudan (EN)
+  - value: sr-en
+    label:
+      en_US: Suriname (EN)
+  - value: sj-en
+    label:
+      en_US: Svalbard and Jan Mayen (EN)
+  - value: sz-en
+    label:
+      en_US: Swaziland (EN)
+  - value: se-en
+    label:
+      en_US: Sweden (EN)
+  - value: ch-en
+    label:
+      en_US: Switzerland (EN)
+  - value: sy-en
+    label:
+      en_US: Syrian Arab Republic (EN)
+  - value: tw-en
+    label:
+      en_US: Taiwan, Province of China (EN)
+  - value: tj-en
+    label:
+      en_US: Tajikistan (EN)
+  - value: tz-en
+    label:
+      en_US: Tanzania, United Republic of (EN)
+  - value: th-en
+    label:
+      en_US: Thailand (EN)
+  - value: tl-en
+    label:
+      en_US: Timor-Leste (EN)
+  - value: tg-en
+    label:
+      en_US: Togo (EN)
+  - value: tk-en
+    label:
+      en_US: Tokelau (EN)
+  - value: to-en
+    label:
+      en_US: Tonga (EN)
+  - value: tt-en
+    label:
+      en_US: Trinidad and Tobago (EN)
+  - value: tn-en
+    label:
+      en_US: Tunisia (EN)
+  - value: tr-en
+    label:
+      en_US: Turkiye (EN)
+  - value: tm-en
+    label:
+      en_US: Turkmenistan (EN)
+  - value: tc-en
+    label:
+      en_US: Turks and Caicos Islands (EN)
+  - value: tv-en
+    label:
+      en_US: Tuvalu (EN)
+  - value: ug-en
+    label:
+      en_US: Uganda (EN)
+  - value: ua-en
+    label:
+      en_US: Ukraine (EN)
+  - value: ae-en
+    label:
+      en_US: United Arab Emirates (EN)
+  - value: uk-en
+    label:
+      en_US: United Kingdom (EN)
+  - value: gb-en
+    label:
+      en_US: United Kingdom (EN)
+  - value: us-en
+    label:
+      en_US: United States (EN)
+  - value: um-en
+    label:
+      en_US: United States Minor Outlying Islands (EN)
+  - value: uy-en
+    label:
+      en_US: Uruguay (EN)
+  - value: uz-en
+    label:
+      en_US: Uzbekistan (EN)
+  - value: vu-en
+    label:
+      en_US: Vanuatu (EN)
+  - value: ve-en
+    label:
+      en_US: Venezuela (EN)
+  - value: vn-en
+    label:
+      en_US: Viet Nam (EN)
+  - value: vg-en
+    label:
+      en_US: Virgin Islands, British (EN)
+  - value: vi-en
+    label:
+      en_US: Virgin Islands, U.S. (EN)
+  - value: wf-en
+    label:
+      en_US: Wallis and Futuna (EN)
+  - value: eh-en
+    label:
+      en_US: Western Sahara (EN)
+  - value: ye-en
+    label:
+      en_US: Yemen (EN)
+  - value: zm-en
+    label:
+      en_US: Zambia (EN)
+  - value: zw-en
+    label:
+      en_US: Zimbabwe (EN)
+- name: start
+  type: number
+  required: false
+  label:
+    en_US: Result offset
+  human_description:
+    en_US: Result offset parameter.
+  llm_description: Result offset parameter.
+  form: form
+  placeholder:
+    en_US: Start Position
+  default: 0
+- name: df
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Filter By Date
+  human_description:
+    en_US: Filter By Date parameter.
+  llm_description: Filter By Date parameter.
+  form: form
+  multiple: false
+  options:
+  - value: ''
+    label:
+      en_US: Any time
+  - value: d
+    label:
+      en_US: Past day
+  - value: w
+    label:
+      en_US: Past week
+  - value: m
+    label:
+      en_US: Past month
+  - value: y
+    label:
+      en_US: Past year
+- name: kp
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Adult Content Filtering
+  human_description:
+    en_US: Adult Content Filtering parameter.
+  llm_description: Adult Content Filtering parameter.
+  form: form
+  multiple: false
+  options:
+  - value: '1'
+    label:
+      en_US: Strict
+  - value: '-1'
+    label:
+      en_US: Moderate
+  - value: '-2'
+    label:
+      en_US: 'False'
+- name: extra_parameters_json
+  type: string
+  required: false
+  default: '{}'
+  label:
+    en_US: Extra Parameters JSON
+  human_description:
+    en_US: Advanced JSON overrides; engine and isjson remain protected.
+  llm_description: Optional advanced JSON object override. The engine and isjson fields
+    remain protected.
+  form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/generated/duckduckgo.py

@@ -1,0 +1,533 @@
+identity:
+  author: thordata
+  name: bing_images
+  label:
+    en_US: Thordata Bing Images
+description:
+  human:
+    en_US: Search with the fixed Thordata SERP engine Thordata Bing Images.
+  llm: Run a Thordata SERP search using the fixed engine bing_images.
+parameters:
+- name: q
+  type: string
+  required: true
+  label:
+    en_US: Search Query
+  human_description:
+    en_US: Search Query parameter.
+  llm_description: Search Query parameter.
+  form: llm
+  placeholder:
+    en_US: pizza
+- name: no_cache
+  type: boolean
+  required: false
+  label:
+    en_US: Disable Caching
+  human_description:
+    en_US: Disable Caching parameter.
+  llm_description: Disable Caching parameter.
+  form: form
+  default: false
+- name: cc
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Country
+  human_description:
+    en_US: Country parameter.
+  llm_description: Country parameter.
+  form: form
+  multiple: false
+  options:
+  - value: AR
+    label:
+      en_US: Argentina-AR
+  - value: AU
+    label:
+      en_US: Australia-AU
+  - value: AT
+    label:
+      en_US: Austria-AT
+  - value: BE
+    label:
+      en_US: Belgium-BE
+  - value: BR
+    label:
+      en_US: Brazil-BR
+  - value: CA
+    label:
+      en_US: Canada-CA
+  - value: CL
+    label:
+      en_US: Chile-CL
+  - value: DK
+    label:
+      en_US: Denmark-DK
+  - value: FI
+    label:
+      en_US: Finland-FI
+  - value: FR
+    label:
+      en_US: France-FR
+  - value: DE
+    label:
+      en_US: Germany-DE
+  - value: HK
+    label:
+      en_US: Hong Kong SAR-HK
+  - value: IN
+    label:
+      en_US: India-IN
+  - value: ID
+    label:
+      en_US: Indonesia-ID
+  - value: IT
+    label:
+      en_US: Italy-IT
+  - value: JP
+    label:
+      en_US: Japan-JP
+  - value: KR
+    label:
+      en_US: Korea-KR
+  - value: MY
+    label:
+      en_US: Malaysia-MY
+  - value: MX
+    label:
+      en_US: Mexico-MX
+  - value: NL
+    label:
+      en_US: Netherlands-NL
+  - value: NZ
+    label:
+      en_US: New Zealand-NZ
+  - value: 'NO'
+    label:
+      en_US: Norway-NO
+  - value: CN
+    label:
+      en_US: People's Republic of China-CN
+  - value: PL
+    label:
+      en_US: Poland-PL
+  - value: PT
+    label:
+      en_US: Portugal-PT
+  - value: PH
+    label:
+      en_US: Republic of the Philippines-PH
+  - value: RU
+    label:
+      en_US: Russia-RU
+  - value: SA
+    label:
+      en_US: Saudi Arabia-SA
+  - value: ZA
+    label:
+      en_US: South Africa-ZA
+  - value: ES
+    label:
+      en_US: Spain-ES
+  - value: SE
+    label:
+      en_US: Sweden-SE
+  - value: CH
+    label:
+      en_US: Switzerland-CH
+  - value: TW
+    label:
+      en_US: Taiwan-TW
+  - value: TR
+    label:
+      en_US: Türkiye-TR
+  - value: GB
+    label:
+      en_US: United Kingdom-GB
+  - value: US
+    label:
+      en_US: United States-US
+- name: mkt
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Language
+  human_description:
+    en_US: Language parameter.
+  llm_description: Language parameter.
+  form: form
+  multiple: false
+  options:
+  - value: zh-cn
+    label:
+      en_US: Chinese-zh-CN
+  - value: da-dk
+    label:
+      en_US: Danish-da-DK
+  - value: nl-be
+    label:
+      en_US: Dutch-nl-BE
+  - value: nl-nl
+    label:
+      en_US: Dutch-nl-NL
+  - value: en-au
+    label:
+      en_US: English-en-AU
+  - value: en-ca
+    label:
+      en_US: English-en-CA
+  - value: en-gb
+    label:
+      en_US: English-en-GB
+  - value: en-id
+    label:
+      en_US: English-en-ID
+  - value: en-in
+    label:
+      en_US: English-en-IN
+  - value: en-my
+    label:
+      en_US: English-en-MY
+  - value: en-nz
+    label:
+      en_US: English-en-NZ
+  - value: en-ph
+    label:
+      en_US: English-en-PH
+  - value: en-us
+    label:
+      en_US: English-en-US
+  - value: en-za
+    label:
+      en_US: English-en-ZA
+  - value: fi-fi
+    label:
+      en_US: Finnish-fi-FI
+  - value: fr-be
+    label:
+      en_US: French-fr-BE
+  - value: fr-ca
+    label:
+      en_US: French-fr-CA
+  - value: fr-ch
+    label:
+      en_US: French-fr-CH
+  - value: fr-fr
+    label:
+      en_US: French-fr-FR
+  - value: de-at
+    label:
+      en_US: German-de-AT
+  - value: de-ch
+    label:
+      en_US: German-de-CH
+  - value: de-de
+    label:
+      en_US: German-de-DE
+  - value: it-it
+    label:
+      en_US: Italian-it-IT
+  - value: ja-jp
+    label:
+      en_US: Japanese-ja-JP
+  - value: ko-kr
+    label:
+      en_US: Korean-ko-KR
+  - value: no-no
+    label:
+      en_US: Norwegian-no-NO
+  - value: pl-pl
+    label:
+      en_US: Polish-pl-PL
+  - value: pt-br
+    label:
+      en_US: Portuguese-pt-BR
+  - value: ru-ru
+    label:
+      en_US: Russian-ru-RU
+  - value: es-ar
+    label:
+      en_US: Spanish-es-AR
+  - value: es-cl
+    label:
+      en_US: Spanish-es-CL
+  - value: es-es
+    label:
+      en_US: Spanish-es-ES
+  - value: es-mx
+    label:
+      en_US: Spanish-es-MX
+  - value: es-us
+    label:
+      en_US: Spanish-es-US
+  - value: sv-se
+    label:
+      en_US: Swedish-sv-SE
+  - value: zh-hk
+    label:
+      en_US: Traditional Chinese-zh-HK
+  - value: zh-tw
+    label:
+      en_US: Traditional Chinese-zh-TW
+  - value: tr-tr
+    label:
+      en_US: Turkish-tr-TR
+- name: first
+  type: number
+  required: false
+  label:
+    en_US: Result offset
+  human_description:
+    en_US: Result offset parameter.
+  llm_description: Result offset parameter.
+  form: form
+  placeholder:
+    en_US: First Result Offset
+  default: 1
+- name: count
+  type: number
+  required: false
+  label:
+    en_US: Number of Results
+  human_description:
+    en_US: Number of Results parameter.
+  llm_description: Number of Results parameter.
+  form: form
+  placeholder:
+    en_US: Result Count
+  default: 10
+- name: adlt
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Adult Content Filtering
+  human_description:
+    en_US: Adult Content Filtering parameter.
+  llm_description: Adult Content Filtering parameter.
+  form: form
+  multiple: false
+  options:
+  - value: strict
+    label:
+      en_US: Strict
+  - value: 'off'
+    label:
+      en_US: 'Off'
+- name: imagesize
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Image Size
+  human_description:
+    en_US: Image Size parameter.
+  llm_description: Image Size parameter.
+  form: form
+  multiple: false
+  options:
+  - value: small
+    label:
+      en_US: Small
+  - value: medium
+    label:
+      en_US: Medium
+  - value: large
+    label:
+      en_US: Large
+  - value: wallpaper
+    label:
+      en_US: Extra Large
+- name: color2
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Color
+  human_description:
+    en_US: Color parameter.
+  llm_description: Color parameter.
+  form: form
+  multiple: false
+  options:
+  - value: color
+    label:
+      en_US: Color Only
+  - value: bw
+    label:
+      en_US: Black & White
+  - value: FGcls_RED
+    label:
+      en_US: Red
+  - value: FGcls_ORGANGE
+    label:
+      en_US: Orange
+  - value: FGcls_YELLOW
+    label:
+      en_US: Yellow
+  - value: FGcls_GREEN
+    label:
+      en_US: Green
+  - value: FGcls_TEAL
+    label:
+      en_US: Teal
+  - value: FGcls_BLUE
+    label:
+      en_US: Blue
+  - value: FGcls_PURPLE
+    label:
+      en_US: Purple
+  - value: FGcls_PINK
+    label:
+      en_US: Pink
+  - value: FGcls_BROWN
+    label:
+      en_US: Brown
+  - value: FGcls_BLACK
+    label:
+      en_US: Black
+  - value: FGcls_GRAY
+    label:
+      en_US: Gray
+  - value: FGcls_WHITE
+    label:
+      en_US: White
+- name: photo
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Type
+  human_description:
+    en_US: Type parameter.
+  llm_description: Type parameter.
+  form: form
+  multiple: false
+  options:
+  - value: photo
+    label:
+      en_US: Photo
+  - value: clipart
+    label:
+      en_US: Clipart
+  - value: linedrawing
+    label:
+      en_US: Line Drawing
+  - value: animatedgif
+    label:
+      en_US: Animated GIF
+  - value: animatedgifhttps
+    label:
+      en_US: Animated GIF HTTPS
+  - value: transparent
+    label:
+      en_US: Transparent
+  - value: shopping
+    label:
+      en_US: Shopping, return only images that contain
+- name: aspect
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Layout
+  human_description:
+    en_US: Layout parameter.
+  llm_description: Layout parameter.
+  form: form
+  multiple: false
+  options:
+  - value: square
+    label:
+      en_US: Square
+  - value: wide
+    label:
+      en_US: Wide
+  - value: tall
+    label:
+      en_US: Tall
+- name: face
+  type: dynamic-select
+  required: false
+  label:
+    en_US: People
+  human_description:
+    en_US: People parameter.
+  llm_description: People parameter.
+  form: form
+  multiple: false
+  options:
+  - value: face
+    label:
+      en_US: Faces Only
+  - value: portrait
+    label:
+      en_US: Head & Shoulders
+- name: age
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Date
+  human_description:
+    en_US: Date parameter.
+  llm_description: Date parameter.
+  form: form
+  multiple: false
+  options:
+  - value: lt1440
+    label:
+      en_US: Past 24 hours
+  - value: lt10080
+    label:
+      en_US: Past week
+  - value: lt43200
+    label:
+      en_US: Past month
+  - value: lt525600
+    label:
+      en_US: Past year
+- name: license
+  type: dynamic-select
+  required: false
+  label:
+    en_US: License
+  human_description:
+    en_US: License parameter.
+  llm_description: License parameter.
+  form: form
+  multiple: false
+  options:
+  - value: Type-Any
+    label:
+      en_US: All Creative Commons
+  - value: L1
+    label:
+      en_US: Public Domain
+  - value: L2_L3_L4_L5_L6_L7
+    label:
+      en_US: Free to share and use
+  - value: L2_L3_L4
+    label:
+      en_US: Free to share and use commercially
+  - value: L2_L3_L5_L6
+    label:
+      en_US: Free to modify, share and use
+  - value: L2_L3
+    label:
+      en_US: Free to modify, share, and use commercially
+- name: extra_parameters_json
+  type: string
+  required: false
+  default: '{}'
+  label:
+    en_US: Extra Parameters JSON
+  human_description:
+    en_US: Advanced JSON overrides; engine and isjson remain protected.
+  llm_description: Optional advanced JSON object override. The engine and isjson fields
+    remain protected.
+  form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/generated/bing_images.py

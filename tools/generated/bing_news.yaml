@@ -1,0 +1,825 @@
+identity:
+  author: thordata
+  name: bing_news
+  label:
+    en_US: Thordata Bing News
+description:
+  human:
+    en_US: Search with the fixed Thordata SERP engine Thordata Bing News.
+  llm: Run a Thordata SERP search using the fixed engine bing_news.
+parameters:
+- name: q
+  type: string
+  required: true
+  label:
+    en_US: Search Query
+  human_description:
+    en_US: Search Query parameter.
+  llm_description: Search Query parameter.
+  form: llm
+  placeholder:
+    en_US: pizza
+- name: no_cache
+  type: boolean
+  required: false
+  label:
+    en_US: Disable Caching
+  human_description:
+    en_US: Disable Caching parameter.
+  llm_description: Disable Caching parameter.
+  form: form
+  default: false
+- name: cc
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Country
+  human_description:
+    en_US: Country parameter.
+  llm_description: Country parameter.
+  form: form
+  multiple: false
+  options:
+  - value: AR
+    label:
+      en_US: Argentina-AR
+  - value: AU
+    label:
+      en_US: Australia-AU
+  - value: AT
+    label:
+      en_US: Austria-AT
+  - value: BE
+    label:
+      en_US: Belgium-BE
+  - value: BR
+    label:
+      en_US: Brazil-BR
+  - value: CA
+    label:
+      en_US: Canada-CA
+  - value: CL
+    label:
+      en_US: Chile-CL
+  - value: DK
+    label:
+      en_US: Denmark-DK
+  - value: FI
+    label:
+      en_US: Finland-FI
+  - value: FR
+    label:
+      en_US: France-FR
+  - value: DE
+    label:
+      en_US: Germany-DE
+  - value: HK
+    label:
+      en_US: Hong Kong SAR-HK
+  - value: IN
+    label:
+      en_US: India-IN
+  - value: ID
+    label:
+      en_US: Indonesia-ID
+  - value: IT
+    label:
+      en_US: Italy-IT
+  - value: JP
+    label:
+      en_US: Japan-JP
+  - value: KR
+    label:
+      en_US: Korea-KR
+  - value: MY
+    label:
+      en_US: Malaysia-MY
+  - value: MX
+    label:
+      en_US: Mexico-MX
+  - value: NL
+    label:
+      en_US: Netherlands-NL
+  - value: NZ
+    label:
+      en_US: New Zealand-NZ
+  - value: 'NO'
+    label:
+      en_US: Norway-NO
+  - value: CN
+    label:
+      en_US: People's Republic of China-CN
+  - value: PL
+    label:
+      en_US: Poland-PL
+  - value: PT
+    label:
+      en_US: Portugal-PT
+  - value: PH
+    label:
+      en_US: Republic of the Philippines-PH
+  - value: RU
+    label:
+      en_US: Russia-RU
+  - value: SA
+    label:
+      en_US: Saudi Arabia-SA
+  - value: ZA
+    label:
+      en_US: South Africa-ZA
+  - value: ES
+    label:
+      en_US: Spain-ES
+  - value: SE
+    label:
+      en_US: Sweden-SE
+  - value: CH
+    label:
+      en_US: Switzerland-CH
+  - value: TW
+    label:
+      en_US: Taiwan-TW
+  - value: TR
+    label:
+      en_US: Türkiye-TR
+  - value: GB
+    label:
+      en_US: United Kingdom-GB
+  - value: US
+    label:
+      en_US: United States-US
+- name: setlang
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Language
+  human_description:
+    en_US: Language parameter.
+  llm_description: Language parameter.
+  form: form
+  default: en
+  multiple: false
+  options:
+  - value: af
+    label:
+      en_US: Afrikaans
+  - value: ak
+    label:
+      en_US: Akan
+  - value: ws
+    label:
+      en_US: Samoa
+  - value: am
+    label:
+      en_US: Amharic
+  - value: ar
+    label:
+      en_US: Arabic
+  - value: hy
+    label:
+      en_US: Armenian
+  - value: az
+    label:
+      en_US: Azerbaijani
+  - value: ceb
+    label:
+      en_US: Binisaya
+  - value: eu
+    label:
+      en_US: Basque
+  - value: be
+    label:
+      en_US: Belarusian
+  - value: bem
+    label:
+      en_US: Bemba
+  - value: bn
+    label:
+      en_US: Bengali
+  - value: bh
+    label:
+      en_US: Bihari
+  - value: xx-bork
+    label:
+      en_US: Bork, bork, bork!
+  - value: bs
+    label:
+      en_US: Bosnian
+  - value: br
+    label:
+      en_US: Breton
+  - value: bg
+    label:
+      en_US: Bulgarian
+  - value: bt
+    label:
+      en_US: Bhutanese
+  - value: km
+    label:
+      en_US: Cambodian
+  - value: ca
+    label:
+      en_US: Catalan
+  - value: chr
+    label:
+      en_US: Cherokee
+  - value: ny
+    label:
+      en_US: Chichewa
+  - value: zh-cn
+    label:
+      en_US: Chinese (Simplified)
+  - value: zh-tw
+    label:
+      en_US: Chinese (Traditional)
+  - value: co
+    label:
+      en_US: Corsican
+  - value: hr
+    label:
+      en_US: Croatian
+  - value: cs
+    label:
+      en_US: Czech
+  - value: da
+    label:
+      en_US: Danish
+  - value: nl
+    label:
+      en_US: Dutch
+  - value: xx-elmer
+    label:
+      en_US: Elmer Fudd
+  - value: en
+    label:
+      en_US: English
+  - value: eo
+    label:
+      en_US: Esperanto
+  - value: et
+    label:
+      en_US: Estonian
+  - value: ee
+    label:
+      en_US: Ewe
+  - value: fo
+    label:
+      en_US: Faroese
+  - value: tl
+    label:
+      en_US: Filipino
+  - value: fi
+    label:
+      en_US: Finnish
+  - value: fr
+    label:
+      en_US: French
+  - value: fy
+    label:
+      en_US: Frisian
+  - value: gaa
+    label:
+      en_US: Ga
+  - value: gl
+    label:
+      en_US: Galician
+  - value: ka
+    label:
+      en_US: Georgian
+  - value: de
+    label:
+      en_US: German
+  - value: el
+    label:
+      en_US: Greek
+  - value: kl
+    label:
+      en_US: Greenlandic
+  - value: gn
+    label:
+      en_US: Guarani
+  - value: gu
+    label:
+      en_US: Gujarati
+  - value: xx-hacker
+    label:
+      en_US: Hacker
+  - value: ht
+    label:
+      en_US: Haitian Creole
+  - value: ha
+    label:
+      en_US: Hausa
+  - value: haw
+    label:
+      en_US: Hawaiian
+  - value: iw
+    label:
+      en_US: Hebrew
+  - value: he
+    label:
+      en_US: Hebrew
+  - value: hi
+    label:
+      en_US: Hindi
+  - value: hu
+    label:
+      en_US: Hungarian
+  - value: is
+    label:
+      en_US: Icelandic
+  - value: ig
+    label:
+      en_US: Igbo
+  - value: id
+    label:
+      en_US: Indonesian
+  - value: ia
+    label:
+      en_US: Interlingua
+  - value: ga
+    label:
+      en_US: Irish
+  - value: it
+    label:
+      en_US: Italian
+  - value: ja
+    label:
+      en_US: Japanese
+  - value: jw
+    label:
+      en_US: Javanese
+  - value: kn
+    label:
+      en_US: Kannada
+  - value: kk
+    label:
+      en_US: Kazakh
+  - value: rw
+    label:
+      en_US: Kinyarwanda
+  - value: rn
+    label:
+      en_US: Kirundi
+  - value: xx-klingon
+    label:
+      en_US: Klingon
+  - value: kg
+    label:
+      en_US: Kongo
+  - value: ko
+    label:
+      en_US: Korean
+  - value: kri
+    label:
+      en_US: Krio (Sierra Leone)
+  - value: ku
+    label:
+      en_US: Kurdish
+  - value: ckb
+    label:
+      en_US: Kurdish (Soranî)
+  - value: ky
+    label:
+      en_US: Kyrgyz
+  - value: lo
+    label:
+      en_US: Laothian
+  - value: la
+    label:
+      en_US: Latin
+  - value: lv
+    label:
+      en_US: Latvian
+  - value: ln
+    label:
+      en_US: Lingala
+  - value: lt
+    label:
+      en_US: Lithuanian
+  - value: loz
+    label:
+      en_US: Lozi
+  - value: lg
+    label:
+      en_US: Luganda
+  - value: ach
+    label:
+      en_US: Luo
+  - value: mk
+    label:
+      en_US: Macedonian
+  - value: mg
+    label:
+      en_US: Malagasy
+  - value: ms
+    label:
+      en_US: Malay
+  - value: ml
+    label:
+      en_US: Malayalam
+  - value: mt
+    label:
+      en_US: Maltese
+  - value: mv
+    label:
+      en_US: Maldives
+  - value: mi
+    label:
+      en_US: Maori
+  - value: mr
+    label:
+      en_US: Marathi
+  - value: mfe
+    label:
+      en_US: Mauritian Creole
+  - value: mo
+    label:
+      en_US: Moldavian
+  - value: mn
+    label:
+      en_US: Mongolian
+  - value: sr-me
+    label:
+      en_US: Montenegrin
+  - value: my
+    label:
+      en_US: Myanmar
+  - value: ne
+    label:
+      en_US: Nepali
+  - value: pcm
+    label:
+      en_US: Nigerian Pidgin
+  - value: nso
+    label:
+      en_US: Northern Sotho
+  - value: 'no'
+    label:
+      en_US: Norwegian
+  - value: nn
+    label:
+      en_US: Norwegian (Nynorsk)
+  - value: oc
+    label:
+      en_US: Occitan
+  - value: or
+    label:
+      en_US: Oriya
+  - value: om
+    label:
+      en_US: Oromo
+  - value: ps
+    label:
+      en_US: Pashto
+  - value: fa
+    label:
+      en_US: Persian
+  - value: xx-pirate
+    label:
+      en_US: Pirate
+  - value: pl
+    label:
+      en_US: Polish
+  - value: pt
+    label:
+      en_US: Portuguese
+  - value: pt-br
+    label:
+      en_US: Portuguese (Brazil)
+  - value: pt-pt
+    label:
+      en_US: Portuguese (Portugal)
+  - value: pa
+    label:
+      en_US: Punjabi
+  - value: qu
+    label:
+      en_US: Quechua
+  - value: ro
+    label:
+      en_US: Romanian
+  - value: rm
+    label:
+      en_US: Romansh
+  - value: nyn
+    label:
+      en_US: Runyakitara
+  - value: ru
+    label:
+      en_US: Russian
+  - value: gd
+    label:
+      en_US: Scots Gaelic
+  - value: sr
+    label:
+      en_US: Serbian
+  - value: sh
+    label:
+      en_US: Serbo-Croatian
+  - value: st
+    label:
+      en_US: Sesotho
+  - value: tn
+    label:
+      en_US: Setswana
+  - value: crs
+    label:
+      en_US: Seychellois Creole
+  - value: sn
+    label:
+      en_US: Shona
+  - value: sd
+    label:
+      en_US: Sindhi
+  - value: si
+    label:
+      en_US: Sinhalese
+  - value: sk
+    label:
+      en_US: Slovak
+  - value: sl
+    label:
+      en_US: Slovenian
+  - value: so
+    label:
+      en_US: Somali
+  - value: es
+    label:
+      en_US: Spanish
+  - value: es-419
+    label:
+      en_US: Spanish (Latin American)
+  - value: su
+    label:
+      en_US: Sundanese
+  - value: sw
+    label:
+      en_US: Swahili
+  - value: sv
+    label:
+      en_US: Swedish
+  - value: tg
+    label:
+      en_US: Tajik
+  - value: ta
+    label:
+      en_US: Tamil
+  - value: tt
+    label:
+      en_US: Tatar
+  - value: te
+    label:
+      en_US: Telugu
+  - value: th
+    label:
+      en_US: Thai
+  - value: ti
+    label:
+      en_US: Tigrinya
+  - value: to
+    label:
+      en_US: Tonga
+  - value: lua
+    label:
+      en_US: Tshiluba
+  - value: tum
+    label:
+      en_US: Tumbuka
+  - value: tr
+    label:
+      en_US: Turkish
+  - value: tk
+    label:
+      en_US: Turkmen
+  - value: tw
+    label:
+      en_US: Twi
+  - value: ug
+    label:
+      en_US: Uighur
+  - value: uk
+    label:
+      en_US: Ukrainian
+  - value: ur
+    label:
+      en_US: Urdu
+  - value: uz
+    label:
+      en_US: Uzbek
+  - value: vu
+    label:
+      en_US: Vanuatu
+  - value: vi
+    label:
+      en_US: Vietnamese
+  - value: cy
+    label:
+      en_US: Welsh
+  - value: wo
+    label:
+      en_US: Wolof
+  - value: xh
+    label:
+      en_US: Xhosa
+  - value: yi
+    label:
+      en_US: Yiddish
+  - value: yo
+    label:
+      en_US: Yoruba
+  - value: zu
+    label:
+      en_US: Zulu
+- name: mkt
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Language
+  human_description:
+    en_US: Language parameter.
+  llm_description: Language parameter.
+  form: form
+  multiple: false
+  options:
+  - value: zh-cn
+    label:
+      en_US: Chinese-zh-CN
+  - value: da-dk
+    label:
+      en_US: Danish-da-DK
+  - value: nl-be
+    label:
+      en_US: Dutch-nl-BE
+  - value: nl-nl
+    label:
+      en_US: Dutch-nl-NL
+  - value: en-au
+    label:
+      en_US: English-en-AU
+  - value: en-ca
+    label:
+      en_US: English-en-CA
+  - value: en-gb
+    label:
+      en_US: English-en-GB
+  - value: en-id
+    label:
+      en_US: English-en-ID
+  - value: en-in
+    label:
+      en_US: English-en-IN
+  - value: en-my
+    label:
+      en_US: English-en-MY
+  - value: en-nz
+    label:
+      en_US: English-en-NZ
+  - value: en-ph
+    label:
+      en_US: English-en-PH
+  - value: en-us
+    label:
+      en_US: English-en-US
+  - value: en-za
+    label:
+      en_US: English-en-ZA
+  - value: fi-fi
+    label:
+      en_US: Finnish-fi-FI
+  - value: fr-be
+    label:
+      en_US: French-fr-BE
+  - value: fr-ca
+    label:
+      en_US: French-fr-CA
+  - value: fr-ch
+    label:
+      en_US: French-fr-CH
+  - value: fr-fr
+    label:
+      en_US: French-fr-FR
+  - value: de-at
+    label:
+      en_US: German-de-AT
+  - value: de-ch
+    label:
+      en_US: German-de-CH
+  - value: de-de
+    label:
+      en_US: German-de-DE
+  - value: it-it
+    label:
+      en_US: Italian-it-IT
+  - value: ja-jp
+    label:
+      en_US: Japanese-ja-JP
+  - value: ko-kr
+    label:
+      en_US: Korean-ko-KR
+  - value: no-no
+    label:
+      en_US: Norwegian-no-NO
+  - value: pl-pl
+    label:
+      en_US: Polish-pl-PL
+  - value: pt-br
+    label:
+      en_US: Portuguese-pt-BR
+  - value: ru-ru
+    label:
+      en_US: Russian-ru-RU
+  - value: es-ar
+    label:
+      en_US: Spanish-es-AR
+  - value: es-cl
+    label:
+      en_US: Spanish-es-CL
+  - value: es-es
+    label:
+      en_US: Spanish-es-ES
+  - value: es-mx
+    label:
+      en_US: Spanish-es-MX
+  - value: es-us
+    label:
+      en_US: Spanish-es-US
+  - value: sv-se
+    label:
+      en_US: Swedish-sv-SE
+  - value: zh-hk
+    label:
+      en_US: Traditional Chinese-zh-HK
+  - value: zh-tw
+    label:
+      en_US: Traditional Chinese-zh-TW
+  - value: tr-tr
+    label:
+      en_US: Turkish-tr-TR
+- name: first
+  type: number
+  required: false
+  label:
+    en_US: Result offset
+  human_description:
+    en_US: Result offset parameter.
+  llm_description: Result offset parameter.
+  form: form
+  placeholder:
+    en_US: Start Position
+  default: 1
+- name: count
+  type: number
+  required: false
+  label:
+    en_US: Number of Results
+  human_description:
+    en_US: Number of Results parameter.
+  llm_description: Number of Results parameter.
+  form: form
+  placeholder:
+    en_US: Results Per Page
+  default: 10
+- name: qft
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Sort by Date
+  human_description:
+    en_US: Sort by Date parameter.
+  llm_description: Sort by Date parameter.
+  form: form
+  multiple: false
+  options:
+  - value: interval="7"
+    label:
+      en_US: Past 24 Hours
+  - value: interval="8"
+    label:
+      en_US: Past Week
+  - value: interval="9"
+    label:
+      en_US: Past Month
+  - value: sortbydate="1"
+    label:
+      en_US: Sort By Date
+- name: extra_parameters_json
+  type: string
+  required: false
+  default: '{}'
+  label:
+    en_US: Extra Parameters JSON
+  human_description:
+    en_US: Advanced JSON overrides; engine and isjson remain protected.
+  llm_description: Optional advanced JSON object override. The engine and isjson fields
+    remain protected.
+  form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/generated/bing_news.py

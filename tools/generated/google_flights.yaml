@@ -1,0 +1,156 @@
+identity:
+  author: thordata
+  name: google_flights
+  label:
+    en_US: Thordata Google Flights
+description:
+  human:
+    en_US: Search with the fixed Thordata SERP engine Thordata Google Flights.
+  llm: Run a Thordata SERP search using the fixed engine google_flights.
+parameters:
+- name: departure_id
+  type: string
+  required: true
+  label:
+    en_US: Departure airport code
+  human_description:
+    en_US: Departure airport code parameter.
+  llm_description: Departure airport code parameter.
+  form: llm
+  placeholder:
+    en_US: CDG
+- name: arrival_id
+  type: string
+  required: true
+  label:
+    en_US: Arrival airport code
+  human_description:
+    en_US: Arrival airport code parameter.
+  llm_description: Arrival airport code parameter.
+  form: form
+  placeholder:
+    en_US: AUS
+- name: no_cache
+  type: boolean
+  required: false
+  label:
+    en_US: Disable Caching
+  human_description:
+    en_US: Disable Caching parameter.
+  llm_description: Disable Caching parameter.
+  form: form
+  default: false
+- name: outbound_date
+  type: string
+  required: false
+  label:
+    en_US: Outbound Date
+  human_description:
+    en_US: Outbound Date parameter.
+  llm_description: Outbound Date parameter.
+  form: form
+  placeholder:
+    en_US: YYYY-MM-DD
+- name: return_date
+  type: string
+  required: false
+  label:
+    en_US: Return Date
+  human_description:
+    en_US: Return Date parameter.
+  llm_description: Return Date parameter.
+  form: form
+  placeholder:
+    en_US: YYYY-MM-DD
+- name: travel_class
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Travel Class
+  human_description:
+    en_US: Travel Class parameter.
+  llm_description: Travel Class parameter.
+  form: form
+  default: '1'
+  multiple: false
+  options:
+  - value: '1'
+    label:
+      en_US: Economy
+  - value: '2'
+    label:
+      en_US: Premium Economy
+  - value: '3'
+    label:
+      en_US: Business
+  - value: '4'
+    label:
+      en_US: First
+- name: adults
+  type: number
+  required: false
+  label:
+    en_US: Number of Adults
+  human_description:
+    en_US: Number of Adults parameter.
+  llm_description: Number of Adults parameter.
+  form: form
+  placeholder:
+    en_US: Adults
+  default: 1
+- name: children
+  type: number
+  required: false
+  label:
+    en_US: Number of Children
+  human_description:
+    en_US: Number of Children parameter.
+  llm_description: Number of Children parameter.
+  form: form
+  placeholder:
+    en_US: Children
+  default: 0
+- name: infants_in_seat
+  type: number
+  required: false
+  label:
+    en_US: Number of Infants in seat
+  human_description:
+    en_US: Number of Infants in seat parameter.
+  llm_description: Number of Infants in seat parameter.
+  form: form
+  placeholder:
+    en_US: Infants in seat
+  default: 0
+- name: infants_on_lap
+  type: number
+  required: false
+  label:
+    en_US: Number of Infants on lap
+  human_description:
+    en_US: Number of Infants on lap parameter.
+  llm_description: Number of Infants on lap parameter.
+  form: form
+  placeholder:
+    en_US: Infants on lap
+  default: 0
+- name: extra_parameters_json
+  type: string
+  required: false
+  default: '{}'
+  label:
+    en_US: Extra Parameters JSON
+  human_description:
+    en_US: Advanced JSON overrides; engine and isjson remain protected.
+  llm_description: Optional advanced JSON object override. The engine and isjson fields
+    remain protected.
+  form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/generated/google_flights.py

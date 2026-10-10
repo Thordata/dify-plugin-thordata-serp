@@ -1,0 +1,53 @@
+identity:
+  author: thordata
+  name: google_patents
+  label:
+    en_US: Thordata Google Patents Search
+description:
+  human:
+    en_US: Search with the fixed Thordata SERP engine Thordata Google Patents Search.
+  llm: Run a Thordata SERP search using the fixed engine google_patents.
+parameters:
+- name: q
+  type: string
+  required: true
+  label:
+    en_US: Search Query
+  human_description:
+    en_US: Search Query parameter.
+  llm_description: Search Query parameter.
+  form: llm
+  placeholder:
+    en_US: pizza
+- name: page
+  type: number
+  required: false
+  label:
+    en_US: Page number
+  human_description:
+    en_US: Page number parameter.
+  llm_description: Page number parameter.
+  form: form
+  placeholder:
+    en_US: Page
+  default: 1
+- name: extra_parameters_json
+  type: string
+  required: false
+  default: '{}'
+  label:
+    en_US: Extra Parameters JSON
+  human_description:
+    en_US: Advanced JSON overrides; engine and isjson remain protected.
+  llm_description: Optional advanced JSON object override. The engine and isjson fields
+    remain protected.
+  form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/generated/google_patents.py

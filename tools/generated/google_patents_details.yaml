@@ -1,0 +1,51 @@
+identity:
+  author: thordata
+  name: google_patents_details
+  label:
+    en_US: Thordata Google Patents Details
+description:
+  human:
+    en_US: Search with the fixed Thordata SERP engine Thordata Google Patents Details.
+  llm: Run a Thordata SERP search using the fixed engine google_patents_details.
+parameters:
+- name: patent_id
+  type: string
+  required: true
+  label:
+    en_US: Patent ID
+  human_description:
+    en_US: Patent ID parameter.
+  llm_description: Patent ID parameter.
+  form: llm
+  placeholder:
+    en_US: patent/US11734097B1/en
+- name: no_cache
+  type: boolean
+  required: false
+  label:
+    en_US: Disable Caching
+  human_description:
+    en_US: Disable Caching parameter.
+  llm_description: Disable Caching parameter.
+  form: form
+  default: false
+- name: extra_parameters_json
+  type: string
+  required: false
+  default: '{}'
+  label:
+    en_US: Extra Parameters JSON
+  human_description:
+    en_US: Advanced JSON overrides; engine and isjson remain protected.
+  llm_description: Optional advanced JSON object override. The engine and isjson fields
+    remain protected.
+  form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/generated/google_patents_details.py

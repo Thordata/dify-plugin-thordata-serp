@@ -1,0 +1,2735 @@
+identity:
+  author: thordata
+  name: google_play_books
+  label:
+    en_US: Thordata Google Play Books
+description:
+  human:
+    en_US: Search with the fixed Thordata SERP engine Thordata Google Play Books.
+  llm: Run a Thordata SERP search using the fixed engine google_play_books.
+parameters:
+- name: q
+  type: string
+  required: true
+  label:
+    en_US: Search Query
+  human_description:
+    en_US: Search Query parameter.
+  llm_description: Search Query parameter.
+  form: llm
+  placeholder:
+    en_US: pizza
+- name: no_cache
+  type: boolean
+  required: false
+  label:
+    en_US: Disable Caching
+  human_description:
+    en_US: Disable Caching parameter.
+  llm_description: Disable Caching parameter.
+  form: form
+  default: false
+- name: gl
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Country
+  human_description:
+    en_US: Country parameter.
+  llm_description: Country parameter.
+  form: form
+  default: us
+  multiple: false
+  options:
+  - value: af
+    label:
+      en_US: Afghanistan
+  - value: al
+    label:
+      en_US: Albania
+  - value: dz
+    label:
+      en_US: Algeria
+  - value: as
+    label:
+      en_US: American Samoa
+  - value: ad
+    label:
+      en_US: Andorra
+  - value: ao
+    label:
+      en_US: Angola
+  - value: ai
+    label:
+      en_US: Anguilla
+  - value: aq
+    label:
+      en_US: Antarctica
+  - value: ag
+    label:
+      en_US: Antigua and Barbuda
+  - value: ar
+    label:
+      en_US: Argentina
+  - value: am
+    label:
+      en_US: Armenia
+  - value: aw
+    label:
+      en_US: Aruba
+  - value: au
+    label:
+      en_US: Australia
+  - value: at
+    label:
+      en_US: Austria
+  - value: az
+    label:
+      en_US: Azerbaijan
+  - value: bs
+    label:
+      en_US: Bahamas
+  - value: bh
+    label:
+      en_US: Bahrain
+  - value: bd
+    label:
+      en_US: Bangladesh
+  - value: bb
+    label:
+      en_US: Barbados
+  - value: by
+    label:
+      en_US: Belarus
+  - value: be
+    label:
+      en_US: Belgium
+  - value: bz
+    label:
+      en_US: Belize
+  - value: bj
+    label:
+      en_US: Benin
+  - value: bm
+    label:
+      en_US: Bermuda
+  - value: bt
+    label:
+      en_US: Bhutan
+  - value: bo
+    label:
+      en_US: Bolivia
+  - value: ba
+    label:
+      en_US: Bosnia and Herzegovina
+  - value: bw
+    label:
+      en_US: Botswana
+  - value: bv
+    label:
+      en_US: Bouvet Island
+  - value: br
+    label:
+      en_US: Brazil
+  - value: io
+    label:
+      en_US: British Indian Ocean Territory
+  - value: bn
+    label:
+      en_US: Brunei Darussalam
+  - value: bg
+    label:
+      en_US: Bulgaria
+  - value: bf
+    label:
+      en_US: Burkina Faso
+  - value: bi
+    label:
+      en_US: Burundi
+  - value: kh
+    label:
+      en_US: Cambodia
+  - value: cm
+    label:
+      en_US: Cameroon
+  - value: ca
+    label:
+      en_US: Canada
+  - value: cv
+    label:
+      en_US: Cape Verde
+  - value: ky
+    label:
+      en_US: Cayman Islands
+  - value: cf
+    label:
+      en_US: Central African Republic
+  - value: td
+    label:
+      en_US: Chad
+  - value: cl
+    label:
+      en_US: Chile
+  - value: cn
+    label:
+      en_US: China
+  - value: cx
+    label:
+      en_US: Christmas Island
+  - value: cc
+    label:
+      en_US: Cocos (Keeling) Islands
+  - value: co
+    label:
+      en_US: Colombia
+  - value: km
+    label:
+      en_US: Comoros
+  - value: cg
+    label:
+      en_US: Congo
+  - value: cd
+    label:
+      en_US: Congo, the Democratic Republic of the
+  - value: ck
+    label:
+      en_US: Cook Islands
+  - value: cr
+    label:
+      en_US: Costa Rica
+  - value: ci
+    label:
+      en_US: Cote D'ivoire
+  - value: hr
+    label:
+      en_US: Croatia
+  - value: cu
+    label:
+      en_US: Cuba
+  - value: cy
+    label:
+      en_US: Cyprus
+  - value: cz
+    label:
+      en_US: Czech Republic
+  - value: dk
+    label:
+      en_US: Denmark
+  - value: dj
+    label:
+      en_US: Djibouti
+  - value: dm
+    label:
+      en_US: Dominica
+  - value: do
+    label:
+      en_US: Dominican Republic
+  - value: ec
+    label:
+      en_US: Ecuador
+  - value: eg
+    label:
+      en_US: Egypt
+  - value: sv
+    label:
+      en_US: El Salvador
+  - value: gq
+    label:
+      en_US: Equatorial Guinea
+  - value: er
+    label:
+      en_US: Eritrea
+  - value: ee
+    label:
+      en_US: Estonia
+  - value: et
+    label:
+      en_US: Ethiopia
+  - value: fk
+    label:
+      en_US: Falkland Islands (Malvinas)
+  - value: fo
+    label:
+      en_US: Faroe Islands
+  - value: fj
+    label:
+      en_US: Fiji
+  - value: fi
+    label:
+      en_US: Finland
+  - value: fr
+    label:
+      en_US: France
+  - value: gf
+    label:
+      en_US: French Guiana
+  - value: pf
+    label:
+      en_US: French Polynesia
+  - value: tf
+    label:
+      en_US: French Southern Territories
+  - value: ga
+    label:
+      en_US: Gabon
+  - value: gm
+    label:
+      en_US: Gambia
+  - value: ge
+    label:
+      en_US: Georgia
+  - value: de
+    label:
+      en_US: Germany
+  - value: gh
+    label:
+      en_US: Ghana
+  - value: gi
+    label:
+      en_US: Gibraltar
+  - value: gr
+    label:
+      en_US: Greece
+  - value: gl
+    label:
+      en_US: Greenland
+  - value: gd
+    label:
+      en_US: Grenada
+  - value: gp
+    label:
+      en_US: Guadeloupe
+  - value: gu
+    label:
+      en_US: Guam
+  - value: gt
+    label:
+      en_US: Guatemala
+  - value: gg
+    label:
+      en_US: Guernsey
+  - value: gn
+    label:
+      en_US: Guinea
+  - value: gw
+    label:
+      en_US: Guinea-Bissau
+  - value: gy
+    label:
+      en_US: Guyana
+  - value: ht
+    label:
+      en_US: Haiti
+  - value: hm
+    label:
+      en_US: Heard Island and Mcdonald Islands
+  - value: va
+    label:
+      en_US: Holy See (Vatican City State)
+  - value: hn
+    label:
+      en_US: Honduras
+  - value: hk
+    label:
+      en_US: Hong Kong
+  - value: hu
+    label:
+      en_US: Hungary
+  - value: is
+    label:
+      en_US: Iceland
+  - value: in
+    label:
+      en_US: India
+  - value: id
+    label:
+      en_US: Indonesia
+  - value: ir
+    label:
+      en_US: Iran, Islamic Republic of
+  - value: iq
+    label:
+      en_US: Iraq
+  - value: ie
+    label:
+      en_US: Ireland
+  - value: im
+    label:
+      en_US: Isle of Man
+  - value: il
+    label:
+      en_US: Israel
+  - value: it
+    label:
+      en_US: Italy
+  - value: je
+    label:
+      en_US: Jersey
+  - value: jm
+    label:
+      en_US: Jamaica
+  - value: jp
+    label:
+      en_US: Japan
+  - value: jo
+    label:
+      en_US: Jordan
+  - value: kz
+    label:
+      en_US: Kazakhstan
+  - value: ke
+    label:
+      en_US: Kenya
+  - value: ki
+    label:
+      en_US: Kiribati
+  - value: kp
+    label:
+      en_US: Korea, Democratic People's Republic of
+  - value: kr
+    label:
+      en_US: Korea, Republic of
+  - value: kw
+    label:
+      en_US: Kuwait
+  - value: kg
+    label:
+      en_US: Kyrgyzstan
+  - value: la
+    label:
+      en_US: Lao People's Democratic Republic
+  - value: lv
+    label:
+      en_US: Latvia
+  - value: lb
+    label:
+      en_US: Lebanon
+  - value: ls
+    label:
+      en_US: Lesotho
+  - value: lr
+    label:
+      en_US: Liberia
+  - value: ly
+    label:
+      en_US: Libyan Arab Jamahiriya
+  - value: li
+    label:
+      en_US: Liechtenstein
+  - value: lt
+    label:
+      en_US: Lithuania
+  - value: lu
+    label:
+      en_US: Luxembourg
+  - value: mo
+    label:
+      en_US: Macao
+  - value: mk
+    label:
+      en_US: Macedonia, the Former Yugosalv Republic of
+  - value: mg
+    label:
+      en_US: Madagascar
+  - value: mw
+    label:
+      en_US: Malawi
+  - value: my
+    label:
+      en_US: Malaysia
+  - value: mv
+    label:
+      en_US: Maldives
+  - value: ml
+    label:
+      en_US: Mali
+  - value: mt
+    label:
+      en_US: Malta
+  - value: mh
+    label:
+      en_US: Marshall Islands
+  - value: mq
+    label:
+      en_US: Martinique
+  - value: mr
+    label:
+      en_US: Mauritania
+  - value: mu
+    label:
+      en_US: Mauritius
+  - value: yt
+    label:
+      en_US: Mayotte
+  - value: mx
+    label:
+      en_US: Mexico
+  - value: fm
+    label:
+      en_US: Micronesia, Federated States of
+  - value: md
+    label:
+      en_US: Moldova, Republic of
+  - value: mc
+    label:
+      en_US: Monaco
+  - value: mn
+    label:
+      en_US: Mongolia
+  - value: me
+    label:
+      en_US: Montenegro
+  - value: ms
+    label:
+      en_US: Montserrat
+  - value: ma
+    label:
+      en_US: Morocco
+  - value: mz
+    label:
+      en_US: Mozambique
+  - value: mm
+    label:
+      en_US: Myanmar
+  - value: na
+    label:
+      en_US: Namibia
+  - value: nr
+    label:
+      en_US: Nauru
+  - value: np
+    label:
+      en_US: Nepal
+  - value: nl
+    label:
+      en_US: Netherlands
+  - value: an
+    label:
+      en_US: Netherlands Antilles
+  - value: nc
+    label:
+      en_US: New Caledonia
+  - value: nz
+    label:
+      en_US: New Zealand
+  - value: ni
+    label:
+      en_US: Nicaragua
+  - value: ne
+    label:
+      en_US: Niger
+  - value: ng
+    label:
+      en_US: Nigeria
+  - value: nu
+    label:
+      en_US: Niue
+  - value: nf
+    label:
+      en_US: Norfolk Island
+  - value: mp
+    label:
+      en_US: Northern Mariana Islands
+  - value: 'no'
+    label:
+      en_US: Norway
+  - value: om
+    label:
+      en_US: Oman
+  - value: pk
+    label:
+      en_US: Pakistan
+  - value: pw
+    label:
+      en_US: Palau
+  - value: ps
+    label:
+      en_US: Palestinian Territory, Occupied
+  - value: pa
+    label:
+      en_US: Panama
+  - value: pg
+    label:
+      en_US: Papua New Guinea
+  - value: py
+    label:
+      en_US: Paraguay
+  - value: pe
+    label:
+      en_US: Peru
+  - value: ph
+    label:
+      en_US: Philippines
+  - value: pn
+    label:
+      en_US: Pitcairn
+  - value: pl
+    label:
+      en_US: Poland
+  - value: pt
+    label:
+      en_US: Portugal
+  - value: pr
+    label:
+      en_US: Puerto Rico
+  - value: qa
+    label:
+      en_US: Qatar
+  - value: re
+    label:
+      en_US: Reunion
+  - value: ro
+    label:
+      en_US: Romania
+  - value: ru
+    label:
+      en_US: Russian Federation
+  - value: rw
+    label:
+      en_US: Rwanda
+  - value: sh
+    label:
+      en_US: Saint Helena
+  - value: kn
+    label:
+      en_US: Saint Kitts and Nevis
+  - value: lc
+    label:
+      en_US: Saint Lucia
+  - value: pm
+    label:
+      en_US: Saint Pierre and Miquelon
+  - value: vc
+    label:
+      en_US: Saint Vincent and the Grenadines
+  - value: ws
+    label:
+      en_US: Samoa
+  - value: sm
+    label:
+      en_US: San Marino
+  - value: st
+    label:
+      en_US: Sao Tome and Principe
+  - value: sa
+    label:
+      en_US: Saudi Arabia
+  - value: sn
+    label:
+      en_US: Senegal
+  - value: rs
+    label:
+      en_US: Serbia
+  - value: sc
+    label:
+      en_US: Seychelles
+  - value: sl
+    label:
+      en_US: Sierra Leone
+  - value: sg
+    label:
+      en_US: Singapore
+  - value: sk
+    label:
+      en_US: Slovakia
+  - value: si
+    label:
+      en_US: Slovenia
+  - value: sb
+    label:
+      en_US: Solomon Islands
+  - value: so
+    label:
+      en_US: Somalia
+  - value: za
+    label:
+      en_US: South Africa
+  - value: gs
+    label:
+      en_US: South Georgia and the South Sandwich Islands
+  - value: es
+    label:
+      en_US: Spain
+  - value: lk
+    label:
+      en_US: Sri Lanka
+  - value: sd
+    label:
+      en_US: Sudan
+  - value: sr
+    label:
+      en_US: Suriname
+  - value: sj
+    label:
+      en_US: Svalbard and Jan Mayen
+  - value: sz
+    label:
+      en_US: Swaziland
+  - value: se
+    label:
+      en_US: Sweden
+  - value: ch
+    label:
+      en_US: Switzerland
+  - value: sy
+    label:
+      en_US: Syrian Arab Republic
+  - value: tw
+    label:
+      en_US: Taiwan, Province of China
+  - value: tj
+    label:
+      en_US: Tajikistan
+  - value: tz
+    label:
+      en_US: Tanzania, United Republic of
+  - value: th
+    label:
+      en_US: Thailand
+  - value: tl
+    label:
+      en_US: Timor-Leste
+  - value: tg
+    label:
+      en_US: Togo
+  - value: tk
+    label:
+      en_US: Tokelau
+  - value: to
+    label:
+      en_US: Tonga
+  - value: tt
+    label:
+      en_US: Trinidad and Tobago
+  - value: tn
+    label:
+      en_US: Tunisia
+  - value: tr
+    label:
+      en_US: Turkiye
+  - value: tm
+    label:
+      en_US: Turkmenistan
+  - value: tc
+    label:
+      en_US: Turks and Caicos Islands
+  - value: tv
+    label:
+      en_US: Tuvalu
+  - value: ug
+    label:
+      en_US: Uganda
+  - value: ua
+    label:
+      en_US: Ukraine
+  - value: ae
+    label:
+      en_US: United Arab Emirates
+  - value: uk
+    label:
+      en_US: United Kingdom
+  - value: gb
+    label:
+      en_US: United Kingdom
+  - value: us
+    label:
+      en_US: United States
+  - value: um
+    label:
+      en_US: United States Minor Outlying Islands
+  - value: uy
+    label:
+      en_US: Uruguay
+  - value: uz
+    label:
+      en_US: Uzbekistan
+  - value: vu
+    label:
+      en_US: Vanuatu
+  - value: ve
+    label:
+      en_US: Venezuela
+  - value: vn
+    label:
+      en_US: Viet Nam
+  - value: vg
+    label:
+      en_US: Virgin Islands, British
+  - value: vi
+    label:
+      en_US: Virgin Islands, U.S.
+  - value: wf
+    label:
+      en_US: Wallis and Futuna
+  - value: eh
+    label:
+      en_US: Western Sahara
+  - value: ye
+    label:
+      en_US: Yemen
+  - value: zm
+    label:
+      en_US: Zambia
+  - value: zw
+    label:
+      en_US: Zimbabwe
+- name: hl
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Language
+  human_description:
+    en_US: Language parameter.
+  llm_description: Language parameter.
+  form: form
+  default: en
+  multiple: false
+  options:
+  - value: af
+    label:
+      en_US: Afrikaans
+  - value: ak
+    label:
+      en_US: Akan
+  - value: ws
+    label:
+      en_US: Samoa
+  - value: am
+    label:
+      en_US: Amharic
+  - value: ar
+    label:
+      en_US: Arabic
+  - value: hy
+    label:
+      en_US: Armenian
+  - value: az
+    label:
+      en_US: Azerbaijani
+  - value: ceb
+    label:
+      en_US: Binisaya
+  - value: eu
+    label:
+      en_US: Basque
+  - value: be
+    label:
+      en_US: Belarusian
+  - value: bem
+    label:
+      en_US: Bemba
+  - value: bn
+    label:
+      en_US: Bengali
+  - value: bh
+    label:
+      en_US: Bihari
+  - value: xx-bork
+    label:
+      en_US: Bork, bork, bork!
+  - value: bs
+    label:
+      en_US: Bosnian
+  - value: br
+    label:
+      en_US: Breton
+  - value: bg
+    label:
+      en_US: Bulgarian
+  - value: bt
+    label:
+      en_US: Bhutanese
+  - value: km
+    label:
+      en_US: Cambodian
+  - value: ca
+    label:
+      en_US: Catalan
+  - value: chr
+    label:
+      en_US: Cherokee
+  - value: ny
+    label:
+      en_US: Chichewa
+  - value: zh-cn
+    label:
+      en_US: Chinese (Simplified)
+  - value: zh-tw
+    label:
+      en_US: Chinese (Traditional)
+  - value: co
+    label:
+      en_US: Corsican
+  - value: hr
+    label:
+      en_US: Croatian
+  - value: cs
+    label:
+      en_US: Czech
+  - value: da
+    label:
+      en_US: Danish
+  - value: nl
+    label:
+      en_US: Dutch
+  - value: xx-elmer
+    label:
+      en_US: Elmer Fudd
+  - value: en
+    label:
+      en_US: English
+  - value: eo
+    label:
+      en_US: Esperanto
+  - value: et
+    label:
+      en_US: Estonian
+  - value: ee
+    label:
+      en_US: Ewe
+  - value: fo
+    label:
+      en_US: Faroese
+  - value: tl
+    label:
+      en_US: Filipino
+  - value: fi
+    label:
+      en_US: Finnish
+  - value: fr
+    label:
+      en_US: French
+  - value: fy
+    label:
+      en_US: Frisian
+  - value: gaa
+    label:
+      en_US: Ga
+  - value: gl
+    label:
+      en_US: Galician
+  - value: ka
+    label:
+      en_US: Georgian
+  - value: de
+    label:
+      en_US: German
+  - value: el
+    label:
+      en_US: Greek
+  - value: kl
+    label:
+      en_US: Greenlandic
+  - value: gn
+    label:
+      en_US: Guarani
+  - value: gu
+    label:
+      en_US: Gujarati
+  - value: xx-hacker
+    label:
+      en_US: Hacker
+  - value: ht
+    label:
+      en_US: Haitian Creole
+  - value: ha
+    label:
+      en_US: Hausa
+  - value: haw
+    label:
+      en_US: Hawaiian
+  - value: iw
+    label:
+      en_US: Hebrew
+  - value: he
+    label:
+      en_US: Hebrew
+  - value: hi
+    label:
+      en_US: Hindi
+  - value: hu
+    label:
+      en_US: Hungarian
+  - value: is
+    label:
+      en_US: Icelandic
+  - value: ig
+    label:
+      en_US: Igbo
+  - value: id
+    label:
+      en_US: Indonesian
+  - value: ia
+    label:
+      en_US: Interlingua
+  - value: ga
+    label:
+      en_US: Irish
+  - value: it
+    label:
+      en_US: Italian
+  - value: ja
+    label:
+      en_US: Japanese
+  - value: jw
+    label:
+      en_US: Javanese
+  - value: kn
+    label:
+      en_US: Kannada
+  - value: kk
+    label:
+      en_US: Kazakh
+  - value: rw
+    label:
+      en_US: Kinyarwanda
+  - value: rn
+    label:
+      en_US: Kirundi
+  - value: xx-klingon
+    label:
+      en_US: Klingon
+  - value: kg
+    label:
+      en_US: Kongo
+  - value: ko
+    label:
+      en_US: Korean
+  - value: kri
+    label:
+      en_US: Krio (Sierra Leone)
+  - value: ku
+    label:
+      en_US: Kurdish
+  - value: ckb
+    label:
+      en_US: Kurdish (Soranî)
+  - value: ky
+    label:
+      en_US: Kyrgyz
+  - value: lo
+    label:
+      en_US: Laothian
+  - value: la
+    label:
+      en_US: Latin
+  - value: lv
+    label:
+      en_US: Latvian
+  - value: ln
+    label:
+      en_US: Lingala
+  - value: lt
+    label:
+      en_US: Lithuanian
+  - value: loz
+    label:
+      en_US: Lozi
+  - value: lg
+    label:
+      en_US: Luganda
+  - value: ach
+    label:
+      en_US: Luo
+  - value: mk
+    label:
+      en_US: Macedonian
+  - value: mg
+    label:
+      en_US: Malagasy
+  - value: ms
+    label:
+      en_US: Malay
+  - value: ml
+    label:
+      en_US: Malayalam
+  - value: mt
+    label:
+      en_US: Maltese
+  - value: mv
+    label:
+      en_US: Maldives
+  - value: mi
+    label:
+      en_US: Maori
+  - value: mr
+    label:
+      en_US: Marathi
+  - value: mfe
+    label:
+      en_US: Mauritian Creole
+  - value: mo
+    label:
+      en_US: Moldavian
+  - value: mn
+    label:
+      en_US: Mongolian
+  - value: sr-me
+    label:
+      en_US: Montenegrin
+  - value: my
+    label:
+      en_US: Myanmar
+  - value: ne
+    label:
+      en_US: Nepali
+  - value: pcm
+    label:
+      en_US: Nigerian Pidgin
+  - value: nso
+    label:
+      en_US: Northern Sotho
+  - value: 'no'
+    label:
+      en_US: Norwegian
+  - value: nn
+    label:
+      en_US: Norwegian (Nynorsk)
+  - value: oc
+    label:
+      en_US: Occitan
+  - value: or
+    label:
+      en_US: Oriya
+  - value: om
+    label:
+      en_US: Oromo
+  - value: ps
+    label:
+      en_US: Pashto
+  - value: fa
+    label:
+      en_US: Persian
+  - value: xx-pirate
+    label:
+      en_US: Pirate
+  - value: pl
+    label:
+      en_US: Polish
+  - value: pt
+    label:
+      en_US: Portuguese
+  - value: pt-br
+    label:
+      en_US: Portuguese (Brazil)
+  - value: pt-pt
+    label:
+      en_US: Portuguese (Portugal)
+  - value: pa
+    label:
+      en_US: Punjabi
+  - value: qu
+    label:
+      en_US: Quechua
+  - value: ro
+    label:
+      en_US: Romanian
+  - value: rm
+    label:
+      en_US: Romansh
+  - value: nyn
+    label:
+      en_US: Runyakitara
+  - value: ru
+    label:
+      en_US: Russian
+  - value: gd
+    label:
+      en_US: Scots Gaelic
+  - value: sr
+    label:
+      en_US: Serbian
+  - value: sh
+    label:
+      en_US: Serbo-Croatian
+  - value: st
+    label:
+      en_US: Sesotho
+  - value: tn
+    label:
+      en_US: Setswana
+  - value: crs
+    label:
+      en_US: Seychellois Creole
+  - value: sn
+    label:
+      en_US: Shona
+  - value: sd
+    label:
+      en_US: Sindhi
+  - value: si
+    label:
+      en_US: Sinhalese
+  - value: sk
+    label:
+      en_US: Slovak
+  - value: sl
+    label:
+      en_US: Slovenian
+  - value: so
+    label:
+      en_US: Somali
+  - value: es
+    label:
+      en_US: Spanish
+  - value: es-419
+    label:
+      en_US: Spanish (Latin American)
+  - value: su
+    label:
+      en_US: Sundanese
+  - value: sw
+    label:
+      en_US: Swahili
+  - value: sv
+    label:
+      en_US: Swedish
+  - value: tg
+    label:
+      en_US: Tajik
+  - value: ta
+    label:
+      en_US: Tamil
+  - value: tt
+    label:
+      en_US: Tatar
+  - value: te
+    label:
+      en_US: Telugu
+  - value: th
+    label:
+      en_US: Thai
+  - value: ti
+    label:
+      en_US: Tigrinya
+  - value: to
+    label:
+      en_US: Tonga
+  - value: lua
+    label:
+      en_US: Tshiluba
+  - value: tum
+    label:
+      en_US: Tumbuka
+  - value: tr
+    label:
+      en_US: Turkish
+  - value: tk
+    label:
+      en_US: Turkmen
+  - value: tw
+    label:
+      en_US: Twi
+  - value: ug
+    label:
+      en_US: Uighur
+  - value: uk
+    label:
+      en_US: Ukrainian
+  - value: ur
+    label:
+      en_US: Urdu
+  - value: uz
+    label:
+      en_US: Uzbek
+  - value: vu
+    label:
+      en_US: Vanuatu
+  - value: vi
+    label:
+      en_US: Vietnamese
+  - value: cy
+    label:
+      en_US: Welsh
+  - value: wo
+    label:
+      en_US: Wolof
+  - value: xh
+    label:
+      en_US: Xhosa
+  - value: yi
+    label:
+      en_US: Yiddish
+  - value: yo
+    label:
+      en_US: Yoruba
+  - value: zu
+    label:
+      en_US: Zulu
+- name: books_category
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Books Category
+  human_description:
+    en_US: Books Category parameter.
+  llm_description: Books Category parameter.
+  form: form
+  multiple: false
+  options:
+  - value: coll_1665
+    label:
+      en_US: Books - Arts & entertainment
+  - value: subj_Art___Humor.AH_Art
+    label:
+      en_US: Books - Arts & entertainment - Art
+  - value: subj_Art___Humor.AH_Drama
+    label:
+      en_US: Books - Arts & entertainment - Drama
+  - value: subj_Art___Humor.AH_Humor
+    label:
+      en_US: Books - Arts & entertainment - Humor
+  - value: subj_Art___Humor.AH_Music
+    label:
+      en_US: Books - Arts & entertainment - Music
+  - value: subj_Art___Humor.AH_Performing_Arts
+    label:
+      en_US: Books - Arts & entertainment - Performing Arts
+  - value: coll_1204
+    label:
+      en_US: Books - Biographies & memoirs
+  - value: subj_Biography___Autobiography.General
+    label:
+      en_US: Books - Biographies & memoirs - General
+  - value: subj_Biography___Autobiography.Adventurers___Explorers
+    label:
+      en_US: Books - Biographies & memoirs - Adventurers & Explorers
+  - value: subj_Biography___Autobiography.Business
+    label:
+      en_US: Books - Biographies & memoirs - Business
+  - value: subj_Biography___Autobiography.Composers___Musicians
+    label:
+      en_US: Books - Biographies & memoirs - Composers & musicians
+  - value: subj_Biography___Autobiography.Criminals___Outlaws
+    label:
+      en_US: Books - Biographies & memoirs - Criminals & outlaws
+  - value: subj_Biography___Autobiography.Cultural_Heritage
+    label:
+      en_US: Books - Biographies & memoirs - Cultural heritage
+  - value: subj_Biography___Autobiography.Entertainment___Performing_Arts
+    label:
+      en_US: Books - Biographies & memoirs - Entertainment & performing arts
+  - value: subj_Biography___Autobiography.Historical
+    label:
+      en_US: Books - Biographies & memoirs - Historical
+  - value: subj_Biography___Autobiography.Literary
+    label:
+      en_US: Books - Biographies & memoirs - Literary
+  - value: subj_Biography___Autobiography.Medical
+    label:
+      en_US: Books - Biographies & memoirs - Medical
+  - value: subj_Biography___Autobiography.Military
+    label:
+      en_US: Books - Biographies & memoirs - Military
+  - value: subj_Biography___Autobiography.Personal_Memoirs
+    label:
+      en_US: Books - Biographies & memoirs - Personal Memoirs
+  - value: subj_Biography___Autobiography.Political
+    label:
+      en_US: Books - Biographies & memoirs - Political
+  - value: subj_Biography___Autobiography.Presidents___Heads_of_State
+    label:
+      en_US: Books - Biographies & memoirs - Presidents & heads of state
+  - value: subj_Biography___Autobiography.Religious
+    label:
+      en_US: Books - Biographies & memoirs - Religious
+  - value: subj_Biography___Autobiography.Rich___Famous
+    label:
+      en_US: Books - Biographies & memoirs - Rich & famous
+  - value: subj_Biography___Autobiography.Royalty
+    label:
+      en_US: Books - Biographies & memoirs - Royalty
+  - value: subj_Biography___Autobiography.Science___Technology
+    label:
+      en_US: Books - Biographies & memoirs - Science & technology
+  - value: subj_Biography___Autobiography.Sports
+    label:
+      en_US: Books - Biographies & memoirs - Sports
+  - value: subj_Biography___Autobiography.Women
+    label:
+      en_US: Books - Biographies & memoirs - Women
+  - value: coll_1668
+    label:
+      en_US: Books - Books in Spanish
+  - value: coll_1205
+    label:
+      en_US: Books - Business & investing
+  - value: subj_Business___Economics.General
+    label:
+      en_US: Books - Business & investing - General
+  - value: subj_Business___Economics.Accounting
+    label:
+      en_US: Books - Business & investing - Accounting
+  - value: subj_Business___Economics.Advertising___Promotion
+    label:
+      en_US: Books - Business & investing - Advertising & promotion
+  - value: subj_Business___Economics.Business_Communication
+    label:
+      en_US: Books - Business & investing - Business Communication
+  - value: subj_Business___Economics.Careers
+    label:
+      en_US: Books - Business & investing - Careers
+  - value: subj_Business___Economics.Decision-Making___Problem_Solving
+    label:
+      en_US: Books - Business & investing - Decision-Making & problem solving
+  - value: subj_Business___Economics.Development
+    label:
+      en_US: Books - Business & investing - Development
+  - value: subj_Business___Economics.E-Commerce
+    label:
+      en_US: Books - Business & investing - E-Commerce
+  - value: subj_Business___Economics.Economic_History
+    label:
+      en_US: Books - Business & investing - Economic History
+  - value: subj_Business___Economics.Economics
+    label:
+      en_US: Books - Business & investing - Economics
+  - value: subj_Business___Economics.Entrepreneurship
+    label:
+      en_US: Books - Business & investing - Entrepreneurship
+  - value: subj_Business___Economics.Finance
+    label:
+      en_US: Books - Business & investing - Finance
+  - value: subj_Business___Economics.Human_Resources___Personnel_Management
+    label:
+      en_US: Books - Business & investing - Human resources & personnel management
+  - value: subj_Business___Economics.Industries
+    label:
+      en_US: Books - Business & investing - Industries
+  - value: subj_Business___Economics.International
+    label:
+      en_US: Books - Business & investing - International
+  - value: subj_Business___Economics.Investments___Securities
+    label:
+      en_US: Books - Business & investing - Investments & securities
+  - value: subj_Business___Economics.Leadership
+    label:
+      en_US: Books - Business & investing - Leadership
+  - value: subj_Business___Economics.Management
+    label:
+      en_US: Books - Business & investing - Management
+  - value: subj_Business___Economics.Management_Science
+    label:
+      en_US: Books - Business & investing - Management Science
+  - value: subj_Business___Economics.Marketing
+    label:
+      en_US: Books - Business & investing - Marketing
+  - value: subj_Business___Economics.Motivational
+    label:
+      en_US: Books - Business & investing - Motivational
+  - value: subj_Business___Economics.Organizational_Behavior
+    label:
+      en_US: Books - Business & investing - Organizational Behavior
+  - value: subj_Business___Economics.Personal_Finance
+    label:
+      en_US: Books - Business & investing - Personal Finance
+  - value: subj_Business___Economics.Real_Estate
+    label:
+      en_US: Books - Business & investing - Real Estate
+  - value: subj_Business___Economics.Sales___Selling
+    label:
+      en_US: Books - Business & investing - Sales & selling
+  - value: subj_Business___Economics.Skills
+    label:
+      en_US: Books - Business & investing - Skills
+  - value: subj_Business___Economics.Small_Business
+    label:
+      en_US: Books - Business & investing - Small Business
+  - value: subj_Business___Economics.Strategic_Planning
+    label:
+      en_US: Books - Business & investing - Strategic Planning
+  - value: subj_Business___Economics.Time_Management
+    label:
+      en_US: Books - Business & investing - Time Management
+  - value: subj_Business___Economics.Workplace_Culture
+    label:
+      en_US: Books - Business & investing - Workplace Culture
+  - value: coll_1207
+    label:
+      en_US: Books - Computers & technology
+  - value: subj_Computers.General
+    label:
+      en_US: Books - Computers & technology - General
+  - value: subj_Computers.Desktop_Applications
+    label:
+      en_US: Books - Computers & technology - Desktop Applications
+  - value: subj_Computers.Electronic_Publishing
+    label:
+      en_US: Books - Computers & technology - Electronic Publishing
+  - value: subj_Computers.Enterprise_Applications
+    label:
+      en_US: Books - Computers & technology - Enterprise Applications
+  - value: subj_Computers.Hardware
+    label:
+      en_US: Books - Computers & technology - Hardware
+  - value: subj_Computers.Internet
+    label:
+      en_US: Books - Computers & technology - Internet
+  - value: subj_Computers.Networking
+    label:
+      en_US: Books - Computers & technology - Networking
+  - value: subj_Computers.Operating_Systems
+    label:
+      en_US: Books - Computers & technology - Operating Systems
+  - value: subj_Computers.Programming
+    label:
+      en_US: Books - Computers & technology - Programming
+  - value: subj_Computers.Programming_Languages
+    label:
+      en_US: Books - Computers & technology - Programming Languages
+  - value: subj_Computers.Security
+    label:
+      en_US: Books - Computers & technology - Security
+  - value: subj_Computers.Software_Development___Engineering
+    label:
+      en_US: Books - Computers & technology - Software development & engineering
+  - value: subj_Computers.Systems_Architecture
+    label:
+      en_US: Books - Computers & technology - Systems Architecture
+  - value: subj_Computers.Web
+    label:
+      en_US: Books - Computers & technology - Web
+  - value: coll_1208
+    label:
+      en_US: Books - Cooking, food & wine
+  - value: subj_Cooking.General
+    label:
+      en_US: Books - Cooking, food & wine - General
+  - value: subj_Cooking.Beverages
+    label:
+      en_US: Books - Cooking, food & wine - Beverages
+  - value: subj_Cooking.Courses___Dishes
+    label:
+      en_US: Books - Cooking, food & wine - Courses & dishes
+  - value: subj_Cooking.Health___Healing
+    label:
+      en_US: Books - Cooking, food & wine - Health & healing
+  - value: subj_Cooking.Methods
+    label:
+      en_US: Books - Cooking, food & wine - Methods
+  - value: subj_Cooking.Regional___Ethnic
+    label:
+      en_US: Books - Cooking, food & wine - Regional & Ethnic
+  - value: subj_Cooking.Specific_Ingredients
+    label:
+      en_US: Books - Cooking, food & wine - Specific Ingredients
+  - value: subj_Cooking.Tablesetting
+    label:
+      en_US: Books - Cooking, food & wine - Tablesetting
+  - value: subj_Cooking.Vegetarian___Vegan
+    label:
+      en_US: Books - Cooking, food & wine - Vegetarian & Vegan
+  - value: coll_1670
+    label:
+      en_US: Books - Education
+  - value: subj_Education.E_General
+    label:
+      en_US: Books - Education - General
+  - value: subj_Education.English_as_a_Second_Language
+    label:
+      en_US: Books - Education - English as a second language
+  - value: subj_Education.Higher
+    label:
+      en_US: Books - Education - Higher
+  - value: subj_Education.Teaching_Methods___Materials
+    label:
+      en_US: Books - Education - Teaching methods & materials
+  - value: coll_1261
+    label:
+      en_US: Books - Engineering
+  - value: subj_Technology___Engineering.General
+    label:
+      en_US: Books - Engineering - General
+  - value: subj_Technology___Engineering.Agriculture
+    label:
+      en_US: Books - Engineering - Agriculture
+  - value: subj_Technology___Engineering.Electronics
+    label:
+      en_US: Books - Engineering - Electronics
+  - value: subj_Technology___Engineering.Industrial_Technology
+    label:
+      en_US: Books - Engineering - Industrial Technology
+  - value: subj_Technology___Engineering.Military_Science
+    label:
+      en_US: Books - Engineering - Military Science
+  - value: subj_Technology___Engineering.Mobile___Wireless_Communications
+    label:
+      en_US: Books - Engineering - Mobile & wireless communications
+  - value: subj_Technology___Engineering.Nanotechnology___MEMS
+    label:
+      en_US: Books - Engineering - Nanotechnology & MEMS
+  - value: subj_Technology___Engineering.Remote_Sensing___Geographic_Information_Systems
+    label:
+      en_US: Books - Engineering - Remote sensing & geographic information systems
+  - value: coll_1200
+    label:
+      en_US: Books - Fiction & literature
+  - value: subj_Fiction.General
+    label:
+      en_US: Books - Fiction & literature - General
+  - value: subj_Fiction.Action___Adventure
+    label:
+      en_US: Books - Fiction & literature - Action & adventure
+  - value: subj_Fiction.African_American
+    label:
+      en_US: Books - Fiction & literature - African American
+  - value: subj_Fiction.Alternative_History
+    label:
+      en_US: Books - Fiction & literature - Alternative History
+  - value: subj_Fiction.Anthologies__multiple_authors_
+    label:
+      en_US: Books - Fiction & literature - Anthologies (multiple authors)
+  - value: subj_Fiction.Biographical
+    label:
+      en_US: Books - Fiction & literature - Biographical
+  - value: subj_Fiction.Christian
+    label:
+      en_US: Books - Fiction & literature - Christian
+  - value: subj_Fiction.Classics
+    label:
+      en_US: Books - Fiction & literature - Classics
+  - value: subj_Fiction.Coming_of_Age
+    label:
+      en_US: Books - Fiction & literature - Coming of Age
+  - value: subj_Fiction.Contemporary_Women
+    label:
+      en_US: Books - Fiction & literature - Contemporary Women
+  - value: subj_Fiction.Crime
+    label:
+      en_US: Books - Fiction & literature - Crime
+  - value: subj_Fiction.Cultural_Heritage
+    label:
+      en_US: Books - Fiction & literature - Cultural Heritage
+  - value: subj_Fiction.Erotica
+    label:
+      en_US: Books - Fiction & literature - Erotica
+  - value: subj_Fiction.Fairy_Tales__Folk_Tales__Legends___Mythology
+    label:
+      en_US: Books - Fiction & literature - Fairy tales, folk tales, legends & mythology
+  - value: subj_Fiction.Family_Life
+    label:
+      en_US: Books - Fiction & literature - Family Life
+  - value: subj_Fiction.Fantasy
+    label:
+      en_US: Books - Fiction & literature - Fantasy
+  - value: subj_Fiction.Gay
+    label:
+      en_US: Books - Fiction & literature - Gay
+  - value: subj_Fiction.Ghost
+    label:
+      en_US: Books - Fiction & literature - Ghost
+  - value: subj_Fiction.Historical
+    label:
+      en_US: Books - Fiction & literature - Historical
+  - value: subj_Fiction.Horror
+    label:
+      en_US: Books - Fiction & literature - Horror
+  - value: subj_Fiction.Humorous
+    label:
+      en_US: Books - Fiction & literature - Humorous
+  - value: subj_Fiction.Legal
+    label:
+      en_US: Books - Fiction & literature - Legal
+  - value: subj_Fiction.Lesbian
+    label:
+      en_US: Books - Fiction & literature - Lesbian
+  - value: subj_Fiction.Literary
+    label:
+      en_US: Books - Fiction & literature - Literary
+  - value: subj_Fiction.Media_Tie-In
+    label:
+      en_US: Books - Fiction & literature - Media Tie-In
+  - value: subj_Fiction.Medical
+    label:
+      en_US: Books - Fiction & literature - Medical
+  - value: subj_Fiction.Men_s_Adventure
+    label:
+      en_US: Books - Fiction & literature - Men's Adventure
+  - value: subj_Fiction.Mystery___Detective
+    label:
+      en_US: Books - Fiction & literature - Mystery & Detective
+  - value: subj_Fiction.Occult___Supernatural
+    label:
+      en_US: Books - Fiction & literature - Occult & Supernatural
+  - value: subj_Fiction.Political
+    label:
+      en_US: Books - Fiction & literature - Political
+  - value: subj_Fiction.Psychological
+    label:
+      en_US: Books - Fiction & literature - Psychological
+  - value: subj_Fiction.Religious
+    label:
+      en_US: Books - Fiction & literature - Religious
+  - value: subj_Fiction.Romance
+    label:
+      en_US: Books - Fiction & literature - Romance
+  - value: subj_Fiction.Sagas
+    label:
+      en_US: Books - Fiction & literature - Sagas
+  - value: subj_Fiction.Satire
+    label:
+      en_US: Books - Fiction & literature - Satire
+  - value: subj_Fiction.Science_Fiction
+    label:
+      en_US: Books - Fiction & literature - Science Fiction
+  - value: subj_Fiction.Sea_Stories
+    label:
+      en_US: Books - Fiction & literature - Sea Stories
+  - value: subj_Fiction.Short_Stories__single_author_
+    label:
+      en_US: Books - Fiction & literature - Short stories (single author)
+  - value: subj_Fiction.Sports
+    label:
+      en_US: Books - Fiction & literature - Sports
+  - value: subj_Fiction.Thrillers
+    label:
+      en_US: Books - Fiction & literature - Thrillers
+  - value: subj_Fiction.War___Military
+    label:
+      en_US: Books - Fiction & literature - War & Military
+  - value: subj_Fiction.Westerns
+    label:
+      en_US: Books - Fiction & literature - Westerns
+  - value: coll_1605
+    label:
+      en_US: Books - Health, mind & body
+  - value: subj_Health__Mind___Body.HMB_General
+    label:
+      en_US: Books - Health, mind & body - General
+  - value: subj_Health__Mind___Body.Alternative_Therapies
+    label:
+      en_US: Books - Health, mind & body - Alternative Therapies
+  - value: subj_Health__Mind___Body.Astrology
+    label:
+      en_US: Books - Health, mind & body - Astrology
+  - value: subj_Health__Mind___Body.Beauty___Grooming
+    label:
+      en_US: Books - Health, mind & body - Beauty & Grooming
+  - value: subj_Health__Mind___Body.Creativity
+    label:
+      en_US: Books - Health, mind & body - Creativity
+  - value: subj_Health__Mind___Body.Death__Grief__Bereavement
+    label:
+      en_US: Books - Health, mind & body - Death, grief, bereavement
+  - value: subj_Health__Mind___Body.Exercise
+    label:
+      en_US: Books - Health, mind & body - Exercise
+  - value: subj_Health__Mind___Body.Healing
+    label:
+      en_US: Books - Health, mind & body - Healing
+  - value: subj_Health__Mind___Body.Healthy_Living
+    label:
+      en_US: Books - Health, mind & body - Healthy Living
+  - value: subj_Health__Mind___Body.Motivational___Inspirational
+    label:
+      en_US: Books - Health, mind & body - Motivational & inspirational
+  - value: subj_Health__Mind___Body.Personal_Growth
+    label:
+      en_US: Books - Health, mind & body - Personal Growth
+  - value: subj_Health__Mind___Body.Spirituality
+    label:
+      en_US: Books - Health, mind & body - Spirituality
+  - value: subj_Health__Mind___Body.Yoga
+    label:
+      en_US: Books - Health, mind & body - Yoga
+  - value: coll_1209
+    label:
+      en_US: Books - History
+  - value: subj_History.General
+    label:
+      en_US: Books - History - General
+  - value: subj_History.Africa
+    label:
+      en_US: Books - History - Africa
+  - value: subj_History.Americas__North__Central__South__West_Indies_
+    label:
+      en_US: Books - History - Americas (north, central, south, West Indies)
+  - value: subj_History.Ancient
+    label:
+      en_US: Books - History - Ancient
+  - value: subj_History.Asia
+    label:
+      en_US: Books - History - Asia
+  - value: subj_History.Europe
+    label:
+      en_US: Books - History - Europe
+  - value: subj_History.Holocaust
+    label:
+      en_US: Books - History - Holocaust
+  - value: subj_History.Latin_America
+    label:
+      en_US: Books - History - Latin America
+  - value: subj_History.Medieval
+    label:
+      en_US: Books - History - Medieval
+  - value: subj_History.Middle_East
+    label:
+      en_US: Books - History - Middle East
+  - value: subj_History.Military
+    label:
+      en_US: Books - History - Military
+  - value: subj_History.Modern
+    label:
+      en_US: Books - History - Modern
+  - value: subj_History.Native_American
+    label:
+      en_US: Books - History - Native American
+  - value: subj_History.Revolutionary
+    label:
+      en_US: Books - History - Revolutionary
+  - value: subj_History.Social_History
+    label:
+      en_US: Books - History - Social History
+  - value: subj_History.United_States
+    label:
+      en_US: Books - History - United States
+  - value: subj_History.World
+    label:
+      en_US: Books - History - World
+  - value: coll_1211
+    label:
+      en_US: Books - Home & garden
+  - value: subj_House___Home.HH_General
+    label:
+      en_US: Books - Home & garden - General
+  - value: subj_House___Home.Crocheting
+    label:
+      en_US: Books - Home & garden - Crocheting
+  - value: subj_House___Home.Do-It-Yourself
+    label:
+      en_US: Books - Home & garden - Do-It-Yourself
+  - value: subj_House___Home.Fruit
+    label:
+      en_US: Books - Home & garden - Fruit
+  - value: subj_House___Home.Furniture
+    label:
+      en_US: Books - Home & garden - Furniture
+  - value: subj_House___Home.Knitting
+    label:
+      en_US: Books - Home & garden - Knitting
+  - value: subj_House___Home.Models
+    label:
+      en_US: Books - Home & garden - Models
+  - value: subj_House___Home.Quilts___Quilting
+    label:
+      en_US: Books - Home & garden - Quilts & Quilting
+  - value: subj_House___Home.Sustainable_Living
+    label:
+      en_US: Books - Home & garden - Sustainable Living
+  - value: subj_House___Home.Woodwork
+    label:
+      en_US: Books - Home & garden - Woodwork
+  - value: coll_1667
+    label:
+      en_US: Books - Law
+  - value: subj_Law.General
+    label:
+      en_US: Books - Law - General
+  - value: subj_Law.Criminal_Law
+    label:
+      en_US: Books - Law - Criminal Law
+  - value: subj_Law.Emigration___Immigration
+    label:
+      en_US: Books - Law - Emigration & Immigration
+  - value: coll_1669
+    label:
+      en_US: Books - Medicine
+  - value: subj_Medical.General
+    label:
+      en_US: Books - Medicine - General
+  - value: subj_Medical.Cardiology
+    label:
+      en_US: Books - Medicine - Cardiology
+  - value: subj_Medical.Caregiving
+    label:
+      en_US: Books - Medicine - Caregiving
+  - value: subj_Medical.Family___General_Practice
+    label:
+      en_US: Books - Medicine - Family & general practice
+  - value: subj_Medical.Neuroscience
+    label:
+      en_US: Books - Medicine - Neuroscience
+  - value: subj_Medical.Nursing
+    label:
+      en_US: Books - Medicine - Nursing
+  - value: subj_Medical.Practice_Management___Reimbursement
+    label:
+      en_US: Books - Medicine - Practice management & reimbursement
+  - value: subj_Medical.Preventive_Medicine
+    label:
+      en_US: Books - Medicine - Preventive Medicine
+  - value: coll_1615
+    label:
+      en_US: Books - Mystery & thrillers
+  - value: subj_Fiction.Mystery___Detective.General
+    label:
+      en_US: Books - Mystery & thrillers - General
+  - value: subj_Fiction.Mystery___Detective.Hard-Boiled
+    label:
+      en_US: Books - Mystery & thrillers - Hard-Boiled
+  - value: subj_Fiction.Mystery___Detective.Historical
+    label:
+      en_US: Books - Mystery & thrillers - Historical
+  - value: subj_Fiction.Mystery___Detective.Police_Procedural
+    label:
+      en_US: Books - Mystery & thrillers - Police Procedural
+  - value: subj_Fiction.Mystery___Detective.Suspense
+    label:
+      en_US: Books - Mystery & thrillers - Suspense
+  - value: subj_Fiction.Mystery___Detective.Traditional_British
+    label:
+      en_US: Books - Mystery & thrillers - Traditional British
+  - value: subj_Fiction.Mystery___Detective.True_Crime
+    label:
+      en_US: Books - Mystery & thrillers - True Crime
+  - value: subj_Fiction.Mystery___Detective.Women_Sleuths
+    label:
+      en_US: Books - Mystery & thrillers - Women Sleuths
+  - value: coll_1214
+    label:
+      en_US: Books - Parenting & families
+  - value: subj_Family___Relationships.General
+    label:
+      en_US: Books - Parenting & families - General
+  - value: subj_Family___Relationships.Abuse
+    label:
+      en_US: Books - Parenting & families - Abuse
+  - value: subj_Family___Relationships.Children_with_Special_Needs
+    label:
+      en_US: Books - Parenting & families - Children with Special Needs
+  - value: subj_Family___Relationships.Conflict_Resolution
+    label:
+      en_US: Books - Parenting & families - Conflict Resolution
+  - value: subj_Family___Relationships.Divorce___Separation
+    label:
+      en_US: Books - Parenting & families - Divorce & Separation
+  - value: subj_Family___Relationships.Family_Relationships
+    label:
+      en_US: Books - Parenting & families - Family Relationships
+  - value: subj_Family___Relationships.Interpersonal_Relations
+    label:
+      en_US: Books - Parenting & families - Interpersonal Relations
+  - value: subj_Family___Relationships.Life_Stages
+    label:
+      en_US: Books - Parenting & families - Life Stages
+  - value: subj_Family___Relationships.Love___Romance
+    label:
+      en_US: Books - Parenting & families - Love & Romance
+  - value: subj_Family___Relationships.Marriage
+    label:
+      en_US: Books - Parenting & families - Marriage
+  - value: subj_Family___Relationships.Parenting
+    label:
+      en_US: Books - Parenting & families - Parenting
+  - value: coll_1215
+    label:
+      en_US: Books - Politics & current events
+  - value: subj_Political_Science.General
+    label:
+      en_US: Books - Politics & current events - General
+  - value: subj_Political_Science.Essays
+    label:
+      en_US: Books - Politics & current events - Essays
+  - value: subj_Political_Science.History___Theory
+    label:
+      en_US: Books - Politics & current events - History & Theory
+  - value: subj_Political_Science.International_Relations
+    label:
+      en_US: Books - Politics & current events - International Relations
+  - value: subj_Political_Science.Political_Ideologies
+    label:
+      en_US: Books - Politics & current events - Political Ideologies
+  - value: subj_Political_Science.Political_Process
+    label:
+      en_US: Books - Politics & current events - Political Process
+  - value: subj_Political_Science.Public_Affairs___Administration
+    label:
+      en_US: Books - Politics & current events - Public Affairs & Administration
+  - value: subj_Political_Science.Public_Policy
+    label:
+      en_US: Books - Politics & current events - Public Policy
+  - value: coll_1217
+    label:
+      en_US: Books - Religion & spirituality
+  - value: subj_Religion.General
+    label:
+      en_US: Books - Religion & spirituality - General
+  - value: subj_Religion.Biblical_Commentary
+    label:
+      en_US: Books - Religion & spirituality - Biblical Commentary
+  - value: subj_Religion.Biblical_Criticism___Interpretation
+    label:
+      en_US: Books - Religion & spirituality - Biblical Criticism & Interpretation
+  - value: subj_Religion.Biblical_Reference
+    label:
+      en_US: Books - Religion & spirituality - Biblical Reference
+  - value: subj_Religion.Biblical_Studies
+    label:
+      en_US: Books - Religion & spirituality - Biblical Studies
+  - value: subj_Religion.Buddhism
+    label:
+      en_US: Books - Religion & spirituality - Buddhism
+  - value: subj_Religion.Christian_Church
+    label:
+      en_US: Books - Religion & spirituality - Christian Church
+  - value: subj_Religion.Christian_Education
+    label:
+      en_US: Books - Religion & spirituality - Christian Education
+  - value: subj_Religion.Christian_Life
+    label:
+      en_US: Books - Religion & spirituality - Christian Life
+  - value: subj_Religion.Christian_Ministry
+    label:
+      en_US: Books - Religion & spirituality - Christian Ministry
+  - value: subj_Religion.Christian_Rituals___Practice
+    label:
+      en_US: Books - Religion & spirituality - Christian Rituals & Practice
+  - value: subj_Religion.Christian_Theology
+    label:
+      en_US: Books - Religion & spirituality - Christian Theology
+  - value: subj_Religion.Christianity
+    label:
+      en_US: Books - Religion & spirituality - Christianity
+  - value: subj_Religion.Comparative_Religion
+    label:
+      en_US: Books - Religion & spirituality - Comparative Religion
+  - value: subj_Religion.Counseling
+    label:
+      en_US: Books - Religion & spirituality - Counseling
+  - value: subj_Religion.Eastern
+    label:
+      en_US: Books - Religion & spirituality - Eastern
+  - value: subj_Religion.Hinduism
+    label:
+      en_US: Books - Religion & spirituality - Hinduism
+  - value: subj_Religion.History
+    label:
+      en_US: Books - Religion & spirituality - History
+  - value: subj_Religion.Inspirational
+    label:
+      en_US: Books - Religion & spirituality - Inspirational
+  - value: subj_Religion.Judaism
+    label:
+      en_US: Books - Religion & spirituality - Judaism
+  - value: subj_Religion.Philosophy
+    label:
+      en_US: Books - Religion & spirituality - Philosophy
+  - value: subj_Religion.Prayer
+    label:
+      en_US: Books - Religion & spirituality - Prayer
+  - value: subj_Religion.Sikhism
+    label:
+      en_US: Books - Religion & spirituality - Sikhism
+  - value: subj_Religion.Spirituality
+    label:
+      en_US: Books - Religion & spirituality - Spirituality
+  - value: subj_Religion.Theology
+    label:
+      en_US: Books - Religion & spirituality - Theology
+  - value: coll_1218
+    label:
+      en_US: Books - Romance
+  - value: subj_Fiction.Romance.General
+    label:
+      en_US: Books - Romance - General
+  - value: subj_Fiction.Romance.Contemporary
+    label:
+      en_US: Books - Romance - Contemporary
+  - value: subj_Fiction.Romance.Fantasy
+    label:
+      en_US: Books - Romance - Fantasy
+  - value: subj_Fiction.Romance.Historical
+    label:
+      en_US: Books - Romance - Historical
+  - value: subj_Fiction.Romance.Paranormal
+    label:
+      en_US: Books - Romance - Paranormal
+  - value: subj_Fiction.Romance.Suspense
+    label:
+      en_US: Books - Romance - Suspense
+  - value: subj_Fiction.Romance.Time_Travel
+    label:
+      en_US: Books - Romance - Time Travel
+  - value: subj_Fiction.Romance.Western
+    label:
+      en_US: Books - Romance - Western
+  - value: coll_1671
+    label:
+      en_US: Books - Science & math
+  - value: coll_1604
+    label:
+      en_US: Books - Science fiction & fantasy
+  - value: subj_Science_Fiction___Fantasy.SFF_General
+    label:
+      en_US: Books - Science fiction & fantasy - General
+  - value: subj_Science_Fiction___Fantasy.Contemporary
+    label:
+      en_US: Books - Science fiction & fantasy - Contemporary
+  - value: subj_Science_Fiction___Fantasy.Epic
+    label:
+      en_US: Books - Science fiction & fantasy - Epic
+  - value: subj_Science_Fiction___Fantasy.SFF_Historical
+    label:
+      en_US: Books - Science fiction & fantasy - Historical
+  - value: subj_Science_Fiction___Fantasy.Military
+    label:
+      en_US: Books - Science fiction & fantasy - Military
+  - value: subj_Science_Fiction___Fantasy.Paranormal
+    label:
+      en_US: Books - Science fiction & fantasy - Paranormal
+  - value: subj_Science_Fiction___Fantasy.Space_Opera
+    label:
+      en_US: Books - Science fiction & fantasy - Space Opera
+  - value: coll_1222
+    label:
+      en_US: Books - Sports
+  - value: subj_Sports___Recreation.General
+    label:
+      en_US: Books - Sports - General
+  - value: subj_Sports___Recreation.Baseball
+    label:
+      en_US: Books - Sports - Baseball
+  - value: subj_Sports___Recreation.Basketball
+    label:
+      en_US: Books - Sports - Basketball
+  - value: subj_Sports___Recreation.Bodybuilding___Weight_Training
+    label:
+      en_US: Books - Sports - Bodybuilding & weight training
+  - value: subj_Sports___Recreation.Coaching
+    label:
+      en_US: Books - Sports - Coaching
+  - value: subj_Sports___Recreation.Essays
+    label:
+      en_US: Books - Sports - Essays
+  - value: subj_Sports___Recreation.Extreme_Sports
+    label:
+      en_US: Books - Sports - Extreme Sports
+  - value: subj_Sports___Recreation.Fishing
+    label:
+      en_US: Books - Sports - Fishing
+  - value: subj_Sports___Recreation.Football
+    label:
+      en_US: Books - Sports - Football
+  - value: subj_Sports___Recreation.Golf
+    label:
+      en_US: Books - Sports - Golf
+  - value: subj_Sports___Recreation.Hiking
+    label:
+      en_US: Books - Sports - Hiking
+  - value: subj_Sports___Recreation.History
+    label:
+      en_US: Books - Sports - History
+  - value: coll_1673
+    label:
+      en_US: Books - Textbooks
+  - value: coll_1224
+    label:
+      en_US: Books - Travel
+  - value: subj_Travel.General
+    label:
+      en_US: Books - Travel - General
+  - value: subj_Travel.Essays___Travelogues
+    label:
+      en_US: Books - Travel - Essays & Travelogues
+  - value: subj_Travel.Europe
+    label:
+      en_US: Books - Travel - Europe
+  - value: subj_Travel.Special_Interest
+    label:
+      en_US: Books - Travel - Special Interest
+  - value: subj_Travel.United_States
+    label:
+      en_US: Books - Travel - United States
+  - value: coll_1672
+    label:
+      en_US: Books - Young adult
+  - value: audiobooks
+    label:
+      en_US: Audiobooks - undefined
+  - value: audiobooks_coll_1665
+    label:
+      en_US: Audiobooks - Arts & entertainment
+  - value: audiobooks_subj_Arts___Entertainment.Celebrity_Bios
+    label:
+      en_US: Audiobooks - Arts & entertainment - Celebrity Bios
+  - value: audiobooks_subj_Arts___Entertainment.Humor
+    label:
+      en_US: Audiobooks - Arts & entertainment - Humor
+  - value: audiobooks_subj_Arts___Entertainment.TV___Film
+    label:
+      en_US: Audiobooks - Arts & entertainment - TV & Film
+  - value: audiobooks_coll_1204
+    label:
+      en_US: Audiobooks - Biographies & memoirs
+  - value: audiobooks_subj_Biographies___Memoirs.Artists__Writers____Musicians
+    label:
+      en_US: Audiobooks - Biographies & memoirs - Artists, Writers, & Musicians
+  - value: audiobooks_subj_Biographies___Memoirs.Business_Leaders
+    label:
+      en_US: Audiobooks - Biographies & memoirs - Business Leaders
+  - value: audiobooks_subj_Biographies___Memoirs.Celebrities
+    label:
+      en_US: Audiobooks - Biographies & memoirs - Celebrities
+  - value: audiobooks_subj_Biographies___Memoirs.Criminal
+    label:
+      en_US: Audiobooks - Biographies & memoirs - Criminal
+  - value: audiobooks_subj_Biographies___Memoirs.Personal_Memoirs
+    label:
+      en_US: Audiobooks - Biographies & memoirs - Personal Memoirs
+  - value: audiobooks_subj_Biographies___Memoirs.Political_Figures
+    label:
+      en_US: Audiobooks - Biographies & memoirs - Political Figures
+  - value: audiobooks_subj_Biographies___Memoirs.Religious_Figures
+    label:
+      en_US: Audiobooks - Biographies & memoirs - Religious Figures
+  - value: audiobooks_subj_Biographies___Memoirs.Science___Technology_Leaders
+    label:
+      en_US: Audiobooks - Biographies & memoirs - Science & Technology Leaders
+  - value: audiobooks_coll_1205
+    label:
+      en_US: Audiobooks - Business & investing
+  - value: audiobooks_subj_Business___Investing.Career_Skills
+    label:
+      en_US: Audiobooks - Business & investing - Career Skills
+  - value: audiobooks_subj_Business___Investing.Commerce___Economy
+    label:
+      en_US: Audiobooks - Business & investing - Commerce & Economy
+  - value: audiobooks_subj_Business___Investing.Leadership
+    label:
+      en_US: Audiobooks - Business & investing - Leadership
+  - value: audiobooks_subj_Business___Investing.Management
+    label:
+      en_US: Audiobooks - Business & investing - Management
+  - value: audiobooks_subj_Business___Investing.Marketing
+    label:
+      en_US: Audiobooks - Business & investing - Marketing
+  - value: audiobooks_subj_Business___Investing.Personal_Finance___Investing
+    label:
+      en_US: Audiobooks - Business & investing - Personal Finance & Investing
+  - value: audiobooks_subj_Business___Investing.Sales
+    label:
+      en_US: Audiobooks - Business & investing - Sales
+  - value: audiobooks_coll_1689
+    label:
+      en_US: Audiobooks - Children's audiobooks
+  - value: audiobooks_coll_1200
+    label:
+      en_US: Audiobooks - Fiction & literature
+  - value: audiobooks_subj_Fiction___Literature.African_American
+    label:
+      en_US: Audiobooks - Fiction & literature - African American
+  - value: audiobooks_subj_Fiction___Literature.Classics
+    label:
+      en_US: Audiobooks - Fiction & literature - Classics
+  - value: audiobooks_subj_Fiction___Literature.Historical
+    label:
+      en_US: Audiobooks - Fiction & literature - Historical
+  - value: audiobooks_subj_Fiction___Literature.Horror
+    label:
+      en_US: Audiobooks - Fiction & literature - Horror
+  - value: audiobooks_subj_Fiction___Literature.Humor
+    label:
+      en_US: Audiobooks - Fiction & literature - Humor
+  - value: audiobooks_subj_Fiction___Literature.Literary
+    label:
+      en_US: Audiobooks - Fiction & literature - Literary
+  - value: audiobooks_subj_Fiction___Literature.Media_Tie-In
+    label:
+      en_US: Audiobooks - Fiction & literature - Media Tie-In
+  - value: audiobooks_subj_Fiction___Literature.Religion___Spirituality
+    label:
+      en_US: Audiobooks - Fiction & literature - Religion & Spirituality
+  - value: audiobooks_subj_Fiction___Literature.Short_Stories___Anthologies
+    label:
+      en_US: Audiobooks - Fiction & literature - Short Stories & Anthologies
+  - value: audiobooks_subj_Fiction___Literature.Western
+    label:
+      en_US: Audiobooks - Fiction & literature - Western
+  - value: audiobooks_coll_1605
+    label:
+      en_US: Audiobooks - Health, mind & body
+  - value: audiobooks_subj_Health__Mind___Body.Alternative_Therapies
+    label:
+      en_US: Audiobooks - Health, mind & body - Alternative Therapies
+  - value: audiobooks_subj_Health__Mind___Body.Astrology
+    label:
+      en_US: Audiobooks - Health, mind & body - Astrology
+  - value: audiobooks_subj_Health__Mind___Body.Beauty___Grooming
+    label:
+      en_US: Audiobooks - Health, mind & body - Beauty & Grooming
+  - value: audiobooks_subj_Health__Mind___Body.Creativity
+    label:
+      en_US: Audiobooks - Health, mind & body - Creativity
+  - value: audiobooks_subj_Health__Mind___Body.Exercise
+    label:
+      en_US: Audiobooks - Health, mind & body - Exercise
+  - value: audiobooks_subj_Health__Mind___Body.Healing
+    label:
+      en_US: Audiobooks - Health, mind & body - Healing
+  - value: audiobooks_subj_Health__Mind___Body.Healthy_Living
+    label:
+      en_US: Audiobooks - Health, mind & body - Healthy Living
+  - value: audiobooks_subj_Health__Mind___Body.Spirituality
+    label:
+      en_US: Audiobooks - Health, mind & body - Spirituality
+  - value: audiobooks_coll_1209
+    label:
+      en_US: Audiobooks - History
+  - value: audiobooks_subj_History.20th_Century
+    label:
+      en_US: Audiobooks - History - 20th Century
+  - value: audiobooks_subj_History.21st_Century
+    label:
+      en_US: Audiobooks - History - 21st Century
+  - value: audiobooks_subj_History.American
+    label:
+      en_US: Audiobooks - History - American
+  - value: audiobooks_subj_History.Ancient
+    label:
+      en_US: Audiobooks - History - Ancient
+  - value: audiobooks_subj_History.European
+    label:
+      en_US: Audiobooks - History - European
+  - value: audiobooks_subj_History.Kids___Young_Adults
+    label:
+      en_US: Audiobooks - History - Kids & Young Adults
+  - value: audiobooks_subj_History.Military
+    label:
+      en_US: Audiobooks - History - Military
+  - value: audiobooks_subj_History.World
+    label:
+      en_US: Audiobooks - History - World
+  - value: audiobooks_coll_1676
+    label:
+      en_US: Audiobooks - Language instruction
+  - value: audiobooks_subj_Language_Instruction.French
+    label:
+      en_US: Audiobooks - Language instruction - French
+  - value: audiobooks_subj_Language_Instruction.German
+    label:
+      en_US: Audiobooks - Language instruction - German
+  - value: audiobooks_subj_Language_Instruction.Italian
+    label:
+      en_US: Audiobooks - Language instruction - Italian
+  - value: audiobooks_subj_Language_Instruction.Spanish
+    label:
+      en_US: Audiobooks - Language instruction - Spanish
+  - value: audiobooks_coll_1615
+    label:
+      en_US: Audiobooks - Mystery & thrillers
+  - value: audiobooks_subj_Mystery___Thrillers.Cozy_Mysteries
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Cozy Mysteries
+  - value: audiobooks_subj_Mystery___Thrillers.Espionage
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Espionage
+  - value: audiobooks_subj_Mystery___Thrillers.Historical
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Historical
+  - value: audiobooks_subj_Mystery___Thrillers.International_Mystery___Crime
+    label:
+      en_US: Audiobooks - Mystery & thrillers - International Mystery & Crime
+  - value: audiobooks_subj_Mystery___Thrillers.Legal_Thrillers
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Legal Thrillers
+  - value: audiobooks_subj_Mystery___Thrillers.Medical_Thrillers
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Medical Thrillers
+  - value: audiobooks_subj_Mystery___Thrillers.Military
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Military
+  - value: audiobooks_subj_Mystery___Thrillers.Noir
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Noir
+  - value: audiobooks_subj_Mystery___Thrillers.Police_Procedural
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Police Procedural
+  - value: audiobooks_subj_Mystery___Thrillers.Political
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Political
+  - value: audiobooks_subj_Mystery___Thrillers.Psychological
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Psychological
+  - value: audiobooks_subj_Mystery___Thrillers.Suspense
+    label:
+      en_US: Audiobooks - Mystery & thrillers - Suspense
+  - value: audiobooks_subj_Mystery___Thrillers.True_Crime
+    label:
+      en_US: Audiobooks - Mystery & thrillers - True Crime
+  - value: audiobooks_coll_1217
+    label:
+      en_US: Audiobooks - Religion & spirituality
+  - value: audiobooks_subj_Religion___Spirituality.Buddhism___Eastern_Religions
+    label:
+      en_US: Audiobooks - Religion & spirituality - Buddhism & Eastern Religions
+  - value: audiobooks_subj_Religion___Spirituality.Christianity
+    label:
+      en_US: Audiobooks - Religion & spirituality - Christianity
+  - value: audiobooks_subj_Religion___Spirituality.Islam
+    label:
+      en_US: Audiobooks - Religion & spirituality - Islam
+  - value: audiobooks_subj_Religion___Spirituality.Judaism
+    label:
+      en_US: Audiobooks - Religion & spirituality - Judaism
+  - value: audiobooks_subj_Religion___Spirituality.Religious_Thought
+    label:
+      en_US: Audiobooks - Religion & spirituality - Religious Thought
+  - value: audiobooks_subj_Religion___Spirituality.Sermons___Ministries
+    label:
+      en_US: Audiobooks - Religion & spirituality - Sermons & Ministries
+  - value: audiobooks_coll_1716
+    label:
+      en_US: Audiobooks - Romance
+  - value: audiobooks_subj_Romance_US.Christian_Romance
+    label:
+      en_US: Audiobooks - Romance - Christian Romance
+  - value: audiobooks_subj_Romance_US.Contemporary
+    label:
+      en_US: Audiobooks - Romance - Contemporary
+  - value: audiobooks_subj_Romance_US.Erotica
+    label:
+      en_US: Audiobooks - Romance - Erotica
+  - value: audiobooks_subj_Romance_US.Fantasy
+    label:
+      en_US: Audiobooks - Romance - Fantasy
+  - value: audiobooks_subj_Romance_US.Historical
+    label:
+      en_US: Audiobooks - Romance - Historical
+  - value: audiobooks_subj_Romance_US.LGBT
+    label:
+      en_US: Audiobooks - Romance - LGBT
+  - value: audiobooks_subj_Romance_US.Paranormal
+    label:
+      en_US: Audiobooks - Romance - Paranormal
+  - value: audiobooks_subj_Romance_US.Regency
+    label:
+      en_US: Audiobooks - Romance - Regency
+  - value: audiobooks_subj_Romance_US.Romantic_Comedy
+    label:
+      en_US: Audiobooks - Romance - Romantic Comedy
+  - value: audiobooks_subj_Romance_US.Science_Fiction___Fantasy
+    label:
+      en_US: Audiobooks - Romance - Science Fiction & Fantasy
+  - value: audiobooks_subj_Romance_US.Sports
+    label:
+      en_US: Audiobooks - Romance - Sports
+  - value: audiobooks_subj_Romance_US.Suspense
+    label:
+      en_US: Audiobooks - Romance - Suspense
+  - value: audiobooks_subj_Romance_US.Western
+    label:
+      en_US: Audiobooks - Romance - Western
+  - value: audiobooks_subj_Romance_US.Young_Adult
+    label:
+      en_US: Audiobooks - Romance - Young Adult
+  - value: audiobooks_coll_1219
+    label:
+      en_US: Audiobooks - Science & technology
+  - value: audiobooks_subj_Science___Technology.Astronomy
+    label:
+      en_US: Audiobooks - Science & technology - Astronomy
+  - value: audiobooks_subj_Science___Technology.Biology
+    label:
+      en_US: Audiobooks - Science & technology - Biology
+  - value: audiobooks_subj_Science___Technology.Environment
+    label:
+      en_US: Audiobooks - Science & technology - Environment
+  - value: audiobooks_subj_Science___Technology.Physics
+    label:
+      en_US: Audiobooks - Science & technology - Physics
+  - value: audiobooks_coll_1604
+    label:
+      en_US: Audiobooks - Science fiction & fantasy
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Alternate_History
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Alternate History
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Contemporary
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Contemporary
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Dark_Fantasy
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Dark Fantasy
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Fantasy__Epic
+    label:
+      en_US: 'Audiobooks - Science fiction & fantasy - Fantasy: Epic'
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Military_Sci-Fi
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Military Sci-Fi
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Paranormal
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Paranormal
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Post_Apocalyptic
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Post Apocalyptic
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Short_Stories___Anthologies
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Short Stories & Anthologies
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Space_Opera
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Space Opera
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Steampunk
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Steampunk
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Superheroes
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Superheroes
+  - value: audiobooks_subj_Science_Fiction___Fantasy.Time_Travel
+    label:
+      en_US: Audiobooks - Science fiction & fantasy - Time Travel
+  - value: audiobooks_coll_1545
+    label:
+      en_US: Audiobooks - Self-help
+  - value: audiobooks_subj_Self-Help.Communication_Skills
+    label:
+      en_US: Audiobooks - Self-help - Communication Skills
+  - value: audiobooks_subj_Self-Help.How-To
+    label:
+      en_US: Audiobooks - Self-help - How-To
+  - value: audiobooks_subj_Self-Help.Hypnosis
+    label:
+      en_US: Audiobooks - Self-help - Hypnosis
+  - value: audiobooks_subj_Self-Help.Meditation
+    label:
+      en_US: Audiobooks - Self-help - Meditation
+  - value: audiobooks_subj_Self-Help.Motivation___Inspiration
+    label:
+      en_US: Audiobooks - Self-help - Motivation & Inspiration
+  - value: audiobooks_subj_Self-Help.Parenting
+    label:
+      en_US: Audiobooks - Self-help - Parenting
+  - value: audiobooks_subj_Self-Help.Personal_Finance
+    label:
+      en_US: Audiobooks - Self-help - Personal_Finance
+  - value: audiobooks_subj_Self-Help.Relationships
+    label:
+      en_US: Audiobooks - Self-help - Relationships
+  - value: audiobooks_subj_Self-Help.Sexuality
+    label:
+      en_US: Audiobooks - Self-help - Sexuality
+  - value: audiobooks_coll_1222
+    label:
+      en_US: Audiobooks - Sports
+  - value: audiobooks_subj_Sports.Baseball
+    label:
+      en_US: Audiobooks - Sports - Baseball
+  - value: audiobooks_subj_Sports.Basketball
+    label:
+      en_US: Audiobooks - Sports - Basketball
+  - value: audiobooks_subj_Sports.Football
+    label:
+      en_US: Audiobooks - Sports - Football
+  - value: audiobooks_subj_Sports.Golf
+    label:
+      en_US: Audiobooks - Sports - Golf
+  - value: audiobooks_coll_1224
+    label:
+      en_US: Audiobooks - Travel
+  - value: audiobooks_subj_Travel.Adventure___Exploration
+    label:
+      en_US: Audiobooks - Travel - Adventure & Exploration
+  - value: audiobooks_subj_Travel.Essays___Travelogues
+    label:
+      en_US: Audiobooks - Travel - Essays & Travelogues
+  - value: audiobooks_subj_Travel.Guided_Tours
+    label:
+      en_US: Audiobooks - Travel - Guided Tours
+  - value: audiobooks_coll_1672
+    label:
+      en_US: Audiobooks - Young adult
+  - value: audiobooks_subj_Young_Adult.Family___Relationships
+    label:
+      en_US: Audiobooks - Young adult - Family & Relationships
+  - value: audiobooks_subj_Young_Adult.Health___Sports
+    label:
+      en_US: Audiobooks - Young adult - Health & Sports
+  - value: audiobooks_subj_Young_Adult.History___Historical_Fiction
+    label:
+      en_US: Audiobooks - Young adult - History & Historical Fiction
+  - value: audiobooks_subj_Young_Adult.Mystery___Thrillers
+    label:
+      en_US: Audiobooks - Young adult - Mystery & Thrillers
+  - value: audiobooks_subj_Young_Adult.Myths___Legends
+    label:
+      en_US: Audiobooks - Young adult - Myths & Legends
+  - value: audiobooks_subj_Young_Adult.Religion___Spirituality
+    label:
+      en_US: Audiobooks - Young adult - Religion & Spirituality
+  - value: audiobooks_subj_Young_Adult.Romance___Friendship
+    label:
+      en_US: Audiobooks - Young adult - Romance & Friendship
+  - value: audiobooks_subj_Young_Adult.Science_Fiction___Fantasy
+    label:
+      en_US: Audiobooks - Young adult - Science Fiction & Fantasy
+  - value: audiobooks_subj_Young_Adult.Social_Issues
+    label:
+      en_US: Audiobooks - Young adult - Social Issues
+  - value: coll_1401
+    label:
+      en_US: Comics - undefined
+  - value: subj_Comics___Graphic_Novels.General
+    label:
+      en_US: Comics - General
+  - value: subj_Comics___Graphic_Novels.Crime___Mystery
+    label:
+      en_US: Comics - Crime & Mystery
+  - value: subj_Comics___Graphic_Novels.Fantasy
+    label:
+      en_US: Comics - Fantasy
+  - value: subj_Comics___Graphic_Novels.Horror
+    label:
+      en_US: Comics - Horror
+  - value: subj_Comics___Graphic_Novels.Literary
+    label:
+      en_US: Comics - Literary
+  - value: subj_Comics___Graphic_Novels.Manga
+    label:
+      en_US: Comics - Manga
+  - value: subj_Comics___Graphic_Novels.Media_Tie-In
+    label:
+      en_US: Comics - Media Tie-In
+  - value: subj_Comics___Graphic_Novels.Science_Fiction
+    label:
+      en_US: Comics - Science Fiction
+  - value: subj_Comics___Graphic_Novels.Superheroes
+    label:
+      en_US: Comics - Science Fiction
+  - value: coll_1689
+    label:
+      en_US: Children's books - undefined
+  - value: coll_1690
+    label:
+      en_US: Children's books - Action & adventure
+  - value: coll_1691
+    label:
+      en_US: Children's books - Animals & nature
+  - value: coll_1693
+    label:
+      en_US: Children's books - Comics
+  - value: coll_1692
+    label:
+      en_US: Children's books - Early learning
+  - value: coll_1694
+    label:
+      en_US: Children's books - Education
+  - value: coll_1696
+    label:
+      en_US: Children's books - Fiction
+  - value: coll_1698
+    label:
+      en_US: Children's books - Growing up
+  - value: coll_1699
+    label:
+      en_US: Children's books - History & biographies
+  - value: coll_1702
+    label:
+      en_US: Children's books - Mysteries
+  - value: coll_1704
+    label:
+      en_US: Children's books - Science fiction & fantasy
+  - value: coll_1705
+    label:
+      en_US: Children's books - Sports
+- name: next_page_token
+  type: string
+  required: false
+  label:
+    en_US: Next Page Token
+  human_description:
+    en_US: Next Page Token parameter.
+  llm_description: Next Page Token parameter.
+  form: form
+  placeholder:
+    en_US: Next page token
+- name: section_page_token
+  type: string
+  required: false
+  label:
+    en_US: Section Page Token
+  human_description:
+    en_US: Section Page Token parameter.
+  llm_description: Section Page Token parameter.
+  form: form
+  placeholder:
+    en_US: Section page token
+- name: chart
+  type: string
+  required: false
+  label:
+    en_US: Chart
+  human_description:
+    en_US: Chart parameter.
+  llm_description: Chart parameter.
+  form: form
+  placeholder:
+    en_US: Chart
+- name: see_more_token
+  type: string
+  required: false
+  label:
+    en_US: See more token
+  human_description:
+    en_US: See more token parameter.
+  llm_description: See more token parameter.
+  form: form
+  placeholder:
+    en_US: See more token
+- name: price
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Price
+  human_description:
+    en_US: Price parameter.
+  llm_description: Price parameter.
+  form: form
+  multiple: false
+  options:
+  - value: ''
+    label:
+      en_US: Any
+  - value: '1'
+    label:
+      en_US: Free
+  - value: '2'
+    label:
+      en_US: Paid
+- name: age
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Age
+  human_description:
+    en_US: Age parameter.
+  llm_description: Age parameter.
+  form: form
+  multiple: false
+  options:
+  - value: AGE_RANGE1
+    label:
+      en_US: Ages 5 and under
+  - value: AGE_RANGE2
+    label:
+      en_US: Ages 6-8
+  - value: AGE_RANGE3
+    label:
+      en_US: Ages 9-12
+- name: extra_parameters_json
+  type: string
+  required: false
+  default: '{}'
+  label:
+    en_US: Extra Parameters JSON
+  human_description:
+    en_US: Advanced JSON overrides; engine and isjson remain protected.
+  llm_description: Optional advanced JSON object override. The engine and isjson fields
+    remain protected.
+  form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/generated/google_play_books.py

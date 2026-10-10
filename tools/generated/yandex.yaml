@@ -1,0 +1,2398 @@
+identity:
+  author: thordata
+  name: yandex
+  label:
+    en_US: Thordata Yandex Search
+description:
+  human:
+    en_US: Search with the fixed Thordata SERP engine Thordata Yandex Search.
+  llm: Run a Thordata SERP search using the fixed engine yandex.
+parameters:
+- name: text
+  type: string
+  required: true
+  label:
+    en_US: Search Query
+  human_description:
+    en_US: Search Query parameter.
+  llm_description: Search Query parameter.
+  form: llm
+  placeholder:
+    en_US: pizza
+- name: no_cache
+  type: boolean
+  required: false
+  label:
+    en_US: Disable Caching
+  human_description:
+    en_US: Disable Caching parameter.
+  llm_description: Disable Caching parameter.
+  form: form
+  default: false
+- name: yandex_domain
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Domain
+  human_description:
+    en_US: Domain parameter.
+  llm_description: Domain parameter.
+  form: form
+  default: yandex.com
+  multiple: false
+  options:
+  - value: yandex.com
+    label:
+      en_US: yandex.com
+  - value: yandex.ru
+    label:
+      en_US: yandex.ru
+  - value: yandex.by
+    label:
+      en_US: yandex.by
+  - value: yandex.kz
+    label:
+      en_US: yandex.kz
+  - value: yandex.ua
+    label:
+      en_US: yandex.ua
+  - value: yandex.com.tr
+    label:
+      en_US: yandex.com.tr
+- name: lang
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Language
+  human_description:
+    en_US: Language parameter.
+  llm_description: Language parameter.
+  form: form
+  default: en
+  multiple: false
+  options:
+  - value: ru
+    label:
+      en_US: Russian
+  - value: en
+    label:
+      en_US: English
+  - value: uk
+    label:
+      en_US: Ukrainian
+  - value: be
+    label:
+      en_US: Belarusian
+  - value: kk
+    label:
+      en_US: Kazakh
+  - value: tt
+    label:
+      en_US: Tatar
+  - value: az
+    label:
+      en_US: Azerbaijani
+  - value: de
+    label:
+      en_US: German
+  - value: fr
+    label:
+      en_US: French
+  - value: it
+    label:
+      en_US: Italian
+  - value: es
+    label:
+      en_US: Spanish
+  - value: pt
+    label:
+      en_US: Portuguese
+  - value: tr
+    label:
+      en_US: Turkish
+- name: lr
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Location
+  human_description:
+    en_US: Location parameter.
+  llm_description: Location parameter.
+  form: form
+  multiple: false
+  options:
+  - value: '1'
+    label:
+      en_US: Moscow and the region
+  - value: '2'
+    label:
+      en_US: St. Petersburg
+  - value: '3'
+    label:
+      en_US: Center
+  - value: '4'
+    label:
+      en_US: Belgorod
+  - value: '5'
+    label:
+      en_US: Ivanovo
+  - value: '6'
+    label:
+      en_US: Kaluga
+  - value: '7'
+    label:
+      en_US: Kostroma
+  - value: '68'
+    label:
+      en_US: Chita
+  - value: '73'
+    label:
+      en_US: Far East
+  - value: '74'
+    label:
+      en_US: Yakutsk
+  - value: '75'
+    label:
+      en_US: Vladivostok
+  - value: '76'
+    label:
+      en_US: Khabarovsk
+  - value: '77'
+    label:
+      en_US: Blagoveshchensk
+  - value: '78'
+    label:
+      en_US: Petropavlovsk-Kamchatsky
+  - value: '79'
+    label:
+      en_US: Magadan
+  - value: '80'
+    label:
+      en_US: Yuzhno-Sakhalinsk
+  - value: '84'
+    label:
+      en_US: USA
+  - value: '86'
+    label:
+      en_US: Atlanta
+  - value: '87'
+    label:
+      en_US: Washington
+  - value: '89'
+    label:
+      en_US: Detroit
+  - value: '90'
+    label:
+      en_US: San Francisco
+  - value: '91'
+    label:
+      en_US: Seattle
+  - value: '93'
+    label:
+      en_US: Argentina
+  - value: '94'
+    label:
+      en_US: Brazil
+  - value: '95'
+    label:
+      en_US: Canada
+  - value: '96'
+    label:
+      en_US: Germany
+  - value: '97'
+    label:
+      en_US: Heidelberg
+  - value: '98'
+    label:
+      en_US: Cologne
+  - value: '99'
+    label:
+      en_US: Munich
+  - value: '100'
+    label:
+      en_US: Frankfurt am Main
+  - value: '101'
+    label:
+      en_US: Stuttgart
+  - value: '102'
+    label:
+      en_US: United Kingdom
+  - value: '111'
+    label:
+      en_US: Europe
+  - value: '113'
+    label:
+      en_US: Austria
+  - value: '114'
+    label:
+      en_US: Belgium
+  - value: '115'
+    label:
+      en_US: Bulgaria
+  - value: '116'
+    label:
+      en_US: Hungary
+  - value: '117'
+    label:
+      en_US: Lithuania
+  - value: '118'
+    label:
+      en_US: Netherlands
+  - value: '119'
+    label:
+      en_US: Norway
+  - value: '120'
+    label:
+      en_US: Poland
+  - value: '121'
+    label:
+      en_US: Slovakia
+  - value: '122'
+    label:
+      en_US: Slovenia
+  - value: '123'
+    label:
+      en_US: Finland
+  - value: '124'
+    label:
+      en_US: France
+  - value: '125'
+    label:
+      en_US: Czech Republic
+  - value: '126'
+    label:
+      en_US: Switzerland
+  - value: '127'
+    label:
+      en_US: Sweden
+  - value: '129'
+    label:
+      en_US: Beer Sheva
+  - value: '130'
+    label:
+      en_US: Jerusalem
+  - value: '131'
+    label:
+      en_US: Tel Aviv
+  - value: '132'
+    label:
+      en_US: Haifa
+  - value: '134'
+    label:
+      en_US: China
+  - value: '135'
+    label:
+      en_US: Korea
+  - value: '137'
+    label:
+      en_US: Japan
+  - value: '138'
+    label:
+      en_US: Australia and Oceania
+  - value: '139'
+    label:
+      en_US: New Zealand
+  - value: '141'
+    label:
+      en_US: Dnepropetrovsk
+  - value: '142'
+    label:
+      en_US: Donetsk
+  - value: '143'
+    label:
+      en_US: Kiev
+  - value: '144'
+    label:
+      en_US: Lviv
+  - value: '145'
+    label:
+      en_US: Odessa
+  - value: '146'
+    label:
+      en_US: Simferopol
+  - value: '147'
+    label:
+      en_US: Kharkiv
+  - value: '148'
+    label:
+      en_US: Nikolaev
+  - value: '149'
+    label:
+      en_US: Belarus
+  - value: '153'
+    label:
+      en_US: Brest
+  - value: '154'
+    label:
+      en_US: Vitebsk
+  - value: '155'
+    label:
+      en_US: Gomel
+  - value: '157'
+    label:
+      en_US: Minsk
+  - value: '158'
+    label:
+      en_US: Mogilev
+  - value: '159'
+    label:
+      en_US: Kazakhstan
+  - value: '162'
+    label:
+      en_US: Almaty
+  - value: '163'
+    label:
+      en_US: Astana
+  - value: '164'
+    label:
+      en_US: Karaganda
+  - value: '165'
+    label:
+      en_US: Semey
+  - value: '166'
+    label:
+      en_US: CIS
+  - value: '167'
+    label:
+      en_US: Azerbaijan
+  - value: '168'
+    label:
+      en_US: Armenia
+  - value: '169'
+    label:
+      en_US: Georgia
+  - value: '170'
+    label:
+      en_US: Turkmenistan
+  - value: '171'
+    label:
+      en_US: Uzbekistan
+  - value: '172'
+    label:
+      en_US: Ufa
+  - value: '177'
+    label:
+      en_US: Berlin
+  - value: '178'
+    label:
+      en_US: Hamburg
+  - value: '179'
+    label:
+      en_US: Estonia
+  - value: '180'
+    label:
+      en_US: Serbia
+  - value: '181'
+    label:
+      en_US: Israel
+  - value: '183'
+    label:
+      en_US: Asia
+  - value: '187'
+    label:
+      en_US: Ukraine
+  - value: '190'
+    label:
+      en_US: Pavlodar
+  - value: '191'
+    label:
+      en_US: Bryansk
+  - value: '192'
+    label:
+      en_US: Vladimir
+  - value: '193'
+    label:
+      en_US: Voronezh
+  - value: '194'
+    label:
+      en_US: Saratov
+  - value: '195'
+    label:
+      en_US: Ulyanovsk
+  - value: '197'
+    label:
+      en_US: Barnaul
+  - value: '198'
+    label:
+      en_US: Ulan-Ude
+  - value: '200'
+    label:
+      en_US: Los Angeles
+  - value: '202'
+    label:
+      en_US: New York
+  - value: '203'
+    label:
+      en_US: Denmark
+  - value: '204'
+    label:
+      en_US: Spain
+  - value: '205'
+    label:
+      en_US: Italy
+  - value: '206'
+    label:
+      en_US: Latvia
+  - value: '207'
+    label:
+      en_US: Kyrgyzstan
+  - value: '208'
+    label:
+      en_US: Moldova
+  - value: '209'
+    label:
+      en_US: Tajikistan
+  - value: '210'
+    label:
+      en_US: UAE
+  - value: '211'
+    label:
+      en_US: Australia
+  - value: '213'
+    label:
+      en_US: Moscow
+  - value: '214'
+    label:
+      en_US: Dolgoprudnyi
+  - value: '215'
+    label:
+      en_US: Dubna
+  - value: '217'
+    label:
+      en_US: Puschino
+  - value: '219'
+    label:
+      en_US: Chernogolovka
+  - value: '221'
+    label:
+      en_US: Shimkent
+  - value: '222'
+    label:
+      en_US: Lugansk
+  - value: '223'
+    label:
+      en_US: MA
+  - value: '225'
+    label:
+      en_US: Russia
+  - value: '235'
+    label:
+      en_US: Magnitogorsk
+  - value: '236'
+    label:
+      en_US: Naberezhnye Chelny
+  - value: '237'
+    label:
+      en_US: Novokuznetsk
+  - value: '238'
+    label:
+      en_US: Novocherkassk
+  - value: '239'
+    label:
+      en_US: Sochi
+  - value: '240'
+    label:
+      en_US: Togliatti
+  - value: '241'
+    label:
+      en_US: Africa
+  - value: '245'
+    label:
+      en_US: Arctic and Antarctic
+  - value: '246'
+    label:
+      en_US: Greece
+  - value: '318'
+    label:
+      en_US: Universal
+  - value: '349'
+    label:
+      en_US: Moscow and the region / Other cities in the region
+  - value: '350'
+    label:
+      en_US: Moscow and the region / Universal
+  - value: '381'
+    label:
+      en_US: Russia / Other
+  - value: '382'
+    label:
+      en_US: Russia / All-Russian
+  - value: '413'
+    label:
+      en_US: Center / Other cities in the region
+  - value: '414'
+    label:
+      en_US: Center / Universal
+  - value: '445'
+    label:
+      en_US: North-West / Other cities in the region
+  - value: '446'
+    label:
+      en_US: North-West / Universal
+  - value: '477'
+    label:
+      en_US: South / Other cities in the region
+  - value: '478'
+    label:
+      en_US: South / Universal
+  - value: '509'
+    label:
+      en_US: Volga region / Other cities in the region
+  - value: '510'
+    label:
+      en_US: Volga region / Universal
+  - value: '541'
+    label:
+      en_US: Ural / Other cities in the region
+  - value: '542'
+    label:
+      en_US: Ural / Universal
+  - value: '573'
+    label:
+      en_US: Siberia / Other cities in the region
+  - value: '574'
+    label:
+      en_US: Siberia / Universal
+  - value: '605'
+    label:
+      en_US: Far East / Other cities in the region
+  - value: '606'
+    label:
+      en_US: Far East / Universal
+  - value: '637'
+    label:
+      en_US: USA / Other
+  - value: '638'
+    label:
+      en_US: USA / Universal
+  - value: '669'
+    label:
+      en_US: Other
+  - value: '670'
+    label:
+      en_US: Universal
+  - value: '701'
+    label:
+      en_US: Germany / Others
+  - value: '702'
+    label:
+      en_US: Germany / Universal
+  - value: '733'
+    label:
+      en_US: Europe / Others
+  - value: '734'
+    label:
+      en_US: Europe / Universal
+  - value: '765'
+    label:
+      en_US: Israel / Others
+  - value: '766'
+    label:
+      en_US: Israel / Universal
+  - value: '797'
+    label:
+      en_US: Asia / Others
+  - value: '798'
+    label:
+      en_US: Asia / Universal
+  - value: '829'
+    label:
+      en_US: Australia and Oceania / Others
+  - value: '830'
+    label:
+      en_US: Australia and Oceania / Universal
+  - value: '861'
+    label:
+      en_US: Ukraine / Others
+  - value: '862'
+    label:
+      en_US: Ukraine / Universal
+  - value: '893'
+    label:
+      en_US: Belarus / Other
+  - value: '894'
+    label:
+      en_US: Belarus / Universal
+  - value: '925'
+    label:
+      en_US: Kazakhstan / Other
+  - value: '926'
+    label:
+      en_US: Kazakhstan / Universal
+  - value: '957'
+    label:
+      en_US: CIS / Other
+  - value: '958'
+    label:
+      en_US: CIS / Universal
+  - value: '959'
+    label:
+      en_US: Sevastopol
+  - value: '960'
+    label:
+      en_US: Zaporozhye
+  - value: '961'
+    label:
+      en_US: Khmelnitsky
+  - value: '962'
+    label:
+      en_US: Kherson
+  - value: '963'
+    label:
+      en_US: Vinnytsia
+  - value: '964'
+    label:
+      en_US: Poltava
+  - value: '965'
+    label:
+      en_US: Sumy
+  - value: '966'
+    label:
+      en_US: Chernihiv
+  - value: '967'
+    label:
+      en_US: Obninsk
+  - value: '968'
+    label:
+      en_US: Cherepovets
+  - value: '969'
+    label:
+      en_US: Vyborg
+  - value: '970'
+    label:
+      en_US: Novorossiysk
+  - value: '971'
+    label:
+      en_US: Taganrog
+  - value: '972'
+    label:
+      en_US: Dzerzhinsk
+  - value: '973'
+    label:
+      en_US: Surgut
+  - value: '974'
+    label:
+      en_US: Nakhodka
+  - value: '975'
+    label:
+      en_US: Biysk
+  - value: '976'
+    label:
+      en_US: Bratsk
+  - value: '977'
+    label:
+      en_US: Crimea
+  - value: '978'
+    label:
+      en_US: Crimea / Other region of the city
+  - value: '979'
+    label:
+      en_US: Crimea / Universal
+  - value: '980'
+    label:
+      en_US: Baltic States
+  - value: '981'
+    label:
+      en_US: Baltic Countries / Other
+  - value: '982'
+    label:
+      en_US: Baltic Countries / Universal
+  - value: '983'
+    label:
+      en_US: Turkey
+  - value: '994'
+    label:
+      en_US: India
+  - value: '995'
+    label:
+      en_US: Thailand
+  - value: '1004'
+    label:
+      en_US: Middle East
+  - value: '1048'
+    label:
+      en_US: Canada / Other
+  - value: '1049'
+    label:
+      en_US: Canada / Universal
+  - value: '1054'
+    label:
+      en_US: Middle East / Other
+  - value: '1055'
+    label:
+      en_US: Middle East / Universal
+  - value: '1056'
+    label:
+      en_US: Egypt
+  - value: '1058'
+    label:
+      en_US: Tuapse
+  - value: '1091'
+    label:
+      en_US: Nizhnevartovsk
+  - value: '1092'
+    label:
+      en_US: Nazran
+  - value: '1093'
+    label:
+      en_US: Maykop
+  - value: '1094'
+    label:
+      en_US: Elista
+  - value: '1095'
+    label:
+      en_US: Abakan
+  - value: '1104'
+    label:
+      en_US: Cherkessk
+  - value: '1106'
+    label:
+      en_US: Grozny
+  - value: '1107'
+    label:
+      en_US: Anapa
+  - value: '10002'
+    label:
+      en_US: North America
+  - value: '10003'
+    label:
+      en_US: South America
+  - value: '10069'
+    label:
+      en_US: Malta
+  - value: '10083'
+    label:
+      en_US: Croatia
+  - value: '10174'
+    label:
+      en_US: St. Petersburg and the Leningrad Region
+  - value: '10176'
+    label:
+      en_US: Nenets Autonomous Okrug
+  - value: '10231'
+    label:
+      en_US: Republic of Altai
+  - value: '10233'
+    label:
+      en_US: Republic of Tyva
+  - value: '10243'
+    label:
+      en_US: Jewish Autonomous Region
+  - value: '10251'
+    label:
+      en_US: Chukotka Autonomous District
+  - value: '10303'
+    label:
+      en_US: Taldykorgan
+  - value: '10306'
+    label:
+      en_US: Ust-Kamenogorsk
+  - value: '10313'
+    label:
+      en_US: Chisinau
+  - value: '10314'
+    label:
+      en_US: Balti
+  - value: '10315'
+    label:
+      en_US: Bender
+  - value: '10317'
+    label:
+      en_US: Tiraspol
+  - value: '10343'
+    label:
+      en_US: Zhytomyr
+  - value: '10345'
+    label:
+      en_US: Ivano-Frankovsk
+  - value: '10347'
+    label:
+      en_US: Kryvyi Rih
+  - value: '10355'
+    label:
+      en_US: Rivne
+  - value: '10357'
+    label:
+      en_US: Ternopil
+  - value: '10358'
+    label:
+      en_US: Uzhhorod
+  - value: '10363'
+    label:
+      en_US: Cherkasy
+  - value: '10365'
+    label:
+      en_US: Chernivtsi
+  - value: '10366'
+    label:
+      en_US: Mariupol
+  - value: '10367'
+    label:
+      en_US: Melitopol
+  - value: '10369'
+    label:
+      en_US: White Church
+  - value: '10645'
+    label:
+      en_US: Belgorod region
+  - value: '10649'
+    label:
+      en_US: Stary Oskol
+  - value: '10650'
+    label:
+      en_US: Bryansk region
+  - value: '10656'
+    label:
+      en_US: Alexandrov
+  - value: '10658'
+    label:
+      en_US: Vladimirckaya area of
+  - value: '10661'
+    label:
+      en_US: Goose-crystal
+  - value: '10664'
+    label:
+      en_US: Carpet
+  - value: '10668'
+    label:
+      en_US: Moore
+  - value: '10671'
+    label:
+      en_US: Suzdal
+  - value: '10672'
+    label:
+      en_US: Voronezhckaya area
+  - value: '10687'
+    label:
+      en_US: Ivanovo region
+  - value: '10693'
+    label:
+      en_US: Kaluga region
+  - value: '10699'
+    label:
+      en_US: Kostroma region
+  - value: '10705'
+    label:
+      en_US: Kursk region
+  - value: '10712'
+    label:
+      en_US: Lipetsk region
+  - value: '10716'
+    label:
+      en_US: Balashikha
+  - value: '10719'
+    label:
+      en_US: Vidnoe
+  - value: '10723'
+    label:
+      en_US: Dmitrov
+  - value: '10725'
+    label:
+      en_US: Domodedovo
+  - value: '10733'
+    label:
+      en_US: Wedge
+  - value: '10734'
+    label:
+      en_US: Kolomna
+  - value: '10735'
+    label:
+      en_US: Krasnogorsk
+  - value: '10738'
+    label:
+      en_US: Lyubertsy
+  - value: '10740'
+    label:
+      en_US: Mytishchi
+  - value: '10742'
+    label:
+      en_US: Noginsk
+  - value: '10743'
+    label:
+      en_US: Odintsovo
+  - value: '10745'
+    label:
+      en_US: Orekhovo-
+  - value: '10746'
+    label:
+      en_US: Pavlovsky Posad
+  - value: '10747'
+    label:
+      en_US: Podolsk
+  - value: '10748'
+    label:
+      en_US: Pushkino
+  - value: '10750'
+    label:
+      en_US: Ramenskoye
+  - value: '10752'
+    label:
+      en_US: Sergiev Posad
+  - value: '10754'
+    label:
+      en_US: Serpukhov
+  - value: '10755'
+    label:
+      en_US: Solnechnogorsk
+  - value: '10756'
+    label:
+      en_US: Stupino
+  - value: '10758'
+    label:
+      en_US: Khimki
+  - value: '10761'
+    label:
+      en_US: Chekhov
+  - value: '10765'
+    label:
+      en_US: Shchelkovo
+  - value: '10772'
+    label:
+      en_US: Oryol Oblast
+  - value: '10776'
+    label:
+      en_US: Ryazan oblast
+  - value: '10795'
+    label:
+      en_US: Smolensk region
+  - value: '10802'
+    label:
+      en_US: Tambov region
+  - value: '10819'
+    label:
+      en_US: Tver region
+  - value: '10820'
+    label:
+      en_US: Rzhev
+  - value: '10830'
+    label:
+      en_US: Novomoskovsk
+  - value: '10832'
+    label:
+      en_US: Tula region
+  - value: '10837'
+    label:
+      en_US: Pereslavl
+  - value: '10838'
+    label:
+      en_US: Rostov
+  - value: '10839'
+    label:
+      en_US: Rybinsk
+  - value: '10840'
+    label:
+      en_US: Uglich
+  - value: '10841'
+    label:
+      en_US: Yaroslavl Oblast
+  - value: '10842'
+    label:
+      en_US: Arkhangelsk Oblast
+  - value: '10849'
+    label:
+      en_US: Severodvinsk
+  - value: '10853'
+    label:
+      en_US: Vologda Oblast
+  - value: '10857'
+    label:
+      en_US: Kaliningrad Oblast
+  - value: '10867'
+    label:
+      en_US: Gatchina
+  - value: '10894'
+    label:
+      en_US: Apatity
+  - value: '10897'
+    label:
+      en_US: Murmansk Oblast
+  - value: '10904'
+    label:
+      en_US: Novgorod Oblast
+  - value: '10926'
+    label:
+      en_US: Pskov Oblast
+  - value: '10928'
+    label:
+      en_US: Velikiye Luki Oblast
+  - value: '10937'
+    label:
+      en_US: Sakhtrata
+  - value: '10945'
+    label:
+      en_US: Sakhtrata Volgograd Region
+  - value: '10950'
+    label:
+      en_US: Republic of Karelia
+  - value: '10951'
+    label:
+      en_US: Volzhsky
+  - value: '10987'
+    label:
+      en_US: Armavir
+  - value: '10990'
+    label:
+      en_US: Gelendzhik
+  - value: '10993'
+    label:
+      en_US: Yeisk
+  - value: '10995'
+    label:
+      en_US: Krasnodar Territory
+  - value: '11004'
+    label:
+      en_US: Republic of Adygea
+  - value: '11010'
+    label:
+      en_US: Dagestan
+  - value: '11012'
+    label:
+      en_US: Ingushetia
+  - value: '11013'
+    label:
+      en_US: Republic of Kabardino-Balkaria
+  - value: '11015'
+    label:
+      en_US: Kalmykia
+  - value: '11020'
+    label:
+      en_US: Karachay-Cherkess Republic
+  - value: '11021'
+    label:
+      en_US: Republic of North Ossetia-Alania
+  - value: '11024'
+    label:
+      en_US: Chechen Republic
+  - value: '11029'
+    label:
+      en_US: Rostov region
+  - value: '11036'
+    label:
+      en_US: Volgodonsk
+  - value: '11043'
+    label:
+      en_US: Kamensk-
+  - value: '11053'
+    label:
+      en_US: Mines
+  - value: '11057'
+    label:
+      en_US: Essentuki
+  - value: '11062'
+    label:
+      en_US: Kislovodsk
+  - value: '11063'
+    label:
+      en_US: Mineral waters
+  - value: '11064'
+    label:
+      en_US: Nevinnomyssk
+  - value: '11067'
+    label:
+      en_US: Pyatigorsk
+  - value: '11069'
+    label:
+      en_US: Stavropol Territory
+  - value: '11070'
+    label:
+      en_US: Kirov Region
+  - value: '11071'
+    label:
+      en_US: Kirovo-Chepetsk
+  - value: '11077'
+    label:
+      en_US: Republic of Mari El
+  - value: '11079'
+    label:
+      en_US: Nizhny Novgorod Region
+  - value: '11080'
+    label:
+      en_US: Arzamas
+  - value: '11083'
+    label:
+      en_US: Sarov
+  - value: '11084'
+    label:
+      en_US: Orenburg region
+  - value: '11091'
+    label:
+      en_US: Orsk
+  - value: '11095'
+    label:
+      en_US: Penza region
+  - value: '11108'
+    label:
+      en_US: Perm
+  - value: '11110'
+    label:
+      en_US: Solikamsk
+  - value: '11111'
+    label:
+      en_US: Bashkortostan
+  - value: '11114'
+    label:
+      en_US: Neftekamsk
+  - value: '11115'
+    label:
+      en_US: Salavat
+  - value: '11116'
+    label:
+      en_US: Sterlitamak
+  - value: '11117'
+    label:
+      en_US: Mordovia
+  - value: '11119'
+    label:
+      en_US: Tatarstan
+  - value: '11121'
+    label:
+      en_US: Almetyevsk
+  - value: '11122'
+    label:
+      en_US: Bugulma
+  - value: '11123'
+    label:
+      en_US: Yelabuga
+  - value: '11125'
+    label:
+      en_US: Zelenodolsk
+  - value: '11127'
+    label:
+      en_US: Nizhnekamsk
+  - value: '11129'
+    label:
+      en_US: Tchistopol
+  - value: '11131'
+    label:
+      en_US: Samara region
+  - value: '11132'
+    label:
+      en_US: Zhigulevsk
+  - value: '11139'
+    label:
+      en_US: Syzran
+  - value: '11143'
+    label:
+      en_US: Balakovo
+  - value: '11146'
+    label:
+      en_US: Saratov Region
+  - value: '11147'
+    label:
+      en_US: Engels
+  - value: '11148'
+    label:
+      en_US: Udmurt Republic
+  - value: '11150'
+    label:
+      en_US: Glazov
+  - value: '11152'
+    label:
+      en_US: Sarapul
+  - value: '11153'
+    label:
+      en_US: Ulyanovsk region
+  - value: '11155'
+    label:
+      en_US: Dimitrovgrad
+  - value: '11156'
+    label:
+      en_US: Chuvash Republic
+  - value: '11158'
+    label:
+      en_US: Kurgan oblast
+  - value: '11162'
+    label:
+      en_US: Sverdlovsk region
+  - value: '11164'
+    label:
+      en_US: Kamensk
+  - value: '11168'
+    label:
+      en_US: Nizhniy Tagil
+  - value: '11170'
+    label:
+      en_US: Novoural'sk
+  - value: '11171'
+    label:
+      en_US: Pervouralsk
+  - value: '11173'
+    label:
+      en_US: Ishim
+  - value: '11175'
+    label:
+      en_US: Tobolsk
+  - value: '11176'
+    label:
+      en_US: Tyumen region
+  - value: '11193'
+    label:
+      en_US: Khanty-Mansiysk
+  - value: '11202'
+    label:
+      en_US: Chrysostom
+  - value: '11212'
+    label:
+      en_US: Miass
+  - value: '11214'
+    label:
+      en_US: Ozersk
+  - value: '11217'
+    label:
+      en_US: Satka
+  - value: '11218'
+    label:
+      en_US: Snezhinsk
+  - value: '11225'
+    label:
+      en_US: Chelyabinsk region
+  - value: '11232'
+    label:
+      en_US: Yamalo-Nenets Autonomous District
+  - value: '11235'
+    label:
+      en_US: Altai Territory
+  - value: '11251'
+    label:
+      en_US: Rubtsovsk
+  - value: '11256'
+    label:
+      en_US: Angarsk
+  - value: '11266'
+    label:
+      en_US: Irkutsk Region
+  - value: '11273'
+    label:
+      en_US: Ust-Ilimsk
+  - value: '11282'
+    label:
+      en_US: Kemerovo Region
+  - value: '11287'
+    label:
+      en_US: Mezhdurechensk
+  - value: '11291'
+    label:
+      en_US: Prokopevsk
+  - value: '11302'
+    label:
+      en_US: Achinsk
+  - value: '11306'
+    label:
+      en_US: Kayerkan
+  - value: '11309'
+    label:
+      en_US: Krasnoyarsk region
+  - value: '11311'
+    label:
+      en_US: Norilsk
+  - value: '11314'
+    label:
+      en_US: Berdsk
+  - value: '11316'
+    label:
+      en_US: Novosibirsk region
+  - value: '11318'
+    label:
+      en_US: Omsk region
+  - value: '11319'
+    label:
+      en_US: Gorno-Altaisk
+  - value: '11330'
+    label:
+      en_US: Buryatia
+  - value: '11333'
+    label:
+      en_US: Kyzyl
+  - value: '11340'
+    label:
+      en_US: Khakassia
+  - value: '11341'
+    label:
+      en_US: Sayanogorsk
+  - value: '11351'
+    label:
+      en_US: Seversk
+  - value: '11353'
+    label:
+      en_US: Tomsk region
+  - value: '11374'
+    label:
+      en_US: Belogorsk
+  - value: '11375'
+    label:
+      en_US: Amurskaya oblast
+  - value: '11391'
+    label:
+      en_US: Tynda
+  - value: '11393'
+    label:
+      en_US: Birobidzhan
+  - value: '11398'
+    label:
+      en_US: Kamchatka Territory
+  - value: '11403'
+    label:
+      en_US: Magadan Region
+  - value: '11409'
+    label:
+      en_US: Primorsky Territory
+  - value: '11426'
+    label:
+      en_US: Ussuriysk
+  - value: '11450'
+    label:
+      en_US: Sakhalin Region
+  - value: '11453'
+    label:
+      en_US: Komsomolsk-on-Amur
+  - value: '11457'
+    label:
+      en_US: Harabov
+  - value: '11458'
+    label:
+      en_US: Anadyr
+  - value: '11463'
+    label:
+      en_US: Yevpatoriya
+  - value: '11464'
+    label:
+      en_US: Kerch
+  - value: '11469'
+    label:
+      en_US: Feodosiya
+  - value: '11470'
+    label:
+      en_US: Yalta
+  - value: '11471'
+    label:
+      en_US: Alushta
+  - value: '20040'
+    label:
+      en_US: Vyksa
+  - value: '20044'
+    label:
+      en_US: Kstovo
+  - value: '20086'
+    label:
+      en_US: Zheleznogorsk
+  - value: '20221'
+    label:
+      en_US: Kirovohrad
+  - value: '20222'
+    label:
+      en_US: Lutsk
+  - value: '20258'
+    label:
+      en_US: Satis
+  - value: '20271'
+    label:
+      en_US: Mexico
+  - value: '20273'
+    label:
+      en_US: Aktobe
+  - value: '20523'
+    label:
+      en_US: Elektrostal
+  - value: '20529'
+    label:
+      en_US: Lviv region
+  - value: '20530'
+    label:
+      en_US: Zakarpattia oblast
+  - value: '20531'
+    label:
+      en_US: Ternopil
+  - value: '20532'
+    label:
+      en_US: Ukraine / Ivano-Frankivsk region
+  - value: '20533'
+    label:
+      en_US: Chernivtsi region
+  - value: '20534'
+    label:
+      en_US: Rivne region
+  - value: '20535'
+    label:
+      en_US: Khmelnytsky region
+  - value: '20536'
+    label:
+      en_US: Donetsk region
+  - value: '20537'
+    label:
+      en_US: Dnipropetrovsk region
+  - value: '20538'
+    label:
+      en_US: Kharkiv Oblast
+  - value: '20539'
+    label:
+      en_US: Zaporizhia Oblast
+  - value: '20540'
+    label:
+      en_US: Luhansk Oblast
+  - value: '20541'
+    label:
+      en_US: Odessa region
+  - value: '20542'
+    label:
+      en_US: Kherson Oblast
+  - value: '20543'
+    label:
+      en_US: Mykolaiv Oblast
+  - value: '20544'
+    label:
+      en_US: Kiev Oblast
+  - value: '20545'
+    label:
+      en_US: Vinnytsia region
+  - value: '20546'
+    label:
+      en_US: Cherkasy oblast
+  - value: '20547'
+    label:
+      en_US: Zhytomyr region
+  - value: '20548'
+    label:
+      en_US: Kirovograd region
+  - value: '20549'
+    label:
+      en_US: Poltava region
+  - value: '20550'
+    label:
+      en_US: Volyn region
+  - value: '20551'
+    label:
+      en_US: Chernigov region
+  - value: '20552'
+    label:
+      en_US: Sumy region
+  - value: '20554'
+    label:
+      en_US: Kramatorsk
+  - value: '20571'
+    label:
+      en_US: Zhukovsky
+  - value: '20574'
+    label:
+      en_US: Cyprus
+  - value: '20728'
+    label:
+      en_US: Korolev
+  - value: '20809'
+    label:
+      en_US: Kokshetau
+  - value: '21609'
+    label:
+      en_US: Kremenchuk
+  - value: '21610'
+    label:
+      en_US: Montenegro
+  - value: '21621'
+    label:
+      en_US: Reutov
+  - value: '21622'
+    label:
+      en_US: Railway
+  - value: '21777'
+    label:
+      en_US: Sakhalin Region / Universal
+  - value: '21778'
+    label:
+      en_US: Sakhalin Region / Other
+  - value: '21779'
+    label:
+      en_US: Primor / Universal
+  - value: '21780'
+    label:
+      en_US: Primor / Other
+  - value: '21781'
+    label:
+      en_US: Magadan Region / Universal
+  - value: '21782'
+    label:
+      en_US: Magadan Region / Other
+  - value: '21783'
+    label:
+      en_US: Jewish Autonomous Region / Universal
+  - value: '21784'
+    label:
+      en_US: Jewish Autonomous Region / Other
+  - value: '21785'
+    label:
+      en_US: Chukotka Autonomous District / Universal
+  - value: '21786'
+    label:
+      en_US: Chukotka Autonomous Okrug / Other
+  - value: '21789'
+    label:
+      en_US: Khabarovsk Territory / Universal
+  - value: '21790'
+    label:
+      en_US: Khabarovsk Territory / Other
+  - value: '21791'
+    label:
+      en_US: Amur Region / Universal
+  - value: '21792'
+    label:
+      en_US: Amur Region / Other
+  - value: '21793'
+    label:
+      en_US: Kamchatka Territory / Universal
+  - value: '21794'
+    label:
+      en_US: Kamchatka Krai / Other
+  - value: '21796'
+    label:
+      en_US: Altay / Universal
+  - value: '21797'
+    label:
+      en_US: Altay / Other
+  - value: '21798'
+    label:
+      en_US: Irkutsk Region / Universal
+  - value: '21799'
+    label:
+      en_US: Irkutsk Region / Other
+  - value: '21800'
+    label:
+      en_US: Kemerovo Oblast / Universal
+  - value: '21801'
+    label:
+      en_US: Kemerovo region / Other
+  - value: '21802'
+    label:
+      en_US: Krasnoyarsk Krai / Universal
+  - value: '21803'
+    label:
+      en_US: Krasnoyarsk Krai / Other
+  - value: '21804'
+    label:
+      en_US: Novosibirsk Region / Universal
+  - value: '21805'
+    label:
+      en_US: Novosibirsk region / Other
+  - value: '21806'
+    label:
+      en_US: Omsk region / Universal
+  - value: '21807'
+    label:
+      en_US: Omsk region / Other
+  - value: '21808'
+    label:
+      en_US: Altai Republic / Universal
+  - value: '21809'
+    label:
+      en_US: Altai Republic / Other
+  - value: '21810'
+    label:
+      en_US: Republic of Buryatia / Universal
+  - value: '21811'
+    label:
+      en_US: Republic of Buryatia / Other
+  - value: '21812'
+    label:
+      en_US: Tyva Republic / Universal
+  - value: '21813'
+    label:
+      en_US: Republic of Tyva / Other
+  - value: '21814'
+    label:
+      en_US: Republic of Khakassia / Universal
+  - value: '21815'
+    label:
+      en_US: Republic of Khakassia / Other
+  - value: '21816'
+    label:
+      en_US: Tomsk Region / Universal
+  - value: '21817'
+    label:
+      en_US: Tomsk Region / Other
+  - value: '21818'
+    label:
+      en_US: Trans-Baikal Territory / Universal
+  - value: '21819'
+    label:
+      en_US: Trans-Baikal Territory / Other
+  - value: '21825'
+    label:
+      en_US: Kurgan Region / Universal
+  - value: '21826'
+    label:
+      en_US: Kurgan Region / Other
+  - value: '21827'
+    label:
+      en_US: Sverdlovsk
+  - value: '21828'
+    label:
+      en_US: Sverdlovsk Region / Other
+  - value: '21829'
+    label:
+      en_US: Tyumen Region / Universal
+  - value: '21830'
+    label:
+      en_US: Tyumen Region / Other
+  - value: '21831'
+    label:
+      en_US: Khanty-Mansi Autonomous Okrug / Universal
+  - value: '21832'
+    label:
+      en_US: Khanty-Mansi Autonomous Okrug / Other
+  - value: '21833'
+    label:
+      en_US: Chelyabinsk Region / Universal
+  - value: '21834'
+    label:
+      en_US: Chelyabinsk Region / Others
+  - value: '21835'
+    label:
+      en_US: Yamal-Nenets Autonomous District / Universal
+  - value: '21836'
+    label:
+      en_US: Yamalo-Nenets Autonomous District / Other
+  - value: '21837'
+    label:
+      en_US: Kirov Region / Universal
+  - value: '21838'
+    label:
+      en_US: Kirov Region / Other
+  - value: '21839'
+    label:
+      en_US: Mari El Republic / Universal
+  - value: '21840'
+    label:
+      en_US: Mari El Republic / Other
+  - value: '21841'
+    label:
+      en_US: Nizhny Novgorod Region / Universal
+  - value: '21842'
+    label:
+      en_US: Nizhny Novgorod Region / Other
+  - value: '21843'
+    label:
+      en_US: Oren Universal
+  - value: '21844'
+    label:
+      en_US: Orenburg region / Other
+  - value: '21845'
+    label:
+      en_US: Penza region / Universal
+  - value: '21846'
+    label:
+      en_US: Penza region / Other
+  - value: '21847'
+    label:
+      en_US: Perm region / Universal
+  - value: '21848'
+    label:
+      en_US: Perm region / Other
+  - value: '21849'
+    label:
+      en_US: Republic of Bashkortostan / Universal
+  - value: '21850'
+    label:
+      en_US: Republic of Bashkortostan / Other
+  - value: '21852'
+    label:
+      en_US: Republic of Mordovia / Universal
+  - value: '21853'
+    label:
+      en_US: Republic of Mordovia / Other
+  - value: '21854'
+    label:
+      en_US: Tatarstan / Universal
+  - value: '21855'
+    label:
+      en_US: Tatarstan / Other
+  - value: '21856'
+    label:
+      en_US: Samara region / Universal
+  - value: '21857'
+    label:
+      en_US: Samara region / Other
+  - value: '21858'
+    label:
+      en_US: Saratov Oblast / Universal
+  - value: '21859'
+    label:
+      en_US: Saratov region / Other
+  - value: '21860'
+    label:
+      en_US: Udmurt Republic / Universal
+  - value: '21861'
+    label:
+      en_US: Udmurt Republic / Other
+  - value: '21862'
+    label:
+      en_US: Ulyanovsk region / Universal
+  - value: '21863'
+    label:
+      en_US: Ulyanovsk region / Other
+  - value: '21864'
+    label:
+      en_US: Chuvash Republic / Universal
+  - value: '21865'
+    label:
+      en_US: Chuvash Republic / Other
+  - value: '21866'
+    label:
+      en_US: Astrakhan region / Universal
+  - value: '21867'
+    label:
+      en_US: Astrakhan region / Other
+  - value: '21868'
+    label:
+      en_US: Volgograd region / Universal
+  - value: '21869'
+    label:
+      en_US: Volgograd region / Other
+  - value: '21870'
+    label:
+      en_US: Krasnodar Territory / Universal
+  - value: '21871'
+    label:
+      en_US: Krasnodar Territory / Other
+  - value: '21872'
+    label:
+      en_US: Republic of Adygea / Universal
+  - value: '21873'
+    label:
+      en_US: Republic of Adygea / Other
+  - value: '21874'
+    label:
+      en_US: Republic of Dagestan / Universal
+  - value: '21875'
+    label:
+      en_US: Republic of Dagestan / Other
+  - value: '21876'
+    label:
+      en_US: Republic of Ingushetia / Universal
+  - value: '21877'
+    label:
+      en_US: Republic of Ingushetia / Other
+  - value: '21878'
+    label:
+      en_US: Republic of Kabardia
+  - value: '21880'
+    label:
+      en_US: Republic of Kalmykia / Universal
+  - value: '21881'
+    label:
+      en_US: Republic of Kalmykia / Other
+  - value: '21882'
+    label:
+      en_US: Karachay-Cherkess Republic / Universal
+  - value: '21883'
+    label:
+      en_US: Karachay-Cherkess Republic / Other
+  - value: '21884'
+    label:
+      en_US: Republic of North Ossetia-Alania / Universal
+  - value: '21885'
+    label:
+      en_US: Republic of North Ossetia-Alania / Others
+  - value: '21886'
+    label:
+      en_US: Rostov Region / Universal
+  - value: '21887'
+    label:
+      en_US: Rostov Region / Other
+  - value: '21888'
+    label:
+      en_US: Stavropol Territory / Universal
+  - value: '21889'
+    label:
+      en_US: Stavropol Territory / Other
+  - value: '21890'
+    label:
+      en_US: Chechen Republic / Universal
+  - value: '21891'
+    label:
+      en_US: Chechen Republic / Other
+  - value: '21892'
+    label:
+      en_US: St. Petersburg and the Leningrad Region / Universal
+  - value: '21893'
+    label:
+      en_US: St. Petersburg and Leningrad Region / Other
+  - value: '21894'
+    label:
+      en_US: Arkhangelskaya region / Universal
+  - value: '21895'
+    label:
+      en_US: Arkhangelsk region / Other
+  - value: '21896'
+    label:
+      en_US: Vologda region / Universal
+  - value: '21897'
+    label:
+      en_US: Vologda region / Other
+  - value: '21898'
+    label:
+      en_US: Kaliningrad region / Universal
+  - value: '21899'
+    label:
+      en_US: Kaliningrad region / Other
+  - value: '21900'
+    label:
+      en_US: Murmansk region / Universal
+  - value: '21901'
+    label:
+      en_US: Murmansk region / Other
+  - value: '21902'
+    label:
+      en_US: Novgorod region / Universal
+  - value: '21903'
+    label:
+      en_US: Novgorod region / Other
+  - value: '21904'
+    label:
+      en_US: Pskov region / Universal
+  - value: '21905'
+    label:
+      en_US: Pskov region / Other
+  - value: '21906'
+    label:
+      en_US: Republic of Karelia / Universal
+  - value: '21907'
+    label:
+      en_US: Republic of Karelia / Other
+  - value: '21908'
+    label:
+      en_US: Komi Republic / Universal
+  - value: '21909'
+    label:
+      en_US: Komi Republic / Other
+  - value: '21910'
+    label:
+      en_US: Belgorod region / Universal
+  - value: '21911'
+    label:
+      en_US: Belgorod region / Other
+  - value: '21912'
+    label:
+      en_US: Bryansk region / Universal
+  - value: '21913'
+    label:
+      en_US: Bryansk region / Other
+  - value: '21914'
+    label:
+      en_US: Vladimir region / Universal
+  - value: '21915'
+    label:
+      en_US: Vladimir region / Other
+  - value: '21916'
+    label:
+      en_US: Voronezh region / Universal
+  - value: '21917'
+    label:
+      en_US: Voronezh region / Other
+  - value: '21918'
+    label:
+      en_US: Ivanovo region / Universal
+  - value: '21919'
+    label:
+      en_US: Ivanovo region / Other
+  - value: '21920'
+    label:
+      en_US: Kaluga region / Universal
+  - value: '21921'
+    label:
+      en_US: Kaluga region / Other
+  - value: '21922'
+    label:
+      en_US: Kostroma region / Universal
+  - value: '21923'
+    label:
+      en_US: Kostroma region / Other
+  - value: '21924'
+    label:
+      en_US: Kursk region / Universal
+  - value: '21925'
+    label:
+      en_US: Kursk region / Other
+  - value: '21926'
+    label:
+      en_US: Lipetsk region / Universal
+  - value: '21927'
+    label:
+      en_US: Lipetsk region / Other
+  - value: '21928'
+    label:
+      en_US: Oryol region / Other
+  - value: '21929'
+    label:
+      en_US: Oryol region / Other
+  - value: '21930'
+    label:
+      en_US: Ryazan region / Universal
+  - value: '21931'
+    label:
+      en_US: Ryazan region / Other
+  - value: '21932'
+    label:
+      en_US: Smolensk region / Universal
+  - value: '21933'
+    label:
+      en_US: Smolensk region / Other
+  - value: '21934'
+    label:
+      en_US: Tambov region / Universal
+  - value: '21935'
+    label:
+      en_US: Tambov region / Other
+  - value: '21936'
+    label:
+      en_US: Tver region / Universal
+  - value: '21937'
+    label:
+      en_US: Tver region / Other
+  - value: '21938'
+    label:
+      en_US: Tula region / Universal
+  - value: '21939'
+    label:
+      en_US: Tula region / Other
+  - value: '21940'
+    label:
+      en_US: Yaroslavl Oblast / Universal
+  - value: '21941'
+    label:
+      en_US: Yaroslavl region / Other
+  - value: '21942'
+    label:
+      en_US: Universal
+  - value: '21943'
+    label:
+      en_US: Other
+  - value: '21949'
+    label:
+      en_US: Trans-Baikal Territory
+  - value: '24876'
+    label:
+      en_US: Makiyivka
+  - value: '26034'
+    label:
+      en_US: Zhodino
+  - value: '29386'
+    label:
+      en_US: Abkhazia
+  - value: '29387'
+    label:
+      en_US: South Ossetia
+  - value: '29403'
+    label:
+      en_US: Akmola oblast
+  - value: '29404'
+    label:
+      en_US: Aktobe oblast
+  - value: '29406'
+    label:
+      en_US: Almaty region
+  - value: '29407'
+    label:
+      en_US: Atyrau region
+  - value: '29408'
+    label:
+      en_US: East Kazakhstan region
+  - value: '29409'
+    label:
+      en_US: Zhambyl region
+  - value: '29410'
+    label:
+      en_US: West Kazakhstan region
+  - value: '29411'
+    label:
+      en_US: Karaganda region
+  - value: '29412'
+    label:
+      en_US: Kostanay region
+  - value: '29413'
+    label:
+      en_US: Kyzylorda oblast
+  - value: '29414'
+    label:
+      en_US: Mangystau
+  - value: '29415'
+    label:
+      en_US: Pavlodar region
+  - value: '29416'
+    label:
+      en_US: North Kazakhstan
+  - value: '29417'
+    label:
+      en_US: South Kazakhstan oblast
+  - value: '29629'
+    label:
+      en_US: Mogilev oblast
+  - value: '29630'
+    label:
+      en_US: Minsk region
+  - value: '29631'
+    label:
+      en_US: Gomel oblast
+  - value: '29632'
+    label:
+      en_US: Brest
+  - value: '29633'
+    label:
+      en_US: Vitebsk
+  - value: '29634'
+    label:
+      en_US: Grodno oblast
+  - value: '33883'
+    label:
+      en_US: Comrat
+  - value: '101852'
+    label:
+      en_US: Minsk Region / Universal
+  - value: '101853'
+    label:
+      en_US: Minsk region / Other
+  - value: '101854'
+    label:
+      en_US: Gomel region / Universal
+  - value: '101855'
+    label:
+      en_US: Gomel region / Other
+  - value: '101856'
+    label:
+      en_US: Vitebsk region / Universal
+  - value: '101857'
+    label:
+      en_US: Vitebsk region / Other
+  - value: '101858'
+    label:
+      en_US: Brest region / Universal
+  - value: '101859'
+    label:
+      en_US: Brest region / Others
+  - value: '101860'
+    label:
+      en_US: Grodno region / Universal
+  - value: '101861'
+    label:
+      en_US: Grodno region / Other
+  - value: '101862'
+    label:
+      en_US: Mogilev region / Universal
+  - value: '101863'
+    label:
+      en_US: Mogilev region / Other
+  - value: '101864'
+    label:
+      en_US: Kiev region / Other
+  - value: '101865'
+    label:
+      en_US: Kiev region / Universal
+  - value: '102444'
+    label:
+      en_US: North Caucasus
+  - value: '102445'
+    label:
+      en_US: North Caucasus / Other cities in the region
+  - value: '102446'
+    label:
+      en_US: North Caucasus / Universal
+  - value: '102450'
+    label:
+      en_US: Poltava region / Others
+  - value: '102451'
+    label:
+      en_US: Cherkasy region / Other
+  - value: '102452'
+    label:
+      en_US: Vinnytsia region / Other
+  - value: '102453'
+    label:
+      en_US: Kirovograd region / Other
+  - value: '102454'
+    label:
+      en_US: Zhytomyr region / Other
+  - value: '102455'
+    label:
+      en_US: Kharkiv region / Other
+  - value: '102456'
+    label:
+      en_US: Donetsk region / Other
+  - value: '102457'
+    label:
+      en_US: Dnepropetrovsk region / Others
+  - value: '102458'
+    label:
+      en_US: Luhansk region / Other
+  - value: '102459'
+    label:
+      en_US: Zaporozhye region / Other
+  - value: '102460'
+    label:
+      en_US: Odessa region / Other
+  - value: '102461'
+    label:
+      en_US: Mykolaiv region / Other
+  - value: '102462'
+    label:
+      en_US: Kherson region / Other
+  - value: '102464'
+    label:
+      en_US: Lviv region / Other
+  - value: '102465'
+    label:
+      en_US: Khmelnytsky region / Other
+  - value: '102466'
+    label:
+      en_US: Ternopil region / Other
+  - value: '102467'
+    label:
+      en_US: Rivne region / Other
+  - value: '102468'
+    label:
+      en_US: Chernivtsi region / Other
+  - value: '102469'
+    label:
+      en_US: Other
+  - value: '102470'
+    label:
+      en_US: Transcarpathian region / Other
+  - value: '102471'
+    label:
+      en_US: Ivano-Frankivsk region / Other
+  - value: '102472'
+    label:
+      en_US: Sumy region / Other
+  - value: '102473'
+    label:
+      en_US: Chernihiv region / Other
+  - value: '102475'
+    label:
+      en_US: Poltava region / Universal
+  - value: '102476'
+    label:
+      en_US: Cherkasy region / Universal
+  - value: '102477'
+    label:
+      en_US: Vinnytsia region / Universal
+  - value: '102478'
+    label:
+      en_US: Kirovograd region / Universal
+  - value: '102479'
+    label:
+      en_US: Zhytomyr region / Universal
+  - value: '102480'
+    label:
+      en_US: Kharkiv region / Universal
+  - value: '102481'
+    label:
+      en_US: Donetsk region / Universal
+  - value: '102482'
+    label:
+      en_US: Dnepropetrovsk region / Universal
+  - value: '102483'
+    label:
+      en_US: Luhansk region / Universal
+  - value: '102484'
+    label:
+      en_US: Zaporozhye region / Universal
+  - value: '102485'
+    label:
+      en_US: Odessa region / Universal
+  - value: '102486'
+    label:
+      en_US: Nikolaev region / Universal
+  - value: '102487'
+    label:
+      en_US: Kherson region / Universal
+  - value: '102489'
+    label:
+      en_US: Lviv region / Universal
+  - value: '102490'
+    label:
+      en_US: Khmelnytsky region / Universal
+  - value: '102491'
+    label:
+      en_US: Ternopil region / Universal
+  - value: '102492'
+    label:
+      en_US: Rivne region / Universal
+  - value: '102493'
+    label:
+      en_US: Chernivtsi region / Universal
+  - value: '102494'
+    label:
+      en_US: Volyn region / Universal
+  - value: '102495'
+    label:
+      en_US: Transcarpathian region / Universal
+  - value: '102496'
+    label:
+      en_US: Ivano-Frankivsk region / Universal
+  - value: '102497'
+    label:
+      en_US: Sumy region / Universal
+  - value: '102498'
+    label:
+      en_US: Chernigov region / Universal
+  - value: '102499'
+    label:
+      en_US: Almaty region / Other
+  - value: '102500'
+    label:
+      en_US: Karaganda region / Other
+  - value: '102501'
+    label:
+      en_US: Akmola region / Other
+  - value: '102502'
+    label:
+      en_US: East Kazakhstan region / Other
+  - value: '102503'
+    label:
+      en_US: Pavlodar region / Other
+  - value: '102504'
+    label:
+      en_US: Kostanay region / Other
+  - value: '102505'
+    label:
+      en_US: West Kazakhstan region / Other
+  - value: '102506'
+    label:
+      en_US: North Kazakhstan region / Other
+  - value: '102507'
+    label:
+      en_US: South Kazakhstan region / Other
+  - value: '102508'
+    label:
+      en_US: Aktobe region / Other
+  - value: '102509'
+    label:
+      en_US: Atyrau region / Other
+  - value: '102510'
+    label:
+      en_US: Mangistau region / Other
+  - value: '102511'
+    label:
+      en_US: Zhambyl oblast / Miscellaneous
+  - value: '102512'
+    label:
+      en_US: Kyzylorda Province / Miscellaneous
+  - value: '102513'
+    label:
+      en_US: Almaty Province / Universal
+  - value: '102514'
+    label:
+      en_US: Karagandy / Universal
+  - value: '102515'
+    label:
+      en_US: Akmola Province / Universal
+  - value: '102516'
+    label:
+      en_US: East-Kazakhstan region / Universal
+  - value: '102517'
+    label:
+      en_US: Pavlodar Province / Universal
+  - value: '102518'
+    label:
+      en_US: Kostanay / Universal
+  - value: '102519'
+    label:
+      en_US: West Kazakhstan / Universal
+  - value: '102520'
+    label:
+      en_US: North Kazakhstan region / Universal
+  - value: '102521'
+    label:
+      en_US: South Kazakhstan region / Universal
+  - value: '102522'
+    label:
+      en_US: Aktobe region / Universal
+  - value: '102523'
+    label:
+      en_US: Atyrau region / Universal
+  - value: '102524'
+    label:
+      en_US: Mangistau region / Universal
+  - value: '102525'
+    label:
+      en_US: Zhambyl region / Universal
+  - value: '102526'
+    label:
+      en_US: Kyzylorda region / Universal
+  - value: '115092'
+    label:
+      en_US: Crimean Federal District
+  - value: '115674'
+    label:
+      en_US: Moldova / Other
+  - value: '115675'
+    label:
+      en_US: Moldova / Universal
+- name: rstr
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Location Strict Check
+  human_description:
+    en_US: Location Strict Check parameter.
+  llm_description: Location Strict Check parameter.
+  form: form
+  default: false
+  multiple: false
+  options:
+  - value: 'True'
+    label:
+      en_US: Active
+  - value: 'False'
+    label:
+      en_US: 'Off'
+- name: p
+  type: number
+  required: false
+  label:
+    en_US: Page number
+  human_description:
+    en_US: Page number parameter.
+  llm_description: Page number parameter.
+  form: form
+  placeholder:
+    en_US: Page
+  default: 0
+- name: within
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Time period
+  human_description:
+    en_US: Time period parameter.
+  llm_description: Time period parameter.
+  form: form
+  multiple: false
+  options:
+  - value: '0'
+    label:
+      en_US: All time
+  - value: '77'
+    label:
+      en_US: Last day
+  - value: '1'
+    label:
+      en_US: Last 2 weeks
+  - value: '2'
+    label:
+      en_US: Last month
+- name: extra_parameters_json
+  type: string
+  required: false
+  default: '{}'
+  label:
+    en_US: Extra Parameters JSON
+  human_description:
+    en_US: Advanced JSON overrides; engine and isjson remain protected.
+  llm_description: Optional advanced JSON object override. The engine and isjson fields
+    remain protected.
+  form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/generated/yandex.py

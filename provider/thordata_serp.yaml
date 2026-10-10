@@ -1,0 +1,60 @@
+identity:
+  author: thordata
+  name: thordata_serp
+  label:
+    en_US: Thordata SERP
+  description:
+    en_US: Search the web with live, structured results from the Thordata SERP API.
+  icon: icon.svg
+  icon_dark: icon-dark.svg
+  tags:
+  - search
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: API Key
+    placeholder:
+      en_US: Enter your Thordata SERP API key
+    help:
+      en_US: Create or manage your API key in the Thordata dashboard.
+    url: https://doc.thordata.com
+tools:
+- tools/generated/google.yaml
+- tools/generated/google_ai_mode.yaml
+- tools/generated/google_web.yaml
+- tools/generated/google_shopping.yaml
+- tools/generated/google_local.yaml
+- tools/generated/google_videos.yaml
+- tools/generated/google_news.yaml
+- tools/generated/google_flights.yaml
+- tools/generated/google_images.yaml
+- tools/generated/google_lens.yaml
+- tools/generated/google_trends.yaml
+- tools/generated/google_hotels.yaml
+- tools/generated/google_play.yaml
+- tools/generated/google_play_product.yaml
+- tools/generated/google_play_games.yaml
+- tools/generated/google_play_movies.yaml
+- tools/generated/google_play_books.yaml
+- tools/generated/google_jobs.yaml
+- tools/generated/google_scholar.yaml
+- tools/generated/google_scholar_cite.yaml
+- tools/generated/google_scholar_author.yaml
+- tools/generated/google_maps.yaml
+- tools/generated/google_finance.yaml
+- tools/generated/google_finance_markets.yaml
+- tools/generated/google_patents.yaml
+- tools/generated/google_patents_details.yaml
+- tools/generated/bing.yaml
+- tools/generated/bing_images.yaml
+- tools/generated/bing_videos.yaml
+- tools/generated/bing_news.yaml
+- tools/generated/bing_maps.yaml
+- tools/generated/bing_shopping.yaml
+- tools/generated/yandex.yaml
+- tools/generated/duckduckgo.yaml
+extra:
+  python:
+    source: provider/thordata_serp.py

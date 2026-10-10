@@ -1,0 +1,96 @@
+identity:
+  author: thordata
+  name: google_ai_mode
+  label:
+    en_US: Thordata Google AI Mode
+description:
+  human:
+    en_US: Search with the fixed Thordata SERP engine Thordata Google AI Mode.
+  llm: Run a Thordata SERP search using the fixed engine google_ai_mode.
+parameters:
+- name: q
+  type: string
+  required: true
+  label:
+    en_US: Search Query
+  human_description:
+    en_US: Search Query parameter.
+  llm_description: Search Query parameter.
+  form: llm
+  placeholder:
+    en_US: pizza
+- name: no_cache
+  type: boolean
+  required: false
+  label:
+    en_US: Disable Caching
+  human_description:
+    en_US: Disable Caching parameter.
+  llm_description: Disable Caching parameter.
+  form: form
+  default: false
+- name: location
+  type: dynamic-select
+  required: false
+  label:
+    en_US: Location
+  human_description:
+    en_US: Location parameter. UULE is derived automatically from the selected location.
+  llm_description: Location parameter. UULE is derived automatically from the selected
+    location.
+  form: form
+  multiple: false
+  options:
+  - value: ''
+    label:
+      en_US: No Selection
+  - value: India
+    label:
+      en_US: India
+  - value: United+States
+    label:
+      en_US: United States
+  - value: Brazil
+    label:
+      en_US: Brazil
+  - value: Indonesia
+    label:
+      en_US: Indonesia
+  - value: Mexico
+    label:
+      en_US: Mexico
+  - value: Japan
+    label:
+      en_US: Japan
+  - value: Uttar+Pradesh%2CIndia
+    label:
+      en_US: Utter Pradesh, India
+  - value: Germany
+    label:
+      en_US: Germany
+  - value: France
+    label:
+      en_US: France
+  - value: Maharashtra%2CIndia
+    label:
+      en_US: Maharashtra, India
+- name: extra_parameters_json
+  type: string
+  required: false
+  default: '{}'
+  label:
+    en_US: Extra Parameters JSON
+  human_description:
+    en_US: Advanced JSON overrides; engine and isjson remain protected.
+  llm_description: Optional advanced JSON object override. The engine and isjson fields
+    remain protected.
+  form: form
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/generated/google_ai_mode.py

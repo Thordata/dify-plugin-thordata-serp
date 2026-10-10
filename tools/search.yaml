@@ -1,0 +1,84 @@
+identity:
+  author: Thordata
+  name: search
+  label:
+    en_US: Search
+description:
+  human:
+    en_US: Run a Thordata SERP search and return structured results.
+  llm: Search through the Thordata SERP API. Use list_engines and get_engine_schema before advanced searches to select a valid engine and parameters.
+parameters:
+  - name: engine
+    type: string
+    required: false
+    default: ''
+    label:
+      en_US: Engine
+    human_description:
+      en_US: The search engine identifier; leave blank to use the default.
+    llm_description: Engine identifier from list_engines, or an empty string for the default.
+    form: llm
+  - name: query
+    type: string
+    required: false
+    default: ''
+    label:
+      en_US: Query
+    human_description:
+      en_US: The search query text.
+    llm_description: Search query text accepted by the selected engine.
+    form: llm
+  - name: parameters_json
+    type: string
+    required: false
+    default: '{}'
+    label:
+      en_US: Parameters JSON
+    human_description:
+      en_US: Additional engine parameters as a JSON object string.
+    llm_description: JSON object string containing parameters supported by get_engine_schema.
+    form: llm
+  - name: response_format
+    type: select
+    required: true
+    default: '1'
+    label:
+      en_US: Response Format
+    human_description:
+      en_US: The response representation to request.
+    form: form
+    options:
+      - value: '1'
+        label:
+          en_US: Structured JSON
+      - value: '2'
+        label:
+          en_US: JSON and HTML
+      - value: '3'
+        label:
+          en_US: HTML
+  - name: response_mode
+    type: select
+    required: true
+    default: compact
+    label:
+      en_US: Response Mode
+    human_description:
+      en_US: Return compact results or the complete response.
+    form: form
+    options:
+      - value: compact
+        label:
+          en_US: Compact
+      - value: complete
+        label:
+          en_US: Complete
+output_schema:
+  type: object
+  properties:
+    result:
+      type: object
+      additionalProperties: true
+extra:
+  python:
+    source: tools/search.py
