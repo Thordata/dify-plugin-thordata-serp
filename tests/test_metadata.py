@@ -27,7 +27,7 @@ def load_provider_class() -> type[Any]:
 def test_manifest_identity_and_marketplace_metadata() -> None:
     manifest = load_yaml("manifest.yaml")
 
-    assert manifest["version"] == "0.1.0"
+    assert manifest["version"] == "0.1.1"
     assert manifest["type"] == "plugin"
     assert manifest["author"] == "thordata"
     assert manifest["author"].islower()
